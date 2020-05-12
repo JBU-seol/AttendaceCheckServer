@@ -1,8 +1,8 @@
 from django.shortcuts import render
 from django.http import HttpResponse, JsonResponse
 from django.views.decorators.csrf import csrf_exempt
-from .models import Member
-from .serializers import MemberSerializer
+from .models import Member, Member_course
+from .serializers import MemberSerializer, Member_courseSerializer
 from rest_framework.parsers import JSONParser
 
 @csrf_exempt
@@ -19,6 +19,17 @@ def member_list(request):
             serializer.save()
             return JsonResponse(serializer.data, status=201)
         return JsonResponse(serializer.errors, status=400)
+
+@csrf_exempt
+def course_list(request):
+    if request.method == 'POST':
+        data = JSONParser().parse(request)
+        search_grade_number = data['grade_number']
+        obj = Member.objects.get(grade_number=search_grade_number)
+        data_dict = { "lecture_id":[]}
+        for course_obj in Member_course.objects.filter(Member_num_id=obj.id):
+            data_dict["lecture_id"].append(course_obj.lecture_id)
+        return JsonResponse(data_dict, status=200)
 
 @csrf_exempt
 def login(request):
