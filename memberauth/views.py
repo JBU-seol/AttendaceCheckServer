@@ -61,9 +61,9 @@ def login(request):
         data = JSONParser().parse(request)
         search_grade_number = data['grade_number']
         obj = Member.objects.get(grade_number=search_grade_number)
-
+        dictName = {"name": obj.name}
         if data['mac_address'] == obj.mac_address:
-            return HttpResponse(status=200)
+            return JsonResponse( dictName,status=200)
         else:
             return HttpResponse(status=400)
     else:
