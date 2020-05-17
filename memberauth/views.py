@@ -49,7 +49,7 @@ def course_time_list(request):
         objs = Subject_time.objects.filter(Subject_num_id = search_id)
         objs_dict = { search_id: []}
         for obj in objs:
-            data_dict = { "year": obj.year, "day": obj.day, "which_day": obj.which_day,
+            data_dict = { "id": search_id, "year": obj.year, "day": obj.day, "which_day": obj.which_day,
                           "start_time": obj.start_time, "finish_time": obj.finish_time}
             objs_dict[search_id].append(data_dict)
         return JsonResponse(objs_dict, status=200)
@@ -61,9 +61,9 @@ def login(request):
         data = JSONParser().parse(request)
         search_grade_number = data['grade_number']
         obj = Member.objects.get(grade_number=search_grade_number)
-
+        dictName = {"name": obj.name}
         if data['mac_address'] == obj.mac_address:
-            return HttpResponse(status=200)
+            return JsonResponse( dictName,status=200)
         else:
             return HttpResponse(status=400)
     else:
