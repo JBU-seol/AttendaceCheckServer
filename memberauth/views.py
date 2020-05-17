@@ -49,7 +49,7 @@ def course_time_list(request):
         objs = Subject_time.objects.filter(Subject_num_id = search_id)
         objs_dict = { search_id: []}
         for obj in objs:
-            data_dict = { "year": obj.year, "day": obj.day, "which_day": obj.which_day,
+            data_dict = { "id": search_id, "year": obj.year, "day": obj.day, "which_day": obj.which_day,
                           "start_time": obj.start_time, "finish_time": obj.finish_time}
             objs_dict[search_id].append(data_dict)
         return JsonResponse(objs_dict, status=200)
