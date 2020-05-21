@@ -29,7 +29,7 @@ class Subject(models.Model):
 class Subject_time(models.Model):
     Subject_num = models.ForeignKey(Subject, on_delete=models.CASCADE)
     year = models.CharField(max_length=5)
-    day = models.CharField(max_length=5)
+    day = models.CharField(max_length=10)
     which_day = models.CharField(max_length=8)
     start_time = models.CharField(max_length=8)
     finish_time = models.CharField(max_length=8)
