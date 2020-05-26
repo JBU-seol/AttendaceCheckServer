@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+
+	<title>학생정보 등록</title>
+</head>
+<body>
+
+<p>학생 정보 입력</p>
+
+<form action ="{% url 'regCon' %}" method="post">
+{% csrf_token %}
+이름 : <input type="text" name="name"></br>
+학년 : <input type="text" name="grade"></br>
+학번 : <input type="text" name="student_id"></br>
+MAC 주소 : <input type="text" name="mac_addr"></br>
+학과 : <input type="text" name="department"></br>
+<input type="submit" name="Register"></br>
+</form>
+
+</body>
+</html>
