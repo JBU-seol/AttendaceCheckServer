@@ -68,3 +68,18 @@ def login(request):
             return HttpResponse(status=400)
     else:
         return HttpResponse(status=400)
+
+def regStudent(request):
+    return render(request, 'students/registerStudent.html')
+
+def regConStudent(request):
+    name = request.POST['name']
+    grade = request.POST['grade']
+    student_id = request.POST['student_id']
+    mac_addr = request.POST['mac_addr']
+    department = request.POST['department']
+
+    qs = Member(name=name, grade=grade, grade_number=student_id, mac_address=mac_addr, department=department)
+    qs.save()
+    return render(request, 'students/response.html')
+
