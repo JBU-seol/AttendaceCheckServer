@@ -1,23 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v4.0.1">
+    <title>Sign in </title>
 
-	<title>학생정보 등록</title>
+
+<meta name="theme-color" content="#563d7c">
+
+
+    <style>
+      html,
+body {
+  height: 100%;
+}
+
+body {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: #f5f5f5;
+}
+
+.form-signin {
+  width: 100%;
+  max-width: 330px;
+  padding: 15px;
+  margin: auto;
+}
+.form-signin .checkbox {
+  font-weight: 400;
+}
+.form-signin .form-control {
+  position: relative;
+  box-sizing: border-box;
+  height: auto;
+  padding: 10px;
+  font-size: 30px;
+}
+.form-signin .sr-only {
+    font-size : 25px;
+}
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+.form-signin input[type="text"] {
+  margin-bottom: 10px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.form-signin button[type="submit"] {
+    font-size: 25px;
+}
+    </style>
 </head>
-<body>
-
-<p>학생 정보 입력</p>
-
-<form action ="{% url 'regCon' %}" method="post">
-{% csrf_token %}
-이름 : <input type="text" name="name"></br>
-학년 : <input type="text" name="grade"></br>
-학번 : <input type="text" name="student_id"></br>
-MAC 주소 : <input type="text" name="mac_addr"></br>
-학과 : <input type="text" name="department"></br>
-<input type="submit" name="Register"></br>
+  <body class="text-center">
+    <form class="form-signin" action ="{% url 'regCon' %}" method="post">
+        {% csrf_token %}
+  <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+        <label for="inputName" class="sr-only">Name</label>
+  <input type="text" name="name" id="inputName" class="form-control" placeholder="Name" required="" autofocus="">
+      <label for="inputGrade" class="sr-only">Grade</label>
+  <input type="text" name="grade" id="inputGrade" class="form-control" placeholder="Grade" required="" autofocus="">
+      <label for="inputGrade_id" class="sr-only">Grade Number</label>
+  <input type="text" name="student_id" id="inputGrade_id" class="form-control" placeholder="Grade Number" required="" autofocus="">
+      <label for="inputMac" class="sr-only">Mac Address</label>
+  <input type="text" name="mac_addr" id="inputMac" class="form-control" placeholder="Mac Address" required="" autofocus="">
+      <label for="inputDepartment" class="sr-only">Department</label>
+  <input type="text" name="department" id="inputDepartment" class="form-control" placeholder="Department" required="" autofocus="">
+  <div class="checkbox mb-3">
+    <label>
+      <input type="checkbox" value="remember-me"> Remember me
+    </label>
+  </div>
+  <button class="btn btn-lg btn-primary btn-block" type="submit" name="Register">Sign in</button>
+  <p class="mt-5 mb-3 text-muted">© 2020 - 출첵해조 </p>
 </form>
 
-</body>
-</html>
+
+</body></html>
