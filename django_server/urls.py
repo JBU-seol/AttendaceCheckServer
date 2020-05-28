@@ -42,6 +42,6 @@ urlpatterns = [
     path('members/course_time', views.course_time_list),
     path('login/', views.login),
     path('', views.regStudent, name='reg'),
-    path('/regCon', views.regConStudent, name='regCon'),
+    path('regCon', views.regConStudent, name='regCon'),
     url(r'^api-auth/', include('rest_framework.urls'))
 ]
