@@ -11,10 +11,8 @@
 
 <meta name="theme-color" content="#563d7c">
 
-
     <style>
-      html,
-body {
+      html,body {
   height: 100%;
 }
 
@@ -27,60 +25,83 @@ body {
   padding-bottom: 40px;
   background-color: #f5f5f5;
 }
-
+p {
+    font-size: 8px;
+}
 .form-signin {
   width: 100%;
-  max-width: 330px;
+  max-width: 250px;
   padding: 15px;
   margin: auto;
 }
-.form-signin .checkbox {
-  font-weight: 400;
-}
 .form-signin .form-control {
-  position: relative;
+  position: static;
   box-sizing: border-box;
   height: auto;
   padding: 10px;
-  font-size: 30px;
+  font-size: 23px;
+}
+.form-signin .form-select {
+  position : relative;
+  box-sizing: border-box;
+  padding : 10px;
+  font-size: 18px;
 }
 .form-signin .sr-only {
-    font-size : 25px;
-}
-.form-signin .form-control:focus {
-  z-index: 2;
+    font-size : 20px;
+    margin-bottom: 20px;
 }
 .form-signin input[type="text"] {
-  margin-bottom: 10px;
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
+  margin-bottom: 20px;
+  border-bottom-right-radius: 10;
+  border-bottom-left-radius: 10;
 }
 .form-signin button[type="submit"] {
-    font-size: 25px;
+    font-size: 30px;
 }
     </style>
 </head>
   <body class="text-center">
     <form class="form-signin" action ="{% url 'regCon' %}" method="post">
         {% csrf_token %}
-  <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
-        <label for="inputName" class="sr-only">Name</label>
-  <input type="text" name="name" id="inputName" class="form-control" placeholder="Name" required="" autofocus="">
-      <label for="inputGrade" class="sr-only">Grade</label>
-  <input type="text" name="grade" id="inputGrade" class="form-control" placeholder="Grade" required="" autofocus="">
-      <label for="inputGrade_id" class="sr-only">Grade Number</label>
-  <input type="text" name="student_id" id="inputGrade_id" class="form-control" placeholder="Grade Number" required="" autofocus="">
-      <label for="inputMac" class="sr-only">Mac Address</label>
-  <input type="text" name="mac_addr" id="inputMac" class="form-control" placeholder="Mac Address" required="" autofocus="">
-      <label for="inputDepartment" class="sr-only">Department</label>
-  <input type="text" name="department" id="inputDepartment" class="form-control" placeholder="Department" required="" autofocus="">
-  <div class="checkbox mb-3">
-    <label>
-      <input type="checkbox" value="remember-me"> Remember me
-    </label>
-  </div>
-  <button class="btn btn-lg btn-primary btn-block" type="submit" name="Register">Sign in</button>
-  <p class="mt-5 mb-3 text-muted">© 2020 - 출첵해조 </p>
+  <h1 > Pease sign in</h1>
+        <label for="inputName" class="sr-only">이름</label>
+         <p> </p>
+        <input type="text" name="name" id="inputName" class="form-control" placeholder="Name" required="" autofocus="">
+
+        <label for="inputGrade" class="sr-only">학년</label>
+        <p> </p>
+        <select name="grade" id="inputGrade" class="form-select">
+            <option value="">- - -</option>
+            <option value="1">1학년</option>
+            <option value="2">2학년</option>
+            <option value="3">3학년</option>
+            <option value="4">4학년</option>
+        </select>
+        <p></p>
+
+        <label for="inputDepartment" class="sr-only">학과</label>
+         <p> </p>
+        <select name="department" id="inputDepartment" class="form-select">
+            <option value=""> - - -</option>
+            <option value="정보보호학과">정보보호학과</option>
+            <option value="기타">기타</option>
+        </select>
+        <p></p>
+
+        <label for="inputGrade_id" class="sr-only">학번</label>
+         <p> </p>
+        <input type="text" name="student_id" id="inputGrade_id" class="form-control" placeholder="Grade Number" required="" autofocus="">
+
+        <label for="inputMac" class="sr-only">맥주소</label>
+         <p> </p>
+        <input type="text" name="mac_addr" id="inputMac" class="form-control" placeholder="Mac Address" required="" autofocus="">
+
+
+<!--        <input type="text" name="department" id="inputDepartment" class="form-control" placeholder="Department" required="" autofocus="">-->
+
+  <button type="submit" name="Register">Sign in</button>
+  <h3 >© 2020 - 출첵해조 </h3>
 </form>
 
 

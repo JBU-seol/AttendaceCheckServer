@@ -43,5 +43,6 @@ urlpatterns = [
     path('login/', views.login),
     path('', views.regStudent, name='reg'),
     path('regCon', views.regConStudent, name='regCon'),
+    path('regLec', views.regLec, name='regLec'),
     url(r'^api-auth/', include('rest_framework.urls'))
 ]

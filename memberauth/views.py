@@ -78,8 +78,18 @@ def regConStudent(request):
     student_id = request.POST['student_id']
     mac_addr = request.POST['mac_addr']
     department = request.POST['department']
-
+    subjects = Subject.objects.all()
+    context = { 'subjects':subjects, 'student_id': student_id, 'name':name}
     qs = Member(name=name, grade=grade, grade_number=student_id, mac_address=mac_addr, department=department)
     qs.save()
-    return render(request, 'students/response.html')
+    return render(request, 'students/response.html', context)
 
+def regLec(request):
+    lec_lists = request.POST.getlist('lecinfo[]')
+    student_id = request.POST['student_id']
+    idd = Member.objects.get(grade_number=student_id)
+    id_value = idd.id
+    for lec in lec_lists:
+        qs = Member_course(Member_num_id = id_value, lecture_id = lec)
+        qs.save()
+    return render(request, 'students/ResLec.html')
