@@ -5,7 +5,7 @@ class Member(models.Model):
     grade = models.CharField(max_length=2)
     grade_number = models.CharField(max_length=10, unique=True)
     mac_address = models.CharField(max_length=20)
-    department = models.CharField(max_length=20, default='정보보호학과')
+    department = models.CharField(max_length=20, default='기타')
 
     def __str__(self):
         return '%s - %s학년 / %s' % (self.department, self.grade, self.name)
