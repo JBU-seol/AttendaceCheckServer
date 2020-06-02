@@ -1,6 +1,8 @@
 from django.shortcuts import render
-from django.http import HttpResponse, JsonResponse
+from django.http import HttpResponse, JsonResponse , HttpResponseRedirect
 from django.views.decorators.csrf import csrf_exempt
+from django.db import IntegrityError
+from django.contrib import messages
 from .models import Member, Member_course, Subject, Subject_time
 from .serializers import MemberSerializer
 from rest_framework.parsers import JSONParser
@@ -80,9 +82,13 @@ def regConStudent(request):
     department = request.POST['department']
     subjects = Subject.objects.all()
     context = { 'subjects':subjects, 'student_id': student_id, 'name':name}
-    qs = Member(name=name, grade=grade, grade_number=student_id, mac_address=mac_addr, department=department)
-    qs.save()
-    return render(request, 'students/response.html', context)
+    try:
+        qs = Member(name=name, grade=grade, grade_number=student_id, mac_address=mac_addr, department=department)
+        qs.save()
+        return render(request, 'students/response.html', context)
+    except IntegrityError:
+        messages.info(request, '등록된 학번이 있습니다.')
+        return HttpResponseRedirect('/')
 
 def regLec(request):
     lec_lists = request.POST.getlist('lecinfo[]')
