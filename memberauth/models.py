@@ -17,6 +17,22 @@ class Member_course(models.Model):
     def __str__(self):
         return '%s - %s' %(self.Member_num, self.lecture_id)
 
+class ProMember(models.Model):
+    name = models.CharField(max_length=20)
+    grade_number = models.CharField(max_length=10, unique=True)
+    mac_address = models.CharField(max_length=20)
+    department = models.CharField(max_length=20, default='기타')
+
+    def __str__(self):
+        return '%s / %s' % ( self.name, self.department )
+
+class ProMember_course(models.Model):
+    ProMember_num = models.ForeignKey(Member,on_delete=models.CASCADE)
+    lecture_id = models.CharField(max_length=8)
+
+    def __str__(self):
+        return '%s - %s' %(self.ProMember_num, self.lecture_id)
+
 class Subject(models.Model):
     lecture_name = models.CharField(max_length=30)
     lecture_room = models.CharField(max_length=7)
