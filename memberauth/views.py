@@ -3,7 +3,7 @@ from django.http import HttpResponse, JsonResponse , HttpResponseRedirect
 from django.views.decorators.csrf import csrf_exempt
 from django.db import IntegrityError
 from django.contrib import messages
-from .models import Member, Member_course, Subject, Subject_time
+from .models import Member, Member_course, Subject, Subject_time, ProMember, ProMember_course
 from .serializers import MemberSerializer
 from rest_framework.parsers import JSONParser
 
@@ -32,6 +32,18 @@ def course_id_list(request):
         for course_obj in Member_course.objects.filter(Member_num_id=obj.id):
             data_dict["lecture_id"].append(course_obj.lecture_id)
         return JsonResponse(data_dict, status=200)
+
+@csrf_exempt
+def Procourse_id_list(request):
+    if request.method == 'POST':
+        data = JSONParser().parse(request)
+        search_grade_number = data['grade_number']
+        obj = ProMember.objects.get(grade_number=search_grade_number)
+        data_dict = { "lecture_id":[]}
+        for course_obj in Member_course.objects.filter(Member_num_id=obj.id):
+            data_dict["lecture_id"].append(course_obj.lecture_id)
+        return JsonResponse(data_dict, status=200)
+
 
 @csrf_exempt
 def course_name_list(request):

@@ -38,6 +38,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('members/', views.member_list),
     path('members/course_id', views.course_id_list),
+    path('members/pro_course_id', views.Procourse_id_list),
     path('members/course_name', views.course_name_list),
     path('members/course_time', views.course_time_list),
     path('login/', views.login),
