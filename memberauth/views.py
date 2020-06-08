@@ -40,7 +40,7 @@ def Procourse_id_list(request):
         search_grade_number = data['grade_number']
         obj = ProMember.objects.get(grade_number=search_grade_number)
         data_dict = { "lecture_id":[]}
-        for course_obj in Member_course.objects.filter(Member_num_id=obj.id):
+        for course_obj in ProMember_course.objects.filter(Member_num_id=obj.id):
             data_dict["lecture_id"].append(course_obj.lecture_id)
         return JsonResponse(data_dict, status=200)
 
