@@ -27,7 +27,7 @@ class ProMember(models.Model):
         return '%s / %s' % ( self.name, self.department )
 
 class ProMember_course(models.Model):
-    ProMember_num = models.ForeignKey(Member,on_delete=models.CASCADE)
+    ProMember_num = models.ForeignKey(ProMember,on_delete=models.CASCADE)
     lecture_id = models.CharField(max_length=8)
 
     def __str__(self):
