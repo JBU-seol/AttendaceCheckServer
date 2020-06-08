@@ -75,9 +75,6 @@ def login(request):
         data = JSONParser().parse(request)
         search_grade_number = data['grade_number']
         obj = Member.objects.get(grade_number=search_grade_number)
-        if obj == 'None':
-            obj = ProMember.objects.get(grade_number=search_grade_number)
-
         dictName = {"name": obj.name}
         if data['mac_address'] == obj.mac_address:
             return JsonResponse( dictName,status=200)
