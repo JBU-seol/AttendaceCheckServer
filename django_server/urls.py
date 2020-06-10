@@ -41,6 +41,7 @@ urlpatterns = [
     path('members/pro_course_id', views.Procourse_id_list),
     path('members/course_name', views.course_name_list),
     path('members/course_time', views.course_time_list),
+    path('members/student_list', views.studentList),
     path('login/', views.login),
     path('', views.regStudent, name='reg'),
     path('regCon', views.regConStudent, name='regCon'),
