@@ -68,6 +68,26 @@ def course_time_list(request):
             objs_dict[search_id].append(data_dict)
         return JsonResponse(objs_dict, status=200)
 
+@csrf_exempt
+def studentList(request):
+    if request.method == 'POST':
+        data = JSONParser().parse(request)
+        search_lec = data['lecture_name']
+        getObj = Subject.objects.get( lecture_name = search_lec )
+        lec_id = getObj.lecture_id
+        #print( "lec_id : " + lec_id)
+        objs = Member_course.objects.filter( lecture_id = lec_id)
+        data_dict = { "students" : []}
+        for obj in objs:
+            #print( obj.Member_num_id)
+            member = Member.objects.get( id = obj.Member_num_id)
+            #print( member.name)
+            data_dict["students"].append(member.name)
+        return JsonResponse(data_dict, status=200)
+    else:
+        return HttpResponse(status=400)
+
+
 
 @csrf_exempt
 def login(request):
