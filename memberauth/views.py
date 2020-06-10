@@ -82,7 +82,7 @@ def studentList(request):
             #print( obj.Member_num_id)
             member = Member.objects.get( id = obj.Member_num_id)
             #print( member.name)
-            data_dict["students"].append(member.name)
+            data_dict["students"].append( {member.name: member.grade_number })
         return JsonResponse(data_dict, status=200)
     else:
         return HttpResponse(status=400)
