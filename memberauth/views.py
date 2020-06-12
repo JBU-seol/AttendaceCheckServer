@@ -3,7 +3,7 @@ from django.http import HttpResponse, JsonResponse , HttpResponseRedirect
 from django.views.decorators.csrf import csrf_exempt
 from django.db import IntegrityError
 from django.contrib import messages
-from .models import Member, Member_course, Subject, Subject_time, ProMember, ProMember_course
+from .models import Member, Member_course, Subject, Subject_time, ProMember, ProMember_course, logTable
 from .serializers import MemberSerializer
 from rest_framework.parsers import JSONParser
 
@@ -125,9 +125,43 @@ def regConStudent(request):
 def regLec(request):
     lec_lists = request.POST.getlist('lecinfo[]')
     student_id = request.POST['student_id']
-    idd = Member.objects.get(grade_number=student_id)
-    id_value = idd.id
+    obj = Member.objects.get(grade_number=student_id)
+    id_value = obj.id
+    mac_value = obj.mac_address
     for lec in lec_lists:
-        qs = Member_course(Member_num_id = id_value, lecture_id = lec)
-        qs.save()
+        qs1 = Member_course(Member_num_id = id_value, lecture_id = lec)
+        qs2 = logTable(macAddress = mac_value, gradeNumber=student_id, lecture_id=lec)
+        qs1.save()
+        qs2.save()
     return render(request, 'students/ResLec.html')
+
+@csrf_exempt
+def attendanceList(request):
+    data = JSONParser().parse(request)
+    grade_number = data['grade_number']
+    lecture_name = data['lecture_name']
+    lecObj = Subject.objects.get(lecture_name = lecture_name)
+    memObj = Member.objects.get(grade_number=grade_number)
+    lecture_id = lecObj.lecture_id
+    mac_address = memObj.mac_address
+    logObj = logTable.objects.get(macAddress=mac_address, gradeNumber=grade_number, lecture_id=lecture_id)
+    dic = { 'week' : []}
+    dic['week'].append(logObj.one_week)
+    dic['week'].append(logObj.two_week)
+    dic['week'].append(logObj.three_week)
+    dic['week'].append(logObj.four_week)
+    dic['week'].append(logObj.five_week)
+    dic['week'].append(logObj.six_week)
+    dic['week'].append(logObj.seven_week)
+    dic['week'].append(logObj.eight_week)
+    dic['week'].append(logObj.nine_week)
+    dic['week'].append(logObj.ten_week)
+    dic['week'].append(logObj.eleven_week)
+    dic['week'].append(logObj.twelve_week)
+    dic['week'].append(logObj.thirteen_week)
+    dic['week'].append(logObj.fourteen_week)
+    dic['week'].append(logObj.fifteen_week)
+    dic['week'].append(logObj.sixteen_week)
+
+    return JsonResponse( dic, status=200)
+
