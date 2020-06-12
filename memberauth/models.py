@@ -53,3 +53,27 @@ class Subject_time(models.Model):
     def __str__(self):
         return '%s - %s - %s' %( self.Subject_num, self.start_time, self.finish_time)
 
+class logTable(models.Model):
+    macAddress = models.CharField(max_length=10)
+    gradeNumber = models.CharField(max_length=15)
+    lecture_id = models.CharField(max_length=8)
+    one_week = models.BooleanField(default=0)
+    two_week = models.BooleanField(default=0)
+    three_week = models.BooleanField(default=0)
+    four_week = models.BooleanField(default=0)
+    five_week = models.BooleanField(default=0)
+    six_week = models.BooleanField(default=0)
+    seven_week = models.BooleanField(default=0)
+    eight_week = models.BooleanField(default=0)
+    nine_week =models.BooleanField(default=0)
+    ten_week = models.BooleanField(default=0)
+    eleven_week = models.BooleanField(default=0)
+    twelve_week = models.BooleanField(default=0)
+    thirteen_week = models.BooleanField(default=0)
+    fourteen_week = models.BooleanField(default=0)
+    fifteen_week = models.BooleanField(default=0)
+    sixteen_week = models.BooleanField(default=0)
+
+    def __str__(self):
+        return '%s / %s / %s' %(self.macAddress, self.gradeNumber, self.lecture_id)
+
