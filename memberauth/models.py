@@ -77,3 +77,18 @@ class logTable(models.Model):
     def __str__(self):
         return '%s / %s / %s' %(self.macAddress, self.gradeNumber, self.lecture_id)
 
+class Log(models.Model):
+    num = models.AutoField(primary_key=True)
+    mac_addr = models.CharField(max_length=12)
+    lecture_room = models.CharField(max_length=7)
+    pwr = models.IntegerField()
+    count = models.IntegerField()
+    time = models.DateTimeField()
+
+    class Meta:
+        managed = False
+        db_table = 'Log'
+
+
+
+
