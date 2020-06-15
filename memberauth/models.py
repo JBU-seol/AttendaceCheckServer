@@ -1,11 +1,13 @@
 from django.db import models
+import datetime
+from django.utils import timezone
 
 class Member(models.Model):
     name = models.CharField(max_length=20)
     grade = models.CharField(max_length=2)
     grade_number = models.CharField(max_length=10, unique=True)
     mac_address = models.CharField(max_length=20)
-    department = models.CharField(max_length=20, default='기타')
+    department = models.CharField(max_length=20)
 
     def __str__(self):
         return '%s - %s학년 / %s' % (self.department, self.grade, self.name)
@@ -21,7 +23,7 @@ class ProMember(models.Model):
     name = models.CharField(max_length=20)
     grade_number = models.CharField(max_length=10, unique=True)
     mac_address = models.CharField(max_length=20)
-    department = models.CharField(max_length=20, default='기타')
+    department = models.CharField(max_length=20)
 
     def __str__(self):
         return '%s / %s' % ( self.name, self.department )
@@ -76,4 +78,20 @@ class logTable(models.Model):
 
     def __str__(self):
         return '%s / %s / %s' %(self.macAddress, self.gradeNumber, self.lecture_id)
+
+
+class Log(models.Model):
+    num = models.AutoField(primary_key=True)
+    mac_addr = models.CharField(max_length=12)
+    lecture_room = models.CharField(max_length=7)
+    pwr = models.IntegerField()
+    count = models.IntegerField()
+    time = models.DateTimeField()
+
+
+    class Meta:
+        managed = False
+        db_table = 'Log'
+
+
 
