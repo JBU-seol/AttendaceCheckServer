@@ -36,7 +36,7 @@ class ProMember_course(models.Model):
 class Subject(models.Model):
     lecture_name = models.CharField(max_length=30)
     lecture_room = models.CharField(max_length=7)
-    department = models.CharField(max_length=20)
+    department = models.CharField(max_length=20, default='기타')
     lecture_id = models.CharField(max_length=8, unique=True)
 
     def __str__(self):
@@ -54,7 +54,7 @@ class Subject_time(models.Model):
         return '%s - %s - %s' %( self.Subject_num, self.start_time, self.finish_time)
 
 class logTable(models.Model):
-    macAddress = models.CharField(max_length=20)
+    macAddress = models.CharField(max_length=10)
     gradeNumber = models.CharField(max_length=15)
     lecture_id = models.CharField(max_length=8)
     one_week = models.BooleanField(default=0)
@@ -77,19 +77,9 @@ class logTable(models.Model):
     def __str__(self):
         return '%s / %s / %s' %(self.macAddress, self.gradeNumber, self.lecture_id)
 
-# This is an auto-generated Django model module.
-# You'll have to do the following manually to clean this up:
-#   * Rearrange models' order
-#   * Make sure each model has one field with primary_key=True
-#   * Make sure each ForeignKey and OneToOneField has `on_delete` set to the desired behavior
-#   * Remove `managed = False` lines if you wish to allow Django to create, modify, and delete the table
-# Feel free to rename the models, but don't rename db_table values or field names.
-from django.db import models
-
-
 class Log(models.Model):
     num = models.AutoField(primary_key=True)
-    mac_addr = models.CharField(max_length=20)
+    mac_addr = models.CharField(max_length=12)
     lecture_room = models.CharField(max_length=7)
     pwr = models.IntegerField()
     count = models.IntegerField()
@@ -98,3 +88,7 @@ class Log(models.Model):
     class Meta:
         managed = False
         db_table = 'Log'
+
+
+
+
