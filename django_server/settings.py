@@ -26,7 +26,10 @@ SECRET_KEY = '3=7s$6eepcha6#rl7lfjg9eh=_yo0dgkl74jo#jwayg*i2jext'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+            'ec2-13-125-176-205.ap-northeast-2.compute.amazonaws.com',
+            'localhost'
+        ]
 
 
 # Application definition
@@ -84,6 +87,23 @@ WSGI_APPLICATION = 'django_server.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
+#<<<<<<< HEAD
+#DATABASES = {
+    #'default': {
+    #    'ENGINE': 'django.db.backends.sqlite3',
+    #    'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    #}
+#    'default': {
+#        'ENGINE': 'django.db.backends.mysql',
+#        'NAME': 'attendance_db',
+#        'USER': 'admin',
+#        'PASSWORD': 'toor1234',
+#        'HOST': '15.164.53.210',
+#        'PORT': '3306',
+#    }
+#}
+
+#=======
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.sqlite3',
@@ -91,6 +111,7 @@ WSGI_APPLICATION = 'django_server.wsgi.application'
 #     }
 # }
 DATABASES = my_settings.DATABASES
+#>>>>>>> d0ac9198dba283c901ee9497bf76ba5c7b846772
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
@@ -129,3 +150,4 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
