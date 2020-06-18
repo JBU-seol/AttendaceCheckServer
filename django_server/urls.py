@@ -43,6 +43,7 @@ urlpatterns = [
     path('members/course_time', views.course_time_list),
     path('members/student_list', views.studentList),
     path('members/week_list', views.attendanceList),
+    path('members/test', views.logtest),
     path('login/', views.login),
     path('', views.regStudent, name='reg'),
     path('regCon', views.regConStudent, name='regCon'),

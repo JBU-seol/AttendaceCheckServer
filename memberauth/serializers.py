@@ -1,9 +1,13 @@
 from rest_framework import serializers
+<<<<<<< HEAD
 from .models import Member
+=======
+from .models import MemberauthMember,MemberauthMemberCourse, MemberauthSubject
+>>>>>>> 595677241dbf7e52d3a13b0312e92363234bae39
 
 class MemberSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Member
+        model = MemberauthMember
         fields = ['name', 'grade', 'grade_number', 'mac_address', 'department']
 
 # class Member_courseSerializer(serializers.ModelSerializer):
