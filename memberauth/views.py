@@ -6,6 +6,7 @@ from django.contrib import messages
 from .models import Member, Member_course, ProMember, ProMember_course, Subject, Subject_time, logTable, Log
 from .serializers import MemberSerializer
 from rest_framework.parsers import JSONParser
+from django.utils import timezone
 import datetime
 
 @csrf_exempt
@@ -180,43 +181,15 @@ def logtest(request):
     mac_address = memObj.mac_address
     subject_num_id = lecObj.id
     timeObj = Subject_time.objects.get(Subject_num_id = subject_num_id)
-    timeSentence = timeObj.year+'-'+timeObj.day+' '+timeObj.start_time
-    start = datetime.date(2020, 1, 1)
+    timeSentence = timeObj.year+'-'+timeObj.day+' '+timeObj.start_time+":00.000000+00:00"
+
+
     logObjs = Log.objects.filter(mac_addr=mac_address, lecture_room=lecture_room,
-                                 time__range=[start,timeSentence])
-    i = 0
-    for obj in logObjs:
-        i += i
-    print(timeSentence)
-    print(i)
-    i =0
-    #         # select * from Log where
-    #         # mac_addr= 'mac_address' and lecture_room = 'lecture_room' and
-    #         # time > '   '  and time < '2020-06-15 18:10:11'
-    objs = Log.objects.all()
-    for obj in objs:
-        i += i
-        # print(obj.mac_addr)
-        # print(obj.lecture_room)
-        # print(obj.pwr)
-        # print(obj.count)
-        # print(obj.time)
-    print(i)
+                                 time__range=['2020-06-01 12:00:00.000000+00:00', timeSentence])
+    print(logObjs)
+
+
     return HttpResponse(status=200)
 
-    # if request.method == 'POST':
-    #     data = JSONParser().parse(request)
-    #     grade_number = data['grade_number']
-    #     lecture_name = data['lecture_name']
-    #     lecObj = Subject.objects.get(lecture_name=lecture_name)
-    #     memObj = Member.objects.get(grade_number=grade_number)
-    #     mac = memObj.mac_address
-    #     lecture_room = lecObj.lecture_room
-    #     lec_id = lecObj.id
-    #     subObj = Subject_time.objects.get( subject_num_id = lec_id)
-    #     year = subObj.year
-    #     day = subObj.day
-    #     stime = subObj.start_time
-    #     etime = subObj.finish_time
-    #     return HttpResponse(status =200)
 
+# next_day = now + datetime.timedelta(days=7)

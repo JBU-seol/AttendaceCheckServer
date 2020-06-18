@@ -54,7 +54,7 @@ class Subject_time(models.Model):
         return '%s - %s - %s' %( self.Subject_num, self.start_time, self.finish_time)
 
 class logTable(models.Model):
-    macAddress = models.CharField(max_length=10)
+    macAddress = models.CharField(max_length=20)
     gradeNumber = models.CharField(max_length=15)
     lecture_id = models.CharField(max_length=8)
     one_week = models.BooleanField(default=0)
@@ -88,7 +88,7 @@ from django.db import models
 
 class Log(models.Model):
     num = models.AutoField(primary_key=True)
-    mac_addr = models.CharField(max_length=12)
+    mac_addr = models.CharField(max_length=20)
     lecture_room = models.CharField(max_length=7)
     pwr = models.IntegerField()
     count = models.IntegerField()
