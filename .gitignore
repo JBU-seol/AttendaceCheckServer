@@ -3,5 +3,6 @@ my_settings.py
 db.sqlite3
 migrations/
 .log
-__pycache__
+__pycache__/
 backup*
+static/
