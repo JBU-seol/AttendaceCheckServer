@@ -6151,3 +6151,1361 @@ Bad Request: /login/
 [pid: 32008|app: 0|req: 8/20] 14.42.3.83 () {38 vars in 621 bytes} [Thu Jun 18 15:39:11 2020] POST /members/student_list => generated 74 bytes in 11 msecs (HTTP/1.1 200) 4 headers in 127 bytes (1 switches on core 0)
 [pid: 32011|app: 0|req: 8/21] 14.42.3.83 () {38 vars in 621 bytes} [Thu Jun 18 15:41:03 2020] POST /members/student_list => generated 74 bytes in 11 msecs (HTTP/1.1 200) 4 headers in 127 bytes (1 switches on core 0)
 [pid: 32008|app: 0|req: 9/22] 14.42.3.83 () {38 vars in 621 bytes} [Thu Jun 18 15:41:05 2020] POST /members/student_list => generated 74 bytes in 11 msecs (HTTP/1.1 200) 4 headers in 127 bytes (1 switches on core 0)
+Thu Jun 18 15:56:04 2020 - uWSGI worker 1 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Thu Jun 18 15:56:04 2020 - uWSGI worker 4 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Thu Jun 18 15:56:04 2020 - uWSGI worker 3 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Thu Jun 18 15:56:04 2020 - uWSGI worker 2 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+*** Starting uWSGI 2.0.18 (64bit) on [Thu Jun 18 15:59:27 2020] ***
+compiled with version: 7.5.0 on 22 May 2020 06:42:38
+os: Linux-4.15.0-1065-aws #69-Ubuntu SMP Thu Mar 26 02:17:29 UTC 2020
+nodename: ip-172-31-38-38
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /home/ubuntu/AttendaceCheckServer
+writing pidfile to /tmp/my_uwsgi.pid
+detected binary path: /home/ubuntu/django-rest-tutorial/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/ubuntu/AttendaceCheckServer
+your processes number limit is 3840
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address localhost:8001 fd 3
+Python version: 3.6.9 (default, Apr 18 2020, 01:56:04)  [GCC 8.4.0]
+Set PythonHome to /home/ubuntu/django-rest-tutorial
+Python main interpreter initialized at 0x55a0c7f04e70
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 364600 bytes (356 KB) for 4 cores
+*** Operational MODE: preforking ***
+spawned uWSGI master process (pid: 32223)
+spawned uWSGI worker 1 (pid: 32224, cores: 1)
+spawned uWSGI worker 2 (pid: 32225, cores: 1)
+spawned uWSGI worker 3 (pid: 32226, cores: 1)
+spawned uWSGI worker 4 (pid: 32227, cores: 1)
+Traceback (most recent call last):
+  File "./django_server/wsgi.py", line 16, in <module>
+Traceback (most recent call last):
+  File "./django_server/wsgi.py", line 16, in <module>
+Traceback (most recent call last):
+  File "./django_server/wsgi.py", line 16, in <module>
+    application = get_wsgi_application()
+  File "/home/ubuntu/django-rest-tutorial/lib/python3.6/site-packages/django/core/wsgi.py", line 12, in get_wsgi_application
+    application = get_wsgi_application()
+  File "/home/ubuntu/django-rest-tutorial/lib/python3.6/site-packages/django/core/wsgi.py", line 12, in get_wsgi_application
+    django.setup(set_prefix=False)
+  File "/home/ubuntu/django-rest-tutorial/lib/python3.6/site-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/home/ubuntu/django-rest-tutorial/lib/python3.6/site-packages/django/apps/registry.py", line 122, in populate
+    app_config.ready()
+  File "/home/ubuntu/django-rest-tutorial/lib/python3.6/site-packages/django/contrib/admin/apps.py", line 24, in ready
+    self.module.autodiscover()
+  File "/home/ubuntu/django-rest-tutorial/lib/python3.6/site-packages/django/contrib/admin/__init__.py", line 26, in autodiscover
+    autodiscover_modules('admin', register_to=site)
+  File "/home/ubuntu/django-rest-tutorial/lib/python3.6/site-packages/django/utils/module_loading.py", line 47, in autodiscover_modules
+    import_module('%s.%s' % (app_config.name, module_to_search))
+  File "/home/ubuntu/django-rest-tutorial/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "./memberauth/admin.py", line 2
+    <<<<<<< HEAD
+     ^
+SyntaxError: invalid syntax
+unable to load app 0 (mountpoint='') (callable not found or import error)
+*** no app loaded. going in full dynamic mode ***
+    application = get_wsgi_application()
+  File "/home/ubuntu/django-rest-tutorial/lib/python3.6/site-packages/django/core/wsgi.py", line 12, in get_wsgi_application
+    django.setup(set_prefix=False)
+  File "/home/ubuntu/django-rest-tutorial/lib/python3.6/site-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/home/ubuntu/django-rest-tutorial/lib/python3.6/site-packages/django/apps/registry.py", line 122, in populate
+    app_config.ready()
+  File "/home/ubuntu/django-rest-tutorial/lib/python3.6/site-packages/django/contrib/admin/apps.py", line 24, in ready
+    self.module.autodiscover()
+  File "/home/ubuntu/django-rest-tutorial/lib/python3.6/site-packages/django/contrib/admin/__init__.py", line 26, in autodiscover
+    autodiscover_modules('admin', register_to=site)
+  File "/home/ubuntu/django-rest-tutorial/lib/python3.6/site-packages/django/utils/module_loading.py", line 47, in autodiscover_modules
+    import_module('%s.%s' % (app_config.name, module_to_search))
+  File "/home/ubuntu/django-rest-tutorial/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "./memberauth/admin.py", line 2
+    <<<<<<< HEAD
+     ^
+SyntaxError: invalid syntax
+unable to load app 0 (mountpoint='') (callable not found or import error)
+*** no app loaded. going in full dynamic mode ***
+Traceback (most recent call last):
+  File "./django_server/wsgi.py", line 16, in <module>
+    application = get_wsgi_application()
+  File "/home/ubuntu/django-rest-tutorial/lib/python3.6/site-packages/django/core/wsgi.py", line 12, in get_wsgi_application
+    django.setup(set_prefix=False)
+  File "/home/ubuntu/django-rest-tutorial/lib/python3.6/site-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/home/ubuntu/django-rest-tutorial/lib/python3.6/site-packages/django/apps/registry.py", line 122, in populate
+    app_config.ready()
+  File "/home/ubuntu/django-rest-tutorial/lib/python3.6/site-packages/django/contrib/admin/apps.py", line 24, in ready
+    self.module.autodiscover()
+  File "/home/ubuntu/django-rest-tutorial/lib/python3.6/site-packages/django/contrib/admin/__init__.py", line 26, in autodiscover
+    autodiscover_modules('admin', register_to=site)
+  File "/home/ubuntu/django-rest-tutorial/lib/python3.6/site-packages/django/utils/module_loading.py", line 47, in autodiscover_modules
+    import_module('%s.%s' % (app_config.name, module_to_search))
+  File "/home/ubuntu/django-rest-tutorial/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "./memberauth/admin.py", line 2
+    <<<<<<< HEAD
+     ^
+SyntaxError: invalid syntax
+unable to load app 0 (mountpoint='') (callable not found or import error)
+*** no app loaded. going in full dynamic mode ***
+    django.setup(set_prefix=False)
+  File "/home/ubuntu/django-rest-tutorial/lib/python3.6/site-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/home/ubuntu/django-rest-tutorial/lib/python3.6/site-packages/django/apps/registry.py", line 122, in populate
+    app_config.ready()
+  File "/home/ubuntu/django-rest-tutorial/lib/python3.6/site-packages/django/contrib/admin/apps.py", line 24, in ready
+    self.module.autodiscover()
+  File "/home/ubuntu/django-rest-tutorial/lib/python3.6/site-packages/django/contrib/admin/__init__.py", line 26, in autodiscover
+    autodiscover_modules('admin', register_to=site)
+  File "/home/ubuntu/django-rest-tutorial/lib/python3.6/site-packages/django/utils/module_loading.py", line 47, in autodiscover_modules
+    import_module('%s.%s' % (app_config.name, module_to_search))
+  File "/home/ubuntu/django-rest-tutorial/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "./memberauth/admin.py", line 2
+    <<<<<<< HEAD
+     ^
+SyntaxError: invalid syntax
+unable to load app 0 (mountpoint='') (callable not found or import error)
+*** no app loaded. going in full dynamic mode ***
+--- no python application found, check your startup logs for errors ---
+[pid: 32225|app: -1|req: -1/1] 14.42.3.83 () {42 vars in 961 bytes} [Thu Jun 18 15:59:36 2020] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 32225|app: -1|req: -1/2] 14.42.3.83 () {42 vars in 977 bytes} [Thu Jun 18 15:59:45 2020] GET /members/ => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+Thu Jun 18 16:03:09 2020 - uWSGI worker 1 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Thu Jun 18 16:03:09 2020 - uWSGI worker 3 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Thu Jun 18 16:03:09 2020 - uWSGI worker 4 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Thu Jun 18 16:03:09 2020 - uWSGI worker 2 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+*** Starting uWSGI 2.0.18 (64bit) on [Thu Jun 18 16:06:09 2020] ***
+compiled with version: 7.5.0 on 22 May 2020 06:42:38
+os: Linux-4.15.0-1065-aws #69-Ubuntu SMP Thu Mar 26 02:17:29 UTC 2020
+nodename: ip-172-31-38-38
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /home/ubuntu/AttendaceCheckServer
+writing pidfile to /tmp/my_uwsgi.pid
+detected binary path: /home/ubuntu/django-rest-tutorial/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/ubuntu/AttendaceCheckServer
+your processes number limit is 3840
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address localhost:8001 fd 3
+Python version: 3.6.9 (default, Apr 18 2020, 01:56:04)  [GCC 8.4.0]
+Set PythonHome to /home/ubuntu/django-rest-tutorial
+Python main interpreter initialized at 0x565101305e50
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 364600 bytes (356 KB) for 4 cores
+*** Operational MODE: preforking ***
+spawned uWSGI master process (pid: 32703)
+spawned uWSGI worker 1 (pid: 32704, cores: 1)
+spawned uWSGI worker 2 (pid: 32705, cores: 1)
+spawned uWSGI worker 3 (pid: 32706, cores: 1)
+spawned uWSGI worker 4 (pid: 32707, cores: 1)
+Traceback (most recent call last):
+  File "./django_server/wsgi.py", line 16, in <module>
+    application = get_wsgi_application()
+  File "/home/ubuntu/django-rest-tutorial/lib/python3.6/site-packages/django/core/wsgi.py", line 12, in get_wsgi_application
+    django.setup(set_prefix=False)
+  File "/home/ubuntu/django-rest-tutorial/lib/python3.6/site-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/home/ubuntu/django-rest-tutorial/lib/python3.6/site-packages/django/apps/registry.py", line 122, in populate
+    app_config.ready()
+  File "/home/ubuntu/django-rest-tutorial/lib/python3.6/site-packages/django/contrib/admin/apps.py", line 24, in ready
+    self.module.autodiscover()
+  File "/home/ubuntu/django-rest-tutorial/lib/python3.6/site-packages/django/contrib/admin/__init__.py", line 26, in autodiscover
+    autodiscover_modules('admin', register_to=site)
+  File "/home/ubuntu/django-rest-tutorial/lib/python3.6/site-packages/django/utils/module_loading.py", line 47, in autodiscover_modules
+    import_module('%s.%s' % (app_config.name, module_to_search))
+  File "/home/ubuntu/django-rest-tutorial/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "./memberauth/admin.py", line 2
+    <<<<<<< HEAD
+     ^
+SyntaxError: invalid syntax
+unable to load app 0 (mountpoint='') (callable not found or import error)
+*** no app loaded. going in full dynamic mode ***
+Traceback (most recent call last):
+  File "./django_server/wsgi.py", line 16, in <module>
+    application = get_wsgi_application()
+  File "/home/ubuntu/django-rest-tutorial/lib/python3.6/site-packages/django/core/wsgi.py", line 12, in get_wsgi_application
+    django.setup(set_prefix=False)
+  File "/home/ubuntu/django-rest-tutorial/lib/python3.6/site-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/home/ubuntu/django-rest-tutorial/lib/python3.6/site-packages/django/apps/registry.py", line 122, in populate
+    app_config.ready()
+  File "/home/ubuntu/django-rest-tutorial/lib/python3.6/site-packages/django/contrib/admin/apps.py", line 24, in ready
+    self.module.autodiscover()
+  File "/home/ubuntu/django-rest-tutorial/lib/python3.6/site-packages/django/contrib/admin/__init__.py", line 26, in autodiscover
+    autodiscover_modules('admin', register_to=site)
+  File "/home/ubuntu/django-rest-tutorial/lib/python3.6/site-packages/django/utils/module_loading.py", line 47, in autodiscover_modules
+    import_module('%s.%s' % (app_config.name, module_to_search))
+  File "/home/ubuntu/django-rest-tutorial/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "./memberauth/admin.py", line 2
+    <<<<<<< HEAD
+     ^
+SyntaxError: invalid syntax
+unable to load app 0 (mountpoint='') (callable not found or import error)
+*** no app loaded. going in full dynamic mode ***
+Traceback (most recent call last):
+  File "./django_server/wsgi.py", line 16, in <module>
+    application = get_wsgi_application()
+  File "/home/ubuntu/django-rest-tutorial/lib/python3.6/site-packages/django/core/wsgi.py", line 12, in get_wsgi_application
+    django.setup(set_prefix=False)
+  File "/home/ubuntu/django-rest-tutorial/lib/python3.6/site-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/home/ubuntu/django-rest-tutorial/lib/python3.6/site-packages/django/apps/registry.py", line 122, in populate
+    app_config.ready()
+  File "/home/ubuntu/django-rest-tutorial/lib/python3.6/site-packages/django/contrib/admin/apps.py", line 24, in ready
+    self.module.autodiscover()
+  File "/home/ubuntu/django-rest-tutorial/lib/python3.6/site-packages/django/contrib/admin/__init__.py", line 26, in autodiscover
+    autodiscover_modules('admin', register_to=site)
+  File "/home/ubuntu/django-rest-tutorial/lib/python3.6/site-packages/django/utils/module_loading.py", line 47, in autodiscover_modules
+    import_module('%s.%s' % (app_config.name, module_to_search))
+  File "/home/ubuntu/django-rest-tutorial/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "./memberauth/admin.py", line 2
+    <<<<<<< HEAD
+     ^
+SyntaxError: invalid syntax
+unable to load app 0 (mountpoint='') (callable not found or import error)
+*** no app loaded. going in full dynamic mode ***
+Traceback (most recent call last):
+  File "./django_server/wsgi.py", line 16, in <module>
+    application = get_wsgi_application()
+  File "/home/ubuntu/django-rest-tutorial/lib/python3.6/site-packages/django/core/wsgi.py", line 12, in get_wsgi_application
+    django.setup(set_prefix=False)
+  File "/home/ubuntu/django-rest-tutorial/lib/python3.6/site-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/home/ubuntu/django-rest-tutorial/lib/python3.6/site-packages/django/apps/registry.py", line 122, in populate
+    app_config.ready()
+  File "/home/ubuntu/django-rest-tutorial/lib/python3.6/site-packages/django/contrib/admin/apps.py", line 24, in ready
+    self.module.autodiscover()
+  File "/home/ubuntu/django-rest-tutorial/lib/python3.6/site-packages/django/contrib/admin/__init__.py", line 26, in autodiscover
+    autodiscover_modules('admin', register_to=site)
+  File "/home/ubuntu/django-rest-tutorial/lib/python3.6/site-packages/django/utils/module_loading.py", line 47, in autodiscover_modules
+    import_module('%s.%s' % (app_config.name, module_to_search))
+  File "/home/ubuntu/django-rest-tutorial/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "./memberauth/admin.py", line 2
+    <<<<<<< HEAD
+     ^
+SyntaxError: invalid syntax
+unable to load app 0 (mountpoint='') (callable not found or import error)
+*** no app loaded. going in full dynamic mode ***
+--- no python application found, check your startup logs for errors ---
+[pid: 32706|app: -1|req: -1/1] 14.42.3.83 () {44 vars in 1008 bytes} [Thu Jun 18 16:06:14 2020] GET /members/ => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 32704|app: -1|req: -1/2] 14.42.3.83 () {42 vars in 961 bytes} [Thu Jun 18 16:06:18 2020] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+Thu Jun 18 16:06:54 2020 - uWSGI worker 1 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Thu Jun 18 16:06:54 2020 - uWSGI worker 4 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Thu Jun 18 16:06:54 2020 - uWSGI worker 3 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Thu Jun 18 16:06:54 2020 - uWSGI worker 2 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+*** Starting uWSGI 2.0.18 (64bit) on [Thu Jun 18 16:06:59 2020] ***
+compiled with version: 7.5.0 on 22 May 2020 06:42:38
+os: Linux-4.15.0-1065-aws #69-Ubuntu SMP Thu Mar 26 02:17:29 UTC 2020
+nodename: ip-172-31-38-38
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /home/ubuntu/AttendaceCheckServer
+writing pidfile to /tmp/my_uwsgi.pid
+detected binary path: /home/ubuntu/django-rest-tutorial/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/ubuntu/AttendaceCheckServer
+your processes number limit is 3840
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address localhost:8001 fd 3
+Python version: 3.6.9 (default, Apr 18 2020, 01:56:04)  [GCC 8.4.0]
+Set PythonHome to /home/ubuntu/django-rest-tutorial
+Python main interpreter initialized at 0x559f8158bea0
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 364600 bytes (356 KB) for 4 cores
+*** Operational MODE: preforking ***
+spawned uWSGI master process (pid: 32726)
+spawned uWSGI worker 1 (pid: 32727, cores: 1)
+spawned uWSGI worker 2 (pid: 32728, cores: 1)
+spawned uWSGI worker 3 (pid: 32729, cores: 1)
+spawned uWSGI worker 4 (pid: 32730, cores: 1)
+Traceback (most recent call last):
+  File "./django_server/wsgi.py", line 16, in <module>
+    application = get_wsgi_application()
+  File "/home/ubuntu/django-rest-tutorial/lib/python3.6/site-packages/django/core/wsgi.py", line 12, in get_wsgi_application
+    django.setup(set_prefix=False)
+  File "/home/ubuntu/django-rest-tutorial/lib/python3.6/site-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/home/ubuntu/django-rest-tutorial/lib/python3.6/site-packages/django/apps/registry.py", line 122, in populate
+Traceback (most recent call last):
+  File "./django_server/wsgi.py", line 16, in <module>
+    application = get_wsgi_application()
+  File "/home/ubuntu/django-rest-tutorial/lib/python3.6/site-packages/django/core/wsgi.py", line 12, in get_wsgi_application
+    django.setup(set_prefix=False)
+  File "/home/ubuntu/django-rest-tutorial/lib/python3.6/site-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/home/ubuntu/django-rest-tutorial/lib/python3.6/site-packages/django/apps/registry.py", line 122, in populate
+Traceback (most recent call last):
+  File "./django_server/wsgi.py", line 16, in <module>
+    application = get_wsgi_application()
+  File "/home/ubuntu/django-rest-tutorial/lib/python3.6/site-packages/django/core/wsgi.py", line 12, in get_wsgi_application
+    django.setup(set_prefix=False)
+  File "/home/ubuntu/django-rest-tutorial/lib/python3.6/site-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/home/ubuntu/django-rest-tutorial/lib/python3.6/site-packages/django/apps/registry.py", line 122, in populate
+    app_config.ready()
+  File "/home/ubuntu/django-rest-tutorial/lib/python3.6/site-packages/django/contrib/admin/apps.py", line 24, in ready
+    self.module.autodiscover()
+  File "/home/ubuntu/django-rest-tutorial/lib/python3.6/site-packages/django/contrib/admin/__init__.py", line 26, in autodiscover
+    autodiscover_modules('admin', register_to=site)
+  File "/home/ubuntu/django-rest-tutorial/lib/python3.6/site-packages/django/utils/module_loading.py", line 47, in autodiscover_modules
+    import_module('%s.%s' % (app_config.name, module_to_search))
+  File "/home/ubuntu/django-rest-tutorial/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "./memberauth/admin.py", line 2
+    <<<<<<< HEAD
+     ^
+SyntaxError: invalid syntax
+unable to load app 0 (mountpoint='') (callable not found or import error)
+*** no app loaded. going in full dynamic mode ***
+Traceback (most recent call last):
+  File "./django_server/wsgi.py", line 16, in <module>
+    application = get_wsgi_application()
+  File "/home/ubuntu/django-rest-tutorial/lib/python3.6/site-packages/django/core/wsgi.py", line 12, in get_wsgi_application
+    django.setup(set_prefix=False)
+  File "/home/ubuntu/django-rest-tutorial/lib/python3.6/site-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/home/ubuntu/django-rest-tutorial/lib/python3.6/site-packages/django/apps/registry.py", line 122, in populate
+    app_config.ready()
+  File "/home/ubuntu/django-rest-tutorial/lib/python3.6/site-packages/django/contrib/admin/apps.py", line 24, in ready
+    self.module.autodiscover()
+  File "/home/ubuntu/django-rest-tutorial/lib/python3.6/site-packages/django/contrib/admin/__init__.py", line 26, in autodiscover
+    autodiscover_modules('admin', register_to=site)
+  File "/home/ubuntu/django-rest-tutorial/lib/python3.6/site-packages/django/utils/module_loading.py", line 47, in autodiscover_modules
+    import_module('%s.%s' % (app_config.name, module_to_search))
+  File "/home/ubuntu/django-rest-tutorial/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "./memberauth/admin.py", line 2
+    <<<<<<< HEAD
+     ^
+SyntaxError: invalid syntax
+unable to load app 0 (mountpoint='') (callable not found or import error)
+*** no app loaded. going in full dynamic mode ***
+    app_config.ready()
+  File "/home/ubuntu/django-rest-tutorial/lib/python3.6/site-packages/django/contrib/admin/apps.py", line 24, in ready
+    self.module.autodiscover()
+  File "/home/ubuntu/django-rest-tutorial/lib/python3.6/site-packages/django/contrib/admin/__init__.py", line 26, in autodiscover
+    autodiscover_modules('admin', register_to=site)
+  File "/home/ubuntu/django-rest-tutorial/lib/python3.6/site-packages/django/utils/module_loading.py", line 47, in autodiscover_modules
+    import_module('%s.%s' % (app_config.name, module_to_search))
+  File "/home/ubuntu/django-rest-tutorial/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "./memberauth/admin.py", line 2
+    <<<<<<< HEAD
+     ^
+SyntaxError: invalid syntax
+unable to load app 0 (mountpoint='') (callable not found or import error)
+*** no app loaded. going in full dynamic mode ***
+    app_config.ready()
+  File "/home/ubuntu/django-rest-tutorial/lib/python3.6/site-packages/django/contrib/admin/apps.py", line 24, in ready
+    self.module.autodiscover()
+  File "/home/ubuntu/django-rest-tutorial/lib/python3.6/site-packages/django/contrib/admin/__init__.py", line 26, in autodiscover
+    autodiscover_modules('admin', register_to=site)
+  File "/home/ubuntu/django-rest-tutorial/lib/python3.6/site-packages/django/utils/module_loading.py", line 47, in autodiscover_modules
+    import_module('%s.%s' % (app_config.name, module_to_search))
+  File "/home/ubuntu/django-rest-tutorial/lib/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "./memberauth/admin.py", line 2
+    <<<<<<< HEAD
+     ^
+SyntaxError: invalid syntax
+unable to load app 0 (mountpoint='') (callable not found or import error)
+*** no app loaded. going in full dynamic mode ***
+--- no python application found, check your startup logs for errors ---
+[pid: 32728|app: -1|req: -1/1] 14.42.3.83 () {44 vars in 992 bytes} [Thu Jun 18 16:07:02 2020] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 32728|app: -1|req: -1/2] 14.42.3.83 () {44 vars in 992 bytes} [Thu Jun 18 16:07:02 2020] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 32728|app: -1|req: -1/3] 14.42.3.83 () {44 vars in 992 bytes} [Thu Jun 18 16:07:02 2020] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 32728|app: -1|req: -1/4] 14.42.3.83 () {44 vars in 992 bytes} [Thu Jun 18 16:07:02 2020] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 32729|app: -1|req: -1/5] 14.42.3.83 () {44 vars in 992 bytes} [Thu Jun 18 16:07:03 2020] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 32727|app: -1|req: -1/6] 14.42.3.83 () {44 vars in 985 bytes} [Thu Jun 18 16:08:22 2020] GET / => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+--- no python application found, check your startup logs for errors ---
+[pid: 32728|app: -1|req: -1/7] 14.42.3.83 () {44 vars in 999 bytes} [Thu Jun 18 16:08:36 2020] GET /members => generated 21 bytes in 0 msecs (HTTP/1.1 500) 2 headers in 83 bytes (0 switches on core 0)
+Thu Jun 18 16:11:18 2020 - uWSGI worker 1 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Thu Jun 18 16:11:18 2020 - uWSGI worker 3 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Thu Jun 18 16:11:18 2020 - uWSGI worker 4 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Thu Jun 18 16:11:18 2020 - uWSGI worker 2 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+*** Starting uWSGI 2.0.18 (64bit) on [Thu Jun 18 16:22:11 2020] ***
+compiled with version: 7.5.0 on 22 May 2020 06:42:38
+os: Linux-4.15.0-1065-aws #69-Ubuntu SMP Thu Mar 26 02:17:29 UTC 2020
+nodename: ip-172-31-38-38
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /home/ubuntu/AttendaceCheckServer
+writing pidfile to /tmp/my_uwsgi.pid
+detected binary path: /home/ubuntu/django-rest-tutorial/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/ubuntu/AttendaceCheckServer
+your processes number limit is 3840
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address localhost:8001 fd 3
+Python version: 3.6.9 (default, Apr 18 2020, 01:56:04)  [GCC 8.4.0]
+Set PythonHome to /home/ubuntu/django-rest-tutorial
+Python main interpreter initialized at 0x5643d0bddec0
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 364600 bytes (356 KB) for 4 cores
+*** Operational MODE: preforking ***
+spawned uWSGI master process (pid: 524)
+spawned uWSGI worker 1 (pid: 525, cores: 1)
+spawned uWSGI worker 2 (pid: 526, cores: 1)
+spawned uWSGI worker 3 (pid: 527, cores: 1)
+spawned uWSGI worker 4 (pid: 528, cores: 1)
+WSGI app 0 (mountpoint='') ready in 2 seconds on interpreter 0x5643d0bddec0 pid: 526 (default app)
+WSGI app 0 (mountpoint='') ready in 2 seconds on interpreter 0x5643d0bddec0 pid: 525 (default app)
+WSGI app 0 (mountpoint='') ready in 2 seconds on interpreter 0x5643d0bddec0 pid: 527 (default app)
+WSGI app 0 (mountpoint='') ready in 2 seconds on interpreter 0x5643d0bddec0 pid: 528 (default app)
+[pid: 528|app: 0|req: 1/1] 14.42.3.83 () {44 vars in 1008 bytes} [Thu Jun 18 16:22:14 2020] GET /members/ => generated 325 bytes in 211 msecs (HTTP/1.1 200) 4 headers in 128 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '13.125.176.205:1234'. You may need to add '13.125.176.205' to ALLOWED_HOSTS.
+Bad Request: /
+[pid: 528|app: 0|req: 2/2] 209.17.96.202 () {30 vars in 457 bytes} [Thu Jun 18 23:22:26 2020] GET / => generated 56548 bytes in 31 msecs (HTTP/1.1 400) 2 headers in 86 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '13.125.176.205:1234'. You may need to add '13.125.176.205' to ALLOWED_HOSTS.
+Bad Request: /
+[pid: 528|app: 0|req: 3/3] 192.35.169.48 () {28 vars in 357 bytes} [Fri Jun 19 03:52:40 2020] GET / => generated 56221 bytes in 32 msecs (HTTP/1.1 400) 2 headers in 86 bytes (1 switches on core 0)
+[pid: 528|app: 0|req: 4/4] 64.233.172.175 () {38 vars in 718 bytes} [Fri Jun 19 03:57:55 2020] GET / => generated 3203 bytes in 75 msecs (HTTP/1.1 200) 6 headers in 319 bytes (1 switches on core 0)
+Not Found: /favicon.ico
+[pid: 528|app: 0|req: 5/5] 64.233.172.177 () {38 vars in 684 bytes} [Fri Jun 19 03:57:56 2020] GET /favicon.ico => generated 3528 bytes in 7 msecs (HTTP/1.1 404) 4 headers in 129 bytes (1 switches on core 0)
+[pid: 527|app: 0|req: 1/6] 64.233.172.173 () {38 vars in 734 bytes} [Fri Jun 19 03:57:55 2020] GET /members/ => generated 325 bytes in 484 msecs (HTTP/1.1 200) 4 headers in 128 bytes (1 switches on core 0)
+[pid: 525|app: 0|req: 1/7] 64.233.172.177 () {38 vars in 730 bytes} [Fri Jun 19 03:57:55 2020] GET /admin/ => generated 0 bytes in 465 msecs (HTTP/1.1 302) 8 headers in 301 bytes (1 switches on core 0)
+[pid: 528|app: 0|req: 6/8] 64.233.172.175 () {38 vars in 767 bytes} [Fri Jun 19 03:57:56 2020] GET /admin/login/?next=/admin/ => generated 1926 bytes in 45 msecs (HTTP/1.1 200) 8 headers in 431 bytes (1 switches on core 0)
+[pid: 527|app: 0|req: 2/9] 14.42.86.31 () {42 vars in 978 bytes} [Fri Jun 19 03:57:56 2020] GET /members/ => generated 325 bytes in 9 msecs (HTTP/1.1 200) 4 headers in 128 bytes (1 switches on core 0)
+Not Found: /favicon.ico
+[pid: 525|app: 0|req: 2/10] 14.42.86.31 () {42 vars in 956 bytes} [Fri Jun 19 03:58:00 2020] GET /favicon.ico => generated 3528 bytes in 7 msecs (HTTP/1.1 404) 4 headers in 129 bytes (1 switches on core 0)
+[pid: 528|app: 0|req: 7/11] 64.233.172.177 () {38 vars in 718 bytes} [Fri Jun 19 06:05:00 2020] GET / => generated 3203 bytes in 2 msecs (HTTP/1.1 200) 6 headers in 319 bytes (1 switches on core 0)
+Not Found: /favicon.ico
+[pid: 528|app: 0|req: 8/12] 64.233.172.173 () {38 vars in 684 bytes} [Fri Jun 19 06:05:00 2020] GET /favicon.ico => generated 3528 bytes in 8 msecs (HTTP/1.1 404) 4 headers in 129 bytes (1 switches on core 0)
+Not Found: /favicon.ico
+[pid: 526|app: 0|req: 1/13] 64.233.172.175 () {38 vars in 684 bytes} [Fri Jun 19 06:05:00 2020] GET /favicon.ico => generated 3528 bytes in 209 msecs (HTTP/1.1 404) 4 headers in 129 bytes (1 switches on core 0)
+[pid: 528|app: 0|req: 9/14] 83.97.20.35 () {26 vars in 322 bytes} [Fri Jun 19 11:20:11 2020] GET / => generated 3203 bytes in 2 msecs (HTTP/1.0 200) 6 headers in 319 bytes (1 switches on core 0)
+[pid: 528|app: 0|req: 10/15] 64.233.172.175 () {38 vars in 733 bytes} [Sat Jun 20 01:11:24 2020] GET /admin/ => generated 0 bytes in 1 msecs (HTTP/1.1 302) 8 headers in 301 bytes (1 switches on core 0)
+[pid: 525|app: 0|req: 3/16] 64.233.172.173 () {38 vars in 721 bytes} [Sat Jun 20 01:11:24 2020] GET / => generated 3203 bytes in 11 msecs (HTTP/1.1 200) 6 headers in 319 bytes (1 switches on core 0)
+[pid: 528|app: 0|req: 11/17] 64.233.172.175 () {38 vars in 737 bytes} [Sat Jun 20 01:11:24 2020] GET /members/ => generated 325 bytes in 28 msecs (HTTP/1.1 200) 4 headers in 128 bytes (1 switches on core 0)
+Not Found: /favicon.ico
+[pid: 527|app: 0|req: 3/18] 64.233.172.173 () {38 vars in 687 bytes} [Sat Jun 20 01:11:24 2020] GET /favicon.ico => generated 3528 bytes in 6 msecs (HTTP/1.1 404) 4 headers in 129 bytes (1 switches on core 0)
+Not Found: /favicon.ico
+[pid: 528|app: 0|req: 12/19] 64.233.172.175 () {38 vars in 687 bytes} [Sat Jun 20 01:11:24 2020] GET /favicon.ico => generated 3528 bytes in 4 msecs (HTTP/1.1 404) 4 headers in 129 bytes (1 switches on core 0)
+[pid: 525|app: 0|req: 4/20] 64.233.172.173 () {38 vars in 770 bytes} [Sat Jun 20 01:11:24 2020] GET /admin/login/?next=/admin/ => generated 1926 bytes in 21 msecs (HTTP/1.1 200) 8 headers in 431 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '13.125.176.205:1234'. You may need to add '13.125.176.205' to ALLOWED_HOSTS.
+Bad Request: /
+[pid: 528|app: 0|req: 13/21] 209.17.97.26 () {30 vars in 456 bytes} [Sat Jun 20 04:00:05 2020] GET / => generated 56547 bytes in 29 msecs (HTTP/1.1 400) 2 headers in 86 bytes (1 switches on core 0)
+[pid: 525|app: 0|req: 5/22] 64.233.172.177 () {38 vars in 733 bytes} [Sat Jun 20 04:43:28 2020] GET /admin/ => generated 0 bytes in 1 msecs (HTTP/1.1 302) 8 headers in 301 bytes (1 switches on core 0)
+[pid: 528|app: 0|req: 14/23] 64.233.172.173 () {38 vars in 737 bytes} [Sat Jun 20 04:43:28 2020] GET /members/ => generated 325 bytes in 13 msecs (HTTP/1.1 200) 4 headers in 128 bytes (1 switches on core 0)
+[pid: 526|app: 0|req: 2/24] 64.233.172.175 () {38 vars in 721 bytes} [Sat Jun 20 04:43:28 2020] GET / => generated 3203 bytes in 28 msecs (HTTP/1.1 200) 6 headers in 319 bytes (1 switches on core 0)
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+[pid: 527|app: 0|req: 4/26] 64.233.172.177 () {38 vars in 687 bytes} [Sat Jun 20 04:43:28 2020] GET /favicon.ico => generated 3528 bytes in 6 msecs (HTTP/1.1 404) 4 headers in 129 bytes (1 switches on core 0)
+[pid: 528|app: 0|req: 15/26] 64.233.172.173 () {38 vars in 687 bytes} [Sat Jun 20 04:43:28 2020] GET /favicon.ico => generated 3528 bytes in 8 msecs (HTTP/1.1 404) 4 headers in 129 bytes (1 switches on core 0)
+[pid: 525|app: 0|req: 6/27] 64.233.172.173 () {38 vars in 770 bytes} [Sat Jun 20 04:43:29 2020] GET /admin/login/?next=/admin/ => generated 1926 bytes in 13 msecs (HTTP/1.1 200) 8 headers in 431 bytes (1 switches on core 0)
+[pid: 528|app: 0|req: 16/28] 64.233.172.177 () {38 vars in 737 bytes} [Sat Jun 20 04:47:56 2020] GET /members/ => generated 325 bytes in 9 msecs (HTTP/1.1 200) 4 headers in 128 bytes (1 switches on core 0)
+Not Found: /favicon.ico
+[pid: 527|app: 0|req: 5/29] 64.233.172.173 () {38 vars in 687 bytes} [Sat Jun 20 04:47:56 2020] GET /favicon.ico => generated 3528 bytes in 3 msecs (HTTP/1.1 404) 4 headers in 129 bytes (1 switches on core 0)
+[pid: 525|app: 0|req: 7/30] 64.233.172.177 () {38 vars in 721 bytes} [Sat Jun 20 04:47:57 2020] GET / => generated 3203 bytes in 2 msecs (HTTP/1.1 200) 6 headers in 319 bytes (1 switches on core 0)
+Not Found: /favicon.ico
+[pid: 526|app: 0|req: 3/31] 64.233.172.173 () {38 vars in 687 bytes} [Sat Jun 20 04:47:57 2020] GET /favicon.ico => generated 3528 bytes in 4 msecs (HTTP/1.1 404) 4 headers in 129 bytes (1 switches on core 0)
+[pid: 528|app: 0|req: 17/32] 64.233.172.173 () {38 vars in 733 bytes} [Sat Jun 20 06:52:02 2020] GET /admin/ => generated 0 bytes in 1 msecs (HTTP/1.1 302) 8 headers in 301 bytes (1 switches on core 0)
+[pid: 526|app: 0|req: 4/33] 64.233.172.173 () {38 vars in 770 bytes} [Sat Jun 20 06:52:02 2020] GET /admin/login/?next=/admin/ => generated 1926 bytes in 38 msecs (HTTP/1.1 200) 8 headers in 431 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '13.125.176.205:1234'. You may need to add '13.125.176.205' to ALLOWED_HOSTS.
+Bad Request: /
+[pid: 528|app: 0|req: 18/34] 196.52.43.89 () {30 vars in 478 bytes} [Sat Jun 20 12:36:52 2020] GET / => generated 56591 bytes in 29 msecs (HTTP/1.1 400) 2 headers in 86 bytes (1 switches on core 0)
+[pid: 526|app: 0|req: 5/35] 64.233.172.177 () {38 vars in 721 bytes} [Sat Jun 20 15:51:57 2020] GET / => generated 3203 bytes in 2 msecs (HTTP/1.1 200) 6 headers in 319 bytes (1 switches on core 0)
+[pid: 528|app: 0|req: 19/36] 64.233.172.175 () {38 vars in 737 bytes} [Sat Jun 20 15:51:57 2020] GET /members/ => generated 325 bytes in 15 msecs (HTTP/1.1 200) 4 headers in 128 bytes (1 switches on core 0)
+[pid: 527|app: 0|req: 6/37] 64.233.172.175 () {38 vars in 733 bytes} [Sat Jun 20 15:51:57 2020] GET /admin/ => generated 0 bytes in 36 msecs (HTTP/1.1 302) 8 headers in 301 bytes (1 switches on core 0)
+[pid: 528|app: 0|req: 20/38] 64.233.172.173 () {38 vars in 770 bytes} [Sat Jun 20 15:51:57 2020] GET /admin/login/?next=/admin/ => generated 1926 bytes in 13 msecs (HTTP/1.1 200) 8 headers in 431 bytes (1 switches on core 0)
+Not Found: /favicon.ico
+[pid: 527|app: 0|req: 7/39] 64.233.172.177 () {38 vars in 687 bytes} [Sat Jun 20 15:51:57 2020] GET /favicon.ico => generated 3528 bytes in 4 msecs (HTTP/1.1 404) 4 headers in 129 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '13.125.176.205:1234'. You may need to add '13.125.176.205' to ALLOWED_HOSTS.
+Bad Request: /
+[pid: 528|app: 0|req: 21/40] 209.17.96.130 () {30 vars in 457 bytes} [Sat Jun 20 19:03:27 2020] GET / => generated 56548 bytes in 30 msecs (HTTP/1.1 400) 2 headers in 86 bytes (1 switches on core 0)
+[pid: 528|app: 0|req: 22/41] 64.233.172.173 () {38 vars in 733 bytes} [Sun Jun 21 02:05:59 2020] GET /admin/ => generated 0 bytes in 1 msecs (HTTP/1.1 302) 8 headers in 301 bytes (1 switches on core 0)
+Not Found: /favicon.ico
+[pid: 525|app: 0|req: 8/42] 64.233.172.177 () {38 vars in 687 bytes} [Sun Jun 21 02:05:59 2020] GET /favicon.ico => generated 3528 bytes in 4 msecs (HTTP/1.1 404) 4 headers in 129 bytes (1 switches on core 0)
+[pid: 527|app: 0|req: 8/43] 64.233.172.175 () {38 vars in 737 bytes} [Sun Jun 21 02:05:59 2020] GET /members/ => generated 325 bytes in 9 msecs (HTTP/1.1 200) 4 headers in 128 bytes (1 switches on core 0)
+[pid: 528|app: 0|req: 23/44] 64.233.172.175 () {38 vars in 770 bytes} [Sun Jun 21 02:05:59 2020] GET /admin/login/?next=/admin/ => generated 1926 bytes in 13 msecs (HTTP/1.1 200) 8 headers in 431 bytes (1 switches on core 0)
+[pid: 528|app: 0|req: 24/45] 64.233.172.173 () {38 vars in 721 bytes} [Sun Jun 21 02:19:43 2020] GET / => generated 3203 bytes in 2 msecs (HTTP/1.1 200) 6 headers in 319 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '13.125.176.205:1234'. You may need to add '13.125.176.205' to ALLOWED_HOSTS.
+Bad Request: /
+[pid: 528|app: 0|req: 25/46] 209.17.96.42 () {30 vars in 456 bytes} [Mon Jun 22 04:10:31 2020] GET / => generated 56547 bytes in 29 msecs (HTTP/1.1 400) 2 headers in 86 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '13.125.176.205:1234'. You may need to add '13.125.176.205' to ALLOWED_HOSTS.
+Bad Request: /
+[pid: 528|app: 0|req: 26/47] 223.71.167.163 () {34 vars in 506 bytes} [Mon Jun 22 14:49:44 2020] GET / => generated 56810 bytes in 29 msecs (HTTP/1.1 400) 2 headers in 86 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '13.125.176.205:1234'. You may need to add '13.125.176.205' to ALLOWED_HOSTS.
+Bad Request: /
+[pid: 528|app: 0|req: 27/48] 183.136.225.44 () {34 vars in 506 bytes} [Mon Jun 22 16:38:07 2020] GET / => generated 56810 bytes in 28 msecs (HTTP/1.1 400) 2 headers in 86 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '13.125.176.205:1234'. You may need to add '13.125.176.205' to ALLOWED_HOSTS.
+Bad Request: /
+[pid: 528|app: 0|req: 28/49] 209.17.96.42 () {30 vars in 456 bytes} [Mon Jun 22 19:02:47 2020] GET / => generated 56547 bytes in 28 msecs (HTTP/1.1 400) 2 headers in 86 bytes (1 switches on core 0)
+[pid: 528|app: 0|req: 29/50] 172.104.143.207 () {26 vars in 327 bytes} [Tue Jun 23 05:47:22 2020] GET / => generated 3203 bytes in 2 msecs (HTTP/1.0 200) 6 headers in 319 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '13.125.176.205:1234'. You may need to add '13.125.176.205' to ALLOWED_HOSTS.
+Bad Request: /
+[pid: 528|app: 0|req: 30/51] 92.118.160.37 () {30 vars in 498 bytes} [Tue Jun 23 11:31:30 2020] GET / => generated 56630 bytes in 29 msecs (HTTP/1.1 400) 2 headers in 86 bytes (1 switches on core 0)
+[pid: 528|app: 0|req: 31/52] 64.233.172.175 () {38 vars in 721 bytes} [Tue Jun 23 16:01:23 2020] GET / => generated 3203 bytes in 2 msecs (HTTP/1.1 200) 6 headers in 319 bytes (1 switches on core 0)
+[pid: 525|app: 0|req: 9/53] 64.233.172.173 () {38 vars in 737 bytes} [Tue Jun 23 16:01:23 2020] GET /members/ => generated 325 bytes in 36 msecs (HTTP/1.1 200) 4 headers in 128 bytes (1 switches on core 0)
+[pid: 528|app: 0|req: 32/54] 64.233.172.173 () {38 vars in 733 bytes} [Tue Jun 23 16:01:23 2020] GET /admin/ => generated 0 bytes in 1 msecs (HTTP/1.1 302) 8 headers in 301 bytes (1 switches on core 0)
+Not Found: /favicon.ico
+[pid: 527|app: 0|req: 9/55] 64.233.172.175 () {38 vars in 687 bytes} [Tue Jun 23 16:01:23 2020] GET /favicon.ico => generated 3528 bytes in 4 msecs (HTTP/1.1 404) 4 headers in 129 bytes (1 switches on core 0)
+[pid: 528|app: 0|req: 33/56] 64.233.172.173 () {38 vars in 770 bytes} [Tue Jun 23 16:01:23 2020] GET /admin/login/?next=/admin/ => generated 1926 bytes in 13 msecs (HTTP/1.1 200) 8 headers in 431 bytes (1 switches on core 0)
+Not Found: /favicon.ico
+[pid: 527|app: 0|req: 10/57] 64.233.172.177 () {38 vars in 687 bytes} [Tue Jun 23 16:01:24 2020] GET /favicon.ico => generated 3528 bytes in 4 msecs (HTTP/1.1 404) 4 headers in 129 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '13.125.176.205:1234'. You may need to add '13.125.176.205' to ALLOWED_HOSTS.
+Bad Request: /
+[pid: 528|app: 0|req: 34/58] 209.17.96.202 () {30 vars in 457 bytes} [Wed Jun 24 01:17:43 2020] GET / => generated 56548 bytes in 28 msecs (HTTP/1.1 400) 2 headers in 86 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '13.125.176.205:1234'. You may need to add '13.125.176.205' to ALLOWED_HOSTS.
+Bad Request: /
+[pid: 528|app: 0|req: 35/59] 64.225.64.8 () {36 vars in 572 bytes} [Wed Jun 24 01:28:58 2020] GET / => generated 57014 bytes in 29 msecs (HTTP/1.1 400) 2 headers in 86 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '13.125.176.205:1234'. You may need to add '13.125.176.205' to ALLOWED_HOSTS.
+Bad Request: /favicon.ico
+[pid: 527|app: 0|req: 11/60] 64.225.64.8 () {36 vars in 594 bytes} [Wed Jun 24 01:29:03 2020] GET /favicon.ico => generated 57146 bytes in 32 msecs (HTTP/1.1 400) 2 headers in 86 bytes (1 switches on core 0)
+[pid: 528|app: 0|req: 36/61] 83.97.20.35 () {26 vars in 323 bytes} [Wed Jun 24 06:21:09 2020] GET / => generated 3203 bytes in 2 msecs (HTTP/1.0 200) 6 headers in 319 bytes (1 switches on core 0)
+[pid: 528|app: 0|req: 37/62] 64.233.172.173 () {38 vars in 734 bytes} [Wed Jun 24 06:42:35 2020] GET /admin/ => generated 0 bytes in 1 msecs (HTTP/1.1 302) 8 headers in 301 bytes (1 switches on core 0)
+[pid: 526|app: 0|req: 6/63] 64.233.172.177 () {38 vars in 722 bytes} [Wed Jun 24 06:42:35 2020] GET / => generated 3203 bytes in 3 msecs (HTTP/1.1 200) 6 headers in 319 bytes (1 switches on core 0)
+[pid: 525|app: 0|req: 10/64] 64.233.172.177 () {38 vars in 738 bytes} [Wed Jun 24 06:42:35 2020] GET /members/ => generated 325 bytes in 10 msecs (HTTP/1.1 200) 4 headers in 128 bytes (1 switches on core 0)
+Not Found: /favicon.ico
+[pid: 528|app: 0|req: 38/65] 64.233.172.177 () {38 vars in 688 bytes} [Wed Jun 24 06:42:35 2020] GET /favicon.ico => generated 3528 bytes in 4 msecs (HTTP/1.1 404) 4 headers in 129 bytes (1 switches on core 0)
+Not Found: /favicon.ico
+[pid: 525|app: 0|req: 11/66] 64.233.172.177 () {38 vars in 688 bytes} [Wed Jun 24 06:42:35 2020] GET /favicon.ico => generated 3528 bytes in 6 msecs (HTTP/1.1 404) 4 headers in 129 bytes (1 switches on core 0)
+[pid: 527|app: 0|req: 12/67] 64.233.172.173 () {38 vars in 771 bytes} [Wed Jun 24 06:42:35 2020] GET /admin/login/?next=/admin/ => generated 1926 bytes in 41 msecs (HTTP/1.1 200) 8 headers in 431 bytes (1 switches on core 0)
+[pid: 526|app: 0|req: 7/68] 64.233.172.177 () {38 vars in 734 bytes} [Wed Jun 24 07:49:32 2020] GET /admin/ => generated 0 bytes in 1 msecs (HTTP/1.1 302) 8 headers in 301 bytes (1 switches on core 0)
+[pid: 527|app: 0|req: 13/69] 64.233.172.173 () {38 vars in 722 bytes} [Wed Jun 24 07:49:32 2020] GET / => generated 3203 bytes in 2 msecs (HTTP/1.1 200) 6 headers in 319 bytes (1 switches on core 0)
+[pid: 528|app: 0|req: 39/70] 64.233.172.173 () {38 vars in 738 bytes} [Wed Jun 24 07:49:32 2020] GET /members/ => generated 325 bytes in 21 msecs (HTTP/1.1 200) 4 headers in 128 bytes (1 switches on core 0)
+[pid: 525|app: 0|req: 12/71] 64.233.172.173 () {38 vars in 771 bytes} [Wed Jun 24 07:49:33 2020] GET /admin/login/?next=/admin/ => generated 1926 bytes in 13 msecs (HTTP/1.1 200) 8 headers in 431 bytes (1 switches on core 0)
+Not Found: /favicon.ico
+[pid: 528|app: 0|req: 40/72] 64.233.172.175 () {38 vars in 687 bytes} [Wed Jun 24 10:03:37 2020] GET /favicon.ico => generated 3528 bytes in 4 msecs (HTTP/1.1 404) 4 headers in 129 bytes (1 switches on core 0)
+[pid: 527|app: 0|req: 14/73] 64.233.172.175 () {38 vars in 721 bytes} [Wed Jun 24 10:03:37 2020] GET / => generated 3203 bytes in 2 msecs (HTTP/1.1 200) 6 headers in 319 bytes (1 switches on core 0)
+[pid: 528|app: 0|req: 41/74] 64.233.172.175 () {38 vars in 733 bytes} [Wed Jun 24 11:31:00 2020] GET /admin/ => generated 0 bytes in 1 msecs (HTTP/1.1 302) 8 headers in 301 bytes (1 switches on core 0)
+[pid: 527|app: 0|req: 15/75] 64.233.172.175 () {38 vars in 770 bytes} [Wed Jun 24 11:31:00 2020] GET /admin/login/?next=/admin/ => generated 1926 bytes in 13 msecs (HTTP/1.1 200) 8 headers in 431 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '13.125.176.205:1234'. You may need to add '13.125.176.205' to ALLOWED_HOSTS.
+Bad Request: /
+[pid: 528|app: 0|req: 42/76] 192.35.169.48 () {28 vars in 357 bytes} [Wed Jun 24 14:51:50 2020] GET / => generated 56221 bytes in 48 msecs (HTTP/1.1 400) 2 headers in 86 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '13.125.176.205:1234'. You may need to add '13.125.176.205' to ALLOWED_HOSTS.
+Bad Request: /
+[pid: 528|app: 0|req: 43/77] 209.17.97.10 () {30 vars in 456 bytes} [Wed Jun 24 22:14:48 2020] GET / => generated 56547 bytes in 30 msecs (HTTP/1.1 400) 2 headers in 86 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '13.125.176.205:1234'. You may need to add '13.125.176.205' to ALLOWED_HOSTS.
+Bad Request: /
+[pid: 527|app: 0|req: 16/78] 192.35.168.250 () {28 vars in 358 bytes} [Thu Jun 25 12:07:12 2020] GET / => generated 56222 bytes in 37 msecs (HTTP/1.1 400) 2 headers in 86 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '13.125.176.205:1234'. You may need to add '13.125.176.205' to ALLOWED_HOSTS.
+Bad Request: /
+[pid: 528|app: 0|req: 44/79] 192.35.168.250 () {34 vars in 444 bytes} [Thu Jun 25 12:07:12 2020] GET / => generated 56655 bytes in 29 msecs (HTTP/1.1 400) 2 headers in 86 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '13.125.176.205:1234'. You may need to add '13.125.176.205' to ALLOWED_HOSTS.
+Bad Request: /
+[pid: 528|app: 0|req: 45/80] 209.17.96.122 () {30 vars in 457 bytes} [Fri Jun 26 02:35:59 2020] GET / => generated 56548 bytes in 30 msecs (HTTP/1.1 400) 2 headers in 86 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '13.125.176.205:1234'. You may need to add '13.125.176.205' to ALLOWED_HOSTS.
+Bad Request: /
+[pid: 528|app: 0|req: 46/81] 209.17.96.34 () {30 vars in 456 bytes} [Fri Jun 26 23:44:46 2020] GET / => generated 56547 bytes in 29 msecs (HTTP/1.1 400) 2 headers in 86 bytes (1 switches on core 0)
+[pid: 528|app: 0|req: 47/82] 66.102.6.75 () {38 vars in 730 bytes} [Sat Jun 27 01:24:13 2020] GET /admin/ => generated 0 bytes in 3 msecs (HTTP/1.1 302) 8 headers in 301 bytes (1 switches on core 0)
+[pid: 526|app: 0|req: 8/83] 66.102.6.79 () {38 vars in 718 bytes} [Sat Jun 27 01:24:13 2020] GET / => generated 3203 bytes in 6 msecs (HTTP/1.1 200) 6 headers in 319 bytes (1 switches on core 0)
+[pid: 525|app: 0|req: 13/84] 66.102.6.79 () {38 vars in 734 bytes} [Sat Jun 27 01:24:13 2020] GET /members/ => generated 325 bytes in 33 msecs (HTTP/1.1 200) 4 headers in 128 bytes (1 switches on core 0)
+Not Found: /favicon.ico
+[pid: 528|app: 0|req: 48/85] 66.102.6.75 () {38 vars in 684 bytes} [Sat Jun 27 01:24:13 2020] GET /favicon.ico => generated 3528 bytes in 4 msecs (HTTP/1.1 404) 4 headers in 129 bytes (1 switches on core 0)
+[pid: 527|app: 0|req: 17/86] 66.102.6.77 () {38 vars in 767 bytes} [Sat Jun 27 01:24:13 2020] GET /admin/login/?next=/admin/ => generated 1926 bytes in 18 msecs (HTTP/1.1 200) 8 headers in 431 bytes (1 switches on core 0)
+Not Found: /favicon.ico
+[pid: 528|app: 0|req: 49/87] 66.102.6.77 () {38 vars in 684 bytes} [Sat Jun 27 01:24:13 2020] GET /favicon.ico => generated 3528 bytes in 3 msecs (HTTP/1.1 404) 4 headers in 129 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '13.125.176.205:1234'. You may need to add '13.125.176.205' to ALLOWED_HOSTS.
+Bad Request: /
+[pid: 528|app: 0|req: 50/88] 183.136.225.44 () {34 vars in 506 bytes} [Sat Jun 27 11:00:59 2020] GET / => generated 56810 bytes in 38 msecs (HTTP/1.1 400) 2 headers in 86 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '13.125.176.205:1234'. You may need to add '13.125.176.205' to ALLOWED_HOSTS.
+Bad Request: /
+[pid: 528|app: 0|req: 51/89] 196.52.43.127 () {30 vars in 479 bytes} [Sat Jun 27 15:14:05 2020] GET / => generated 56592 bytes in 29 msecs (HTTP/1.1 400) 2 headers in 86 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '13.125.176.205:1234'. You may need to add '13.125.176.205' to ALLOWED_HOSTS.
+Bad Request: /
+[pid: 528|app: 0|req: 52/90] 209.17.97.74 () {30 vars in 456 bytes} [Sat Jun 27 20:53:09 2020] GET / => generated 56547 bytes in 29 msecs (HTTP/1.1 400) 2 headers in 86 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '13.125.176.205:1234'. You may need to add '13.125.176.205' to ALLOWED_HOSTS.
+Bad Request: /
+[pid: 528|app: 0|req: 53/91] 223.71.167.163 () {34 vars in 506 bytes} [Sat Jun 27 21:30:14 2020] GET / => generated 56810 bytes in 30 msecs (HTTP/1.1 400) 2 headers in 86 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '13.125.176.205:1234'. You may need to add '13.125.176.205' to ALLOWED_HOSTS.
+Bad Request: /status
+[pid: 528|app: 0|req: 54/92] 185.142.236.34 () {30 vars in 402 bytes} [Sat Jun 27 21:56:19 2020] GET /status => generated 56432 bytes in 30 msecs (HTTP/1.1 400) 2 headers in 86 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '13.125.176.205:1234'. You may need to add '13.125.176.205' to ALLOWED_HOSTS.
+Bad Request: /
+[pid: 528|app: 0|req: 55/93] 209.17.96.26 () {30 vars in 456 bytes} [Sun Jun 28 19:34:39 2020] GET / => generated 56547 bytes in 31 msecs (HTTP/1.1 400) 2 headers in 86 bytes (1 switches on core 0)
+[pid: 528|app: 0|req: 56/94] 83.97.20.35 () {26 vars in 323 bytes} [Mon Jun 29 02:52:29 2020] GET / => generated 3203 bytes in 2 msecs (HTTP/1.0 200) 6 headers in 319 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '13.125.176.205:1234'. You may need to add '13.125.176.205' to ALLOWED_HOSTS.
+Bad Request: /logs
+[pid: 528|app: 0|req: 57/95] 62.171.152.36 () {30 vars in 389 bytes} [Mon Jun 29 19:36:41 2020] GET /logs => generated 56399 bytes in 28 msecs (HTTP/1.0 400) 2 headers in 86 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '13.125.176.205:1234'. You may need to add '13.125.176.205' to ALLOWED_HOSTS.
+Bad Request: /editConfig
+[pid: 527|app: 0|req: 18/96] 62.171.152.36 () {30 vars in 424 bytes} [Mon Jun 29 19:36:41 2020] GET /editConfig?returnUrl=/ => generated 56857 bytes in 31 msecs (HTTP/1.0 400) 2 headers in 86 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '13.125.176.205:1234'. You may need to add '13.125.176.205' to ALLOWED_HOSTS.
+Bad Request: /
+[pid: 528|app: 0|req: 58/97] 209.17.96.234 () {30 vars in 457 bytes} [Mon Jun 29 21:28:46 2020] GET / => generated 56548 bytes in 31 msecs (HTTP/1.1 400) 2 headers in 86 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '13.125.176.205:1234'. You may need to add '13.125.176.205' to ALLOWED_HOSTS.
+Bad Request: /logs
+[pid: 528|app: 0|req: 59/98] 62.171.152.36 () {30 vars in 389 bytes} [Tue Jun 30 02:07:20 2020] GET /logs => generated 56399 bytes in 29 msecs (HTTP/1.0 400) 2 headers in 86 bytes (1 switches on core 0)
+[pid: 528|app: 0|req: 60/99] 66.102.6.75 () {38 vars in 730 bytes} [Tue Jun 30 15:19:34 2020] GET /admin/ => generated 0 bytes in 1 msecs (HTTP/1.1 302) 8 headers in 301 bytes (1 switches on core 0)
+[pid: 528|app: 0|req: 61/100] 66.102.6.77 () {38 vars in 718 bytes} [Tue Jun 30 15:19:34 2020] GET / => generated 3203 bytes in 2 msecs (HTTP/1.1 200) 6 headers in 319 bytes (1 switches on core 0)
+[pid: 526|app: 0|req: 9/101] 66.102.6.79 () {38 vars in 734 bytes} [Tue Jun 30 15:19:34 2020] GET /members/ => generated 325 bytes in 51 msecs (HTTP/1.1 200) 4 headers in 128 bytes (1 switches on core 0)
+[pid: 528|app: 0|req: 62/102] 66.102.6.75 () {38 vars in 767 bytes} [Tue Jun 30 15:19:34 2020] GET /admin/login/?next=/admin/ => generated 1926 bytes in 17 msecs (HTTP/1.1 200) 8 headers in 431 bytes (1 switches on core 0)
+Not Found: /favicon.ico
+[pid: 527|app: 0|req: 19/103] 66.102.6.79 () {38 vars in 684 bytes} [Tue Jun 30 15:19:35 2020] GET /favicon.ico => generated 3528 bytes in 4 msecs (HTTP/1.1 404) 4 headers in 129 bytes (1 switches on core 0)
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+[pid: 526|app: 0|req: 10/105] 66.102.6.79 () {38 vars in 684 bytes} [Tue Jun 30 15:19:35 2020] GET /favicon.ico => generated 3528 bytes in 6 msecs (HTTP/1.1 404) 4 headers in 129 bytes (1 switches on core 0)
+[pid: 525|app: 0|req: 14/105] 66.102.6.75 () {38 vars in 684 bytes} [Tue Jun 30 15:19:35 2020] GET /favicon.ico => generated 3528 bytes in 8 msecs (HTTP/1.1 404) 4 headers in 129 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '13.125.176.205:1234'. You may need to add '13.125.176.205' to ALLOWED_HOSTS.
+Bad Request: /
+[pid: 528|app: 0|req: 63/106] 196.52.43.99 () {30 vars in 478 bytes} [Tue Jun 30 17:54:16 2020] GET / => generated 56591 bytes in 28 msecs (HTTP/1.1 400) 2 headers in 86 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '13.125.176.205:1234'. You may need to add '13.125.176.205' to ALLOWED_HOSTS.
+Bad Request: /logs
+[pid: 528|app: 0|req: 64/107] 62.171.152.36 () {30 vars in 389 bytes} [Tue Jun 30 20:52:11 2020] GET /logs => generated 56399 bytes in 29 msecs (HTTP/1.0 400) 2 headers in 86 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '13.125.176.205:1234'. You may need to add '13.125.176.205' to ALLOWED_HOSTS.
+Bad Request: /editConfig
+[pid: 527|app: 0|req: 20/108] 62.171.152.36 () {30 vars in 424 bytes} [Tue Jun 30 20:52:12 2020] GET /editConfig?returnUrl=/ => generated 56857 bytes in 31 msecs (HTTP/1.0 400) 2 headers in 86 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '13.125.176.205:1234'. You may need to add '13.125.176.205' to ALLOWED_HOSTS.
+Bad Request: /logs
+[pid: 528|app: 0|req: 65/109] 62.171.152.36 () {30 vars in 389 bytes} [Wed Jul  1 01:56:46 2020] GET /logs => generated 56398 bytes in 29 msecs (HTTP/1.0 400) 2 headers in 86 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '13.125.176.205:1234'. You may need to add '13.125.176.205' to ALLOWED_HOSTS.
+Bad Request: /editConfig
+[pid: 527|app: 0|req: 21/110] 62.171.152.36 () {30 vars in 424 bytes} [Wed Jul  1 01:56:47 2020] GET /editConfig?returnUrl=/ => generated 56856 bytes in 29 msecs (HTTP/1.0 400) 2 headers in 86 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '13.125.176.205:1234'. You may need to add '13.125.176.205' to ALLOWED_HOSTS.
+Bad Request: /
+[pid: 528|app: 0|req: 66/111] 209.17.96.58 () {30 vars in 456 bytes} [Wed Jul  1 02:25:46 2020] GET / => generated 56546 bytes in 29 msecs (HTTP/1.1 400) 2 headers in 86 bytes (1 switches on core 0)
+[pid: 528|app: 0|req: 67/112] 66.102.6.75 () {38 vars in 718 bytes} [Wed Jul  1 04:09:50 2020] GET / => generated 3203 bytes in 2 msecs (HTTP/1.1 200) 6 headers in 319 bytes (1 switches on core 0)
+Not Found: /favicon.ico
+[pid: 525|app: 0|req: 15/113] 66.102.6.79 () {38 vars in 684 bytes} [Wed Jul  1 04:09:50 2020] GET /favicon.ico => generated 3528 bytes in 3 msecs (HTTP/1.1 404) 4 headers in 129 bytes (1 switches on core 0)
+Not Found: /favicon.ico
+[pid: 527|app: 0|req: 22/114] 66.102.6.79 () {38 vars in 684 bytes} [Wed Jul  1 04:09:50 2020] GET /favicon.ico => generated 3528 bytes in 3 msecs (HTTP/1.1 404) 4 headers in 129 bytes (1 switches on core 0)
+Not Found: /favicon.ico
+[pid: 526|app: 0|req: 11/115] 66.102.6.77 () {38 vars in 684 bytes} [Wed Jul  1 04:09:51 2020] GET /favicon.ico => generated 3528 bytes in 4 msecs (HTTP/1.1 404) 4 headers in 129 bytes (1 switches on core 0)
+[pid: 526|app: 0|req: 12/116] 66.102.6.77 () {38 vars in 730 bytes} [Wed Jul  1 05:27:20 2020] GET /admin/ => generated 0 bytes in 1 msecs (HTTP/1.1 302) 8 headers in 301 bytes (1 switches on core 0)
+[pid: 528|app: 0|req: 68/117] 66.102.6.77 () {38 vars in 734 bytes} [Wed Jul  1 05:27:20 2020] GET /members/ => generated 325 bytes in 10 msecs (HTTP/1.1 200) 4 headers in 128 bytes (1 switches on core 0)
+Not Found: /favicon.ico
+[pid: 527|app: 0|req: 23/118] 66.102.6.77 () {38 vars in 684 bytes} [Wed Jul  1 05:27:20 2020] GET /favicon.ico => generated 3528 bytes in 4 msecs (HTTP/1.1 404) 4 headers in 129 bytes (1 switches on core 0)
+[pid: 525|app: 0|req: 16/119] 66.102.6.77 () {38 vars in 767 bytes} [Wed Jul  1 05:27:20 2020] GET /admin/login/?next=/admin/ => generated 1926 bytes in 13 msecs (HTTP/1.1 200) 8 headers in 431 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '13.125.176.205:1234'. You may need to add '13.125.176.205' to ALLOWED_HOSTS.
+Bad Request: /
+[pid: 528|app: 0|req: 69/120] 183.136.225.44 () {34 vars in 506 bytes} [Wed Jul  1 12:48:18 2020] GET / => generated 56809 bytes in 29 msecs (HTTP/1.1 400) 2 headers in 86 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '13.125.176.205:1234'. You may need to add '13.125.176.205' to ALLOWED_HOSTS.
+Bad Request: /
+[pid: 527|app: 0|req: 24/121] 192.35.169.48 () {28 vars in 357 bytes} [Wed Jul  1 12:48:28 2020] GET / => generated 56220 bytes in 29 msecs (HTTP/1.1 400) 2 headers in 86 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '13.125.176.205:1234'. You may need to add '13.125.176.205' to ALLOWED_HOSTS.
+Bad Request: /logs
+[pid: 528|app: 0|req: 70/122] 62.171.152.36 () {30 vars in 389 bytes} [Wed Jul  1 19:22:47 2020] GET /logs => generated 56398 bytes in 28 msecs (HTTP/1.0 400) 2 headers in 86 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '13.125.176.205:1234'. You may need to add '13.125.176.205' to ALLOWED_HOSTS.
+Bad Request: /editConfig
+[pid: 527|app: 0|req: 25/123] 62.171.152.36 () {30 vars in 424 bytes} [Wed Jul  1 19:22:48 2020] GET /editConfig?returnUrl=/ => generated 56856 bytes in 30 msecs (HTTP/1.0 400) 2 headers in 86 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '13.125.176.205:1234'. You may need to add '13.125.176.205' to ALLOWED_HOSTS.
+Bad Request: /
+[pid: 528|app: 0|req: 71/124] 209.17.96.50 () {30 vars in 456 bytes} [Thu Jul  2 01:02:37 2020] GET / => generated 56546 bytes in 28 msecs (HTTP/1.1 400) 2 headers in 86 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '13.125.176.205:1234'. You may need to add '13.125.176.205' to ALLOWED_HOSTS.
+Bad Request: /logs
+[pid: 528|app: 0|req: 72/125] 62.171.152.36 () {30 vars in 389 bytes} [Thu Jul  2 01:22:03 2020] GET /logs => generated 56398 bytes in 28 msecs (HTTP/1.0 400) 2 headers in 86 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '13.125.176.205:1234'. You may need to add '13.125.176.205' to ALLOWED_HOSTS.
+Bad Request: /editConfig
+[pid: 527|app: 0|req: 26/126] 62.171.152.36 () {30 vars in 424 bytes} [Thu Jul  2 01:22:04 2020] GET /editConfig?returnUrl=/ => generated 56856 bytes in 30 msecs (HTTP/1.0 400) 2 headers in 86 bytes (1 switches on core 0)
+[pid: 528|app: 0|req: 73/127] 66.102.6.79 () {38 vars in 730 bytes} [Thu Jul  2 16:06:50 2020] GET /admin/ => generated 0 bytes in 1 msecs (HTTP/1.1 302) 8 headers in 301 bytes (1 switches on core 0)
+[pid: 526|app: 0|req: 13/128] 66.102.6.75 () {38 vars in 718 bytes} [Thu Jul  2 16:06:50 2020] GET / => generated 3203 bytes in 2 msecs (HTTP/1.1 200) 6 headers in 319 bytes (1 switches on core 0)
+[pid: 525|app: 0|req: 17/129] 66.102.6.77 () {38 vars in 734 bytes} [Thu Jul  2 16:06:50 2020] GET /members/ => generated 325 bytes in 42 msecs (HTTP/1.1 200) 4 headers in 128 bytes (1 switches on core 0)
+Not Found: /favicon.ico
+[pid: 528|app: 0|req: 74/130] 66.102.6.75 () {38 vars in 684 bytes} [Thu Jul  2 16:06:51 2020] GET /favicon.ico => generated 3528 bytes in 4 msecs (HTTP/1.1 404) 4 headers in 129 bytes (1 switches on core 0)
+Not Found: /favicon.ico
+[pid: 527|app: 0|req: 27/131] 66.102.6.79 () {38 vars in 684 bytes} [Thu Jul  2 16:06:51 2020] GET /favicon.ico => generated 3528 bytes in 4 msecs (HTTP/1.1 404) 4 headers in 129 bytes (1 switches on core 0)
+[pid: 526|app: 0|req: 14/132] 66.102.6.77 () {38 vars in 767 bytes} [Thu Jul  2 16:06:51 2020] GET /admin/login/?next=/admin/ => generated 1926 bytes in 13 msecs (HTTP/1.1 200) 8 headers in 431 bytes (1 switches on core 0)
+Not Found: /favicon.ico
+[pid: 528|app: 0|req: 75/133] 66.102.6.77 () {38 vars in 684 bytes} [Thu Jul  2 16:06:51 2020] GET /favicon.ico => generated 3528 bytes in 4 msecs (HTTP/1.1 404) 4 headers in 129 bytes (1 switches on core 0)
+[pid: 528|app: 0|req: 76/134] 66.102.6.79 () {38 vars in 730 bytes} [Thu Jul  2 16:22:17 2020] GET /admin/ => generated 0 bytes in 1 msecs (HTTP/1.1 302) 8 headers in 301 bytes (1 switches on core 0)
+[pid: 527|app: 0|req: 28/135] 66.102.6.77 () {38 vars in 767 bytes} [Thu Jul  2 16:22:18 2020] GET /admin/login/?next=/admin/ => generated 1926 bytes in 13 msecs (HTTP/1.1 200) 8 headers in 431 bytes (1 switches on core 0)
+[pid: 528|app: 0|req: 77/136] 66.102.6.77 () {38 vars in 734 bytes} [Thu Jul  2 16:22:44 2020] GET /members/ => generated 325 bytes in 10 msecs (HTTP/1.1 200) 4 headers in 128 bytes (1 switches on core 0)
+[pid: 528|app: 0|req: 78/137] 66.102.6.79 () {38 vars in 718 bytes} [Thu Jul  2 16:52:46 2020] GET / => generated 3203 bytes in 2 msecs (HTTP/1.1 200) 6 headers in 319 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '13.125.176.205:1234'. You may need to add '13.125.176.205' to ALLOWED_HOSTS.
+Bad Request: /
+[pid: 528|app: 0|req: 79/138] 209.17.96.242 () {30 vars in 457 bytes} [Fri Jul  3 05:16:49 2020] GET / => generated 56547 bytes in 28 msecs (HTTP/1.1 400) 2 headers in 86 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '13.125.176.205:1234'. You may need to add '13.125.176.205' to ALLOWED_HOSTS.
+Bad Request: /
+[pid: 528|app: 0|req: 80/139] 196.52.43.59 () {30 vars in 478 bytes} [Fri Jul  3 10:02:36 2020] GET / => generated 56590 bytes in 29 msecs (HTTP/1.1 400) 2 headers in 86 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '13.125.176.205:1234'. You may need to add '13.125.176.205' to ALLOWED_HOSTS.
+Bad Request: /status
+[pid: 528|app: 0|req: 81/140] 71.6.146.130 () {30 vars in 400 bytes} [Fri Jul  3 11:58:38 2020] GET /status => generated 56429 bytes in 28 msecs (HTTP/1.1 400) 2 headers in 86 bytes (1 switches on core 0)
+[pid: 528|app: 0|req: 82/141] 66.102.6.77 () {38 vars in 730 bytes} [Sat Jul  4 00:33:43 2020] GET /admin/ => generated 0 bytes in 1 msecs (HTTP/1.1 302) 8 headers in 301 bytes (1 switches on core 0)
+[pid: 527|app: 0|req: 29/142] 66.102.6.75 () {38 vars in 718 bytes} [Sat Jul  4 00:33:44 2020] GET / => generated 3203 bytes in 2 msecs (HTTP/1.1 200) 6 headers in 319 bytes (1 switches on core 0)
+[pid: 526|app: 0|req: 15/143] 66.102.6.75 () {38 vars in 734 bytes} [Sat Jul  4 00:33:44 2020] GET /members/ => generated 325 bytes in 11 msecs (HTTP/1.1 200) 4 headers in 128 bytes (1 switches on core 0)
+[pid: 525|app: 0|req: 18/144] 66.102.6.79 () {38 vars in 767 bytes} [Sat Jul  4 00:33:44 2020] GET /admin/login/?next=/admin/ => generated 1926 bytes in 13 msecs (HTTP/1.1 200) 8 headers in 431 bytes (1 switches on core 0)
+Not Found: /favicon.ico
+[pid: 528|app: 0|req: 83/145] 66.102.6.75 () {38 vars in 684 bytes} [Sat Jul  4 00:33:44 2020] GET /favicon.ico => generated 3528 bytes in 4 msecs (HTTP/1.1 404) 4 headers in 129 bytes (1 switches on core 0)
+Not Found: /favicon.ico
+[pid: 527|app: 0|req: 30/146] 66.102.6.75 () {38 vars in 684 bytes} [Sat Jul  4 00:33:44 2020] GET /favicon.ico => generated 3528 bytes in 4 msecs (HTTP/1.1 404) 4 headers in 129 bytes (1 switches on core 0)
+Not Found: /favicon.ico
+[pid: 526|app: 0|req: 16/147] 66.102.6.75 () {38 vars in 684 bytes} [Sat Jul  4 00:33:44 2020] GET /favicon.ico => generated 3528 bytes in 4 msecs (HTTP/1.1 404) 4 headers in 129 bytes (1 switches on core 0)
+[pid: 528|app: 0|req: 84/148] 83.97.20.35 () {26 vars in 323 bytes} [Sat Jul  4 03:27:13 2020] GET / => generated 3203 bytes in 2 msecs (HTTP/1.0 200) 6 headers in 319 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '13.125.176.205:1234'. You may need to add '13.125.176.205' to ALLOWED_HOSTS.
+Bad Request: /
+[pid: 528|app: 0|req: 85/149] 209.17.96.234 () {30 vars in 457 bytes} [Sat Jul  4 05:21:23 2020] GET / => generated 56547 bytes in 29 msecs (HTTP/1.1 400) 2 headers in 86 bytes (1 switches on core 0)
+[pid: 528|app: 0|req: 86/150] 66.102.6.79 () {38 vars in 734 bytes} [Sat Jul  4 06:36:57 2020] GET /members/ => generated 325 bytes in 9 msecs (HTTP/1.1 200) 4 headers in 128 bytes (1 switches on core 0)
+[pid: 527|app: 0|req: 31/151] 66.102.6.79 () {38 vars in 718 bytes} [Sat Jul  4 06:36:57 2020] GET / => generated 3203 bytes in 2 msecs (HTTP/1.1 200) 6 headers in 319 bytes (1 switches on core 0)
+[pid: 526|app: 0|req: 17/152] 66.102.6.77 () {38 vars in 730 bytes} [Sat Jul  4 06:36:57 2020] GET /admin/ => generated 0 bytes in 1 msecs (HTTP/1.1 302) 8 headers in 301 bytes (1 switches on core 0)
+[pid: 525|app: 0|req: 19/153] 66.102.6.79 () {38 vars in 767 bytes} [Sat Jul  4 06:36:57 2020] GET /admin/login/?next=/admin/ => generated 1926 bytes in 14 msecs (HTTP/1.1 200) 8 headers in 431 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '13.125.176.205:1234'. You may need to add '13.125.176.205' to ALLOWED_HOSTS.
+Bad Request: /
+[pid: 528|app: 0|req: 87/154] 209.17.96.90 () {30 vars in 456 bytes} [Sat Jul  4 19:30:48 2020] GET / => generated 56546 bytes in 29 msecs (HTTP/1.1 400) 2 headers in 86 bytes (1 switches on core 0)
+[pid: 528|app: 0|req: 88/155] 66.102.6.79 () {38 vars in 717 bytes} [Sat Jul  4 23:01:02 2020] GET / => generated 3203 bytes in 2 msecs (HTTP/1.1 200) 6 headers in 319 bytes (1 switches on core 0)
+[pid: 526|app: 0|req: 18/156] 66.102.6.75 () {38 vars in 729 bytes} [Sat Jul  4 23:01:02 2020] GET /admin/ => generated 0 bytes in 1 msecs (HTTP/1.1 302) 8 headers in 301 bytes (1 switches on core 0)
+[pid: 525|app: 0|req: 20/157] 66.102.6.75 () {38 vars in 733 bytes} [Sat Jul  4 23:01:02 2020] GET /members/ => generated 325 bytes in 28 msecs (HTTP/1.1 200) 4 headers in 128 bytes (1 switches on core 0)
+Not Found: /favicon.ico
+[pid: 527|app: 0|req: 32/158] 66.102.6.79 () {38 vars in 683 bytes} [Sat Jul  4 23:01:03 2020] GET /favicon.ico => generated 3528 bytes in 9 msecs (HTTP/1.1 404) 4 headers in 129 bytes (1 switches on core 0)
+[pid: 526|app: 0|req: 19/159] 66.102.6.75 () {38 vars in 766 bytes} [Sat Jul  4 23:01:03 2020] GET /admin/login/?next=/admin/ => generated 1926 bytes in 17 msecs (HTTP/1.1 200) 8 headers in 431 bytes (1 switches on core 0)
+Not Found: /favicon.ico
+[pid: 528|app: 0|req: 89/160] 66.102.6.75 () {38 vars in 683 bytes} [Sat Jul  4 23:01:03 2020] GET /favicon.ico => generated 3528 bytes in 4 msecs (HTTP/1.1 404) 4 headers in 129 bytes (1 switches on core 0)
+[pid: 528|app: 0|req: 90/161] 66.102.6.79 () {38 vars in 729 bytes} [Sat Jul  4 23:24:43 2020] GET /admin/ => generated 0 bytes in 1 msecs (HTTP/1.1 302) 8 headers in 301 bytes (1 switches on core 0)
+[pid: 525|app: 0|req: 21/162] 66.102.6.79 () {38 vars in 717 bytes} [Sat Jul  4 23:24:43 2020] GET / => generated 3203 bytes in 2 msecs (HTTP/1.1 200) 6 headers in 319 bytes (1 switches on core 0)
+[pid: 527|app: 0|req: 33/163] 66.102.6.79 () {38 vars in 766 bytes} [Sat Jul  4 23:24:43 2020] GET /admin/login/?next=/admin/ => generated 1926 bytes in 13 msecs (HTTP/1.1 200) 8 headers in 431 bytes (1 switches on core 0)
+[pid: 528|app: 0|req: 91/164] 66.102.6.79 () {38 vars in 733 bytes} [Sat Jul  4 23:51:45 2020] GET /members/ => generated 325 bytes in 9 msecs (HTTP/1.1 200) 4 headers in 128 bytes (1 switches on core 0)
+[pid: 528|app: 0|req: 92/165] 39.115.76.251 () {42 vars in 936 bytes} [Sun Jul  5 00:43:22 2020] GET /members/ => generated 325 bytes in 9 msecs (HTTP/1.1 200) 4 headers in 128 bytes (1 switches on core 0)
+Not Found: /favicon.ico
+[pid: 527|app: 0|req: 34/166] 39.115.76.251 () {42 vars in 914 bytes} [Sun Jul  5 00:43:22 2020] GET /favicon.ico => generated 3528 bytes in 4 msecs (HTTP/1.1 404) 4 headers in 129 bytes (1 switches on core 0)
+[pid: 525|app: 0|req: 22/167] 39.115.76.251 () {42 vars in 920 bytes} [Sun Jul  5 00:43:26 2020] GET / => generated 3203 bytes in 2 msecs (HTTP/1.1 200) 6 headers in 319 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '13.125.176.205:1234'. You may need to add '13.125.176.205' to ALLOWED_HOSTS.
+Bad Request: /
+[pid: 528|app: 0|req: 93/168] 209.17.96.10 () {30 vars in 456 bytes} [Sun Jul  5 22:49:38 2020] GET / => generated 56546 bytes in 28 msecs (HTTP/1.1 400) 2 headers in 86 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '13.125.176.205:1234'. You may need to add '13.125.176.205' to ALLOWED_HOSTS.
+Bad Request: /logs
+[pid: 528|app: 0|req: 94/169] 62.171.163.129 () {30 vars in 390 bytes} [Sun Jul  5 23:23:00 2020] GET /logs => generated 56399 bytes in 28 msecs (HTTP/1.0 400) 2 headers in 86 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '13.125.176.205:1234'. You may need to add '13.125.176.205' to ALLOWED_HOSTS.
+Bad Request: /editConfig
+[pid: 527|app: 0|req: 35/170] 62.171.163.129 () {30 vars in 425 bytes} [Sun Jul  5 23:23:01 2020] GET /editConfig?returnUrl=/ => generated 56857 bytes in 30 msecs (HTTP/1.0 400) 2 headers in 86 bytes (1 switches on core 0)
+[pid: 525|app: 0|req: 23/171] 66.102.6.75 () {38 vars in 729 bytes} [Mon Jul  6 00:50:58 2020] GET /admin/ => generated 0 bytes in 1 msecs (HTTP/1.1 302) 8 headers in 301 bytes (1 switches on core 0)
+[pid: 528|app: 0|req: 95/172] 66.102.6.79 () {38 vars in 733 bytes} [Mon Jul  6 00:50:58 2020] GET /members/ => generated 325 bytes in 21 msecs (HTTP/1.1 200) 4 headers in 128 bytes (1 switches on core 0)
+[pid: 527|app: 0|req: 36/173] 66.102.6.75 () {38 vars in 717 bytes} [Mon Jul  6 00:50:58 2020] GET / => generated 3203 bytes in 2 msecs (HTTP/1.1 200) 6 headers in 319 bytes (1 switches on core 0)
+Not Found: /favicon.ico
+[pid: 526|app: 0|req: 20/174] 66.102.6.79 () {38 vars in 683 bytes} [Mon Jul  6 00:50:58 2020] GET /favicon.ico => generated 3528 bytes in 4 msecs (HTTP/1.1 404) 4 headers in 129 bytes (1 switches on core 0)
+[pid: 525|app: 0|req: 24/175] 66.102.6.79 () {38 vars in 766 bytes} [Mon Jul  6 00:50:59 2020] GET /admin/login/?next=/admin/ => generated 1926 bytes in 15 msecs (HTTP/1.1 200) 8 headers in 431 bytes (1 switches on core 0)
+Not Found: /favicon.ico
+[pid: 528|app: 0|req: 96/176] 66.102.6.77 () {38 vars in 683 bytes} [Mon Jul  6 00:50:59 2020] GET /favicon.ico => generated 3528 bytes in 4 msecs (HTTP/1.1 404) 4 headers in 129 bytes (1 switches on core 0)
+[pid: 528|app: 0|req: 97/177] 66.102.6.77 () {38 vars in 717 bytes} [Mon Jul  6 04:44:07 2020] GET / => generated 3203 bytes in 2 msecs (HTTP/1.1 200) 6 headers in 319 bytes (1 switches on core 0)
+[pid: 528|app: 0|req: 98/178] 66.102.6.77 () {38 vars in 733 bytes} [Mon Jul  6 05:49:35 2020] GET /members/ => generated 325 bytes in 9 msecs (HTTP/1.1 200) 4 headers in 128 bytes (1 switches on core 0)
+[pid: 527|app: 0|req: 37/179] 66.102.6.75 () {38 vars in 729 bytes} [Mon Jul  6 05:49:35 2020] GET /admin/ => generated 0 bytes in 1 msecs (HTTP/1.1 302) 8 headers in 301 bytes (1 switches on core 0)
+[pid: 526|app: 0|req: 21/180] 66.102.6.79 () {38 vars in 766 bytes} [Mon Jul  6 05:49:35 2020] GET /admin/login/?next=/admin/ => generated 1926 bytes in 13 msecs (HTTP/1.1 200) 8 headers in 431 bytes (1 switches on core 0)
+[pid: 526|app: 0|req: 22/181] 66.102.6.75 () {38 vars in 730 bytes} [Mon Jul  6 10:02:20 2020] GET /admin/ => generated 0 bytes in 1 msecs (HTTP/1.1 302) 8 headers in 301 bytes (1 switches on core 0)
+[pid: 528|app: 0|req: 99/182] 66.102.6.77 () {38 vars in 734 bytes} [Mon Jul  6 10:02:20 2020] GET /members/ => generated 325 bytes in 10 msecs (HTTP/1.1 200) 4 headers in 128 bytes (1 switches on core 0)
+[pid: 527|app: 0|req: 38/183] 66.102.6.75 () {38 vars in 767 bytes} [Mon Jul  6 10:02:20 2020] GET /admin/login/?next=/admin/ => generated 1926 bytes in 13 msecs (HTTP/1.1 200) 8 headers in 431 bytes (1 switches on core 0)
+Not Found: /favicon.ico
+[pid: 528|app: 0|req: 100/184] 66.102.6.79 () {38 vars in 684 bytes} [Mon Jul  6 10:02:21 2020] GET /favicon.ico => generated 3528 bytes in 4 msecs (HTTP/1.1 404) 4 headers in 129 bytes (1 switches on core 0)
+Not Found: /favicon.ico
+[pid: 525|app: 0|req: 25/185] 66.102.6.79 () {38 vars in 684 bytes} [Mon Jul  6 10:02:21 2020] GET /favicon.ico => generated 3528 bytes in 4 msecs (HTTP/1.1 404) 4 headers in 129 bytes (1 switches on core 0)
+[pid: 526|app: 0|req: 23/186] 66.102.6.79 () {38 vars in 730 bytes} [Mon Jul  6 10:49:14 2020] GET /admin/ => generated 0 bytes in 1 msecs (HTTP/1.1 302) 8 headers in 301 bytes (1 switches on core 0)
+[pid: 528|app: 0|req: 101/187] 66.102.6.79 () {38 vars in 734 bytes} [Mon Jul  6 10:49:14 2020] GET /members/ => generated 325 bytes in 10 msecs (HTTP/1.1 200) 4 headers in 128 bytes (1 switches on core 0)
+[pid: 527|app: 0|req: 39/188] 66.102.6.79 () {38 vars in 767 bytes} [Mon Jul  6 10:49:14 2020] GET /admin/login/?next=/admin/ => generated 1926 bytes in 13 msecs (HTTP/1.1 200) 8 headers in 431 bytes (1 switches on core 0)
+Not Found: /favicon.ico
+[pid: 528|app: 0|req: 102/189] 66.102.6.79 () {38 vars in 684 bytes} [Mon Jul  6 10:49:14 2020] GET /favicon.ico => generated 3528 bytes in 4 msecs (HTTP/1.1 404) 4 headers in 129 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '13.125.176.205:1234'. You may need to add '13.125.176.205' to ALLOWED_HOSTS.
+Bad Request: /
+[pid: 528|app: 0|req: 103/190] 209.17.96.66 () {30 vars in 456 bytes} [Tue Jul  7 04:00:08 2020] GET / => generated 56546 bytes in 29 msecs (HTTP/1.1 400) 2 headers in 86 bytes (1 switches on core 0)
+[pid: 528|app: 0|req: 104/191] 66.102.6.79 () {38 vars in 734 bytes} [Tue Jul  7 07:28:38 2020] GET /members/ => generated 325 bytes in 34 msecs (HTTP/1.1 200) 4 headers in 128 bytes (1 switches on core 0)
+[pid: 528|app: 0|req: 105/192] 66.102.6.77 () {38 vars in 730 bytes} [Tue Jul  7 08:03:31 2020] GET /admin/ => generated 0 bytes in 1 msecs (HTTP/1.1 302) 8 headers in 301 bytes (1 switches on core 0)
+[pid: 526|app: 0|req: 24/193] 66.102.6.75 () {38 vars in 767 bytes} [Tue Jul  7 08:03:31 2020] GET /admin/login/?next=/admin/ => generated 1926 bytes in 17 msecs (HTTP/1.1 200) 8 headers in 431 bytes (1 switches on core 0)
+[pid: 528|app: 0|req: 106/194] 66.102.6.75 () {38 vars in 730 bytes} [Tue Jul  7 10:04:31 2020] GET /admin/ => generated 0 bytes in 1 msecs (HTTP/1.1 302) 8 headers in 301 bytes (1 switches on core 0)
+[pid: 525|app: 0|req: 26/195] 66.102.6.77 () {38 vars in 767 bytes} [Tue Jul  7 10:04:31 2020] GET /admin/login/?next=/admin/ => generated 1926 bytes in 13 msecs (HTTP/1.1 200) 8 headers in 431 bytes (1 switches on core 0)
+Not Found: /favicon.ico
+[pid: 528|app: 0|req: 107/196] 66.102.6.75 () {38 vars in 684 bytes} [Tue Jul  7 10:11:58 2020] GET /favicon.ico => generated 3528 bytes in 4 msecs (HTTP/1.1 404) 4 headers in 129 bytes (1 switches on core 0)
+Not Found: /favicon.ico
+[pid: 528|app: 0|req: 108/197] 66.102.6.75 () {38 vars in 684 bytes} [Tue Jul  7 12:30:24 2020] GET /favicon.ico => generated 3528 bytes in 4 msecs (HTTP/1.1 404) 4 headers in 129 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '13.125.176.205:1234'. You may need to add '13.125.176.205' to ALLOWED_HOSTS.
+Bad Request: /
+[pid: 528|app: 0|req: 109/198] 192.35.169.48 () {28 vars in 357 bytes} [Tue Jul  7 13:15:56 2020] GET / => generated 56220 bytes in 29 msecs (HTTP/1.1 400) 2 headers in 86 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '13.125.176.205:1234'. You may need to add '13.125.176.205' to ALLOWED_HOSTS.
+Bad Request: /
+[pid: 528|app: 0|req: 110/199] 209.17.96.106 () {30 vars in 457 bytes} [Tue Jul  7 19:55:26 2020] GET / => generated 56547 bytes in 28 msecs (HTTP/1.1 400) 2 headers in 86 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '13.125.176.205:1234'. You may need to add '13.125.176.205' to ALLOWED_HOSTS.
+Bad Request: /
+[pid: 528|app: 0|req: 111/200] 92.118.161.25 () {30 vars in 498 bytes} [Tue Jul  7 21:40:40 2020] GET / => generated 56629 bytes in 29 msecs (HTTP/1.1 400) 2 headers in 86 bytes (1 switches on core 0)
+[pid: 528|app: 0|req: 112/201] 74.125.212.81 () {38 vars in 736 bytes} [Wed Jul  8 00:43:05 2020] GET /members/ => generated 325 bytes in 10 msecs (HTTP/1.1 200) 4 headers in 128 bytes (1 switches on core 0)
+[pid: 528|app: 0|req: 113/202] 66.102.6.79 () {38 vars in 734 bytes} [Wed Jul  8 04:58:43 2020] GET /members/ => generated 325 bytes in 9 msecs (HTTP/1.1 200) 4 headers in 128 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '13.125.176.205:1234'. You may need to add '13.125.176.205' to ALLOWED_HOSTS.
+Bad Request: /
+[pid: 528|app: 0|req: 114/203] 223.71.167.163 () {34 vars in 506 bytes} [Wed Jul  8 06:15:35 2020] GET / => generated 56809 bytes in 57 msecs (HTTP/1.1 400) 2 headers in 86 bytes (1 switches on core 0)
+Not Found: /favicon.ico
+[pid: 528|app: 0|req: 115/204] 66.102.6.75 () {38 vars in 684 bytes} [Wed Jul  8 08:45:28 2020] GET /favicon.ico => generated 3528 bytes in 4 msecs (HTTP/1.1 404) 4 headers in 129 bytes (1 switches on core 0)
+Not Found: /favicon.ico
+[pid: 528|app: 0|req: 116/205] 66.102.6.79 () {38 vars in 684 bytes} [Wed Jul  8 11:49:47 2020] GET /favicon.ico => generated 3528 bytes in 3 msecs (HTTP/1.1 404) 4 headers in 129 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '13.125.176.205:1234'. You may need to add '13.125.176.205' to ALLOWED_HOSTS.
+Bad Request: /
+[pid: 528|app: 0|req: 117/206] 183.136.225.44 () {34 vars in 506 bytes} [Wed Jul  8 13:09:40 2020] GET / => generated 56809 bytes in 31 msecs (HTTP/1.1 400) 2 headers in 86 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '13.125.176.205:1234'. You may need to add '13.125.176.205' to ALLOWED_HOSTS.
+Bad Request: /
+[pid: 528|app: 0|req: 118/207] 209.17.96.178 () {30 vars in 457 bytes} [Wed Jul  8 21:54:09 2020] GET / => generated 56547 bytes in 29 msecs (HTTP/1.1 400) 2 headers in 86 bytes (1 switches on core 0)
+[pid: 528|app: 0|req: 119/208] 66.102.6.77 () {38 vars in 730 bytes} [Wed Jul  8 23:44:28 2020] GET /admin/ => generated 0 bytes in 1 msecs (HTTP/1.1 302) 8 headers in 301 bytes (1 switches on core 0)
+[pid: 526|app: 0|req: 25/209] 66.102.6.75 () {38 vars in 767 bytes} [Wed Jul  8 23:44:29 2020] GET /admin/login/?next=/admin/ => generated 1926 bytes in 13 msecs (HTTP/1.1 200) 8 headers in 431 bytes (1 switches on core 0)
+[pid: 528|app: 0|req: 120/210] 66.102.6.75 () {38 vars in 730 bytes} [Wed Jul  8 23:53:06 2020] GET /admin/ => generated 0 bytes in 1 msecs (HTTP/1.1 302) 8 headers in 301 bytes (1 switches on core 0)
+[pid: 526|app: 0|req: 26/211] 66.102.6.77 () {38 vars in 734 bytes} [Wed Jul  8 23:53:06 2020] GET /members/ => generated 325 bytes in 14 msecs (HTTP/1.1 200) 4 headers in 128 bytes (1 switches on core 0)
+[pid: 527|app: 0|req: 40/212] 66.102.6.77 () {38 vars in 767 bytes} [Wed Jul  8 23:53:07 2020] GET /admin/login/?next=/admin/ => generated 1926 bytes in 13 msecs (HTTP/1.1 200) 8 headers in 431 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '13.125.176.205:1234'. You may need to add '13.125.176.205' to ALLOWED_HOSTS.
+Bad Request: /logs
+[pid: 528|app: 0|req: 121/213] 62.171.152.36 () {28 vars in 365 bytes} [Thu Jul  9 01:01:55 2020] GET /logs => generated 56268 bytes in 29 msecs (HTTP/1.0 400) 2 headers in 86 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '13.125.176.205:1234'. You may need to add '13.125.176.205' to ALLOWED_HOSTS.
+Bad Request: /editConfig
+[pid: 527|app: 0|req: 41/214] 62.171.152.36 () {28 vars in 400 bytes} [Thu Jul  9 01:01:56 2020] GET /editConfig?returnUrl=/ => generated 56726 bytes in 30 msecs (HTTP/1.0 400) 2 headers in 86 bytes (1 switches on core 0)
+[pid: 528|app: 0|req: 122/215] 66.102.6.75 () {38 vars in 734 bytes} [Thu Jul  9 01:40:40 2020] GET /members/ => generated 325 bytes in 9 msecs (HTTP/1.1 200) 4 headers in 128 bytes (1 switches on core 0)
+Not Found: /favicon.ico
+[pid: 528|app: 0|req: 123/216] 66.102.6.75 () {38 vars in 684 bytes} [Thu Jul  9 05:42:58 2020] GET /favicon.ico => generated 3528 bytes in 4 msecs (HTTP/1.1 404) 4 headers in 129 bytes (1 switches on core 0)
+[pid: 528|app: 0|req: 124/217] 83.97.20.35 () {26 vars in 323 bytes} [Thu Jul  9 14:10:21 2020] GET / => generated 3203 bytes in 3 msecs (HTTP/1.0 200) 6 headers in 319 bytes (1 switches on core 0)
+[pid: 528|app: 0|req: 125/218] 66.102.6.79 () {38 vars in 734 bytes} [Thu Jul  9 23:37:50 2020] GET /members/ => generated 325 bytes in 10 msecs (HTTP/1.1 200) 4 headers in 128 bytes (1 switches on core 0)
+Not Found: /favicon.ico
+[pid: 527|app: 0|req: 42/219] 66.102.6.75 () {38 vars in 684 bytes} [Thu Jul  9 23:37:50 2020] GET /favicon.ico => generated 3528 bytes in 5 msecs (HTTP/1.1 404) 4 headers in 129 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '13.125.176.205:1234'. You may need to add '13.125.176.205' to ALLOWED_HOSTS.
+Bad Request: /
+[pid: 528|app: 0|req: 126/220] 92.118.160.45 () {30 vars in 498 bytes} [Fri Jul 10 00:39:29 2020] GET / => generated 56630 bytes in 33 msecs (HTTP/1.1 400) 2 headers in 86 bytes (1 switches on core 0)
+[pid: 528|app: 0|req: 127/221] 66.102.6.75 () {38 vars in 734 bytes} [Fri Jul 10 01:46:46 2020] GET /members/ => generated 325 bytes in 9 msecs (HTTP/1.1 200) 4 headers in 128 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '13.125.176.205:1234'. You may need to add '13.125.176.205' to ALLOWED_HOSTS.
+Bad Request: /
+[pid: 528|app: 0|req: 128/222] 209.17.96.34 () {30 vars in 456 bytes} [Fri Jul 10 03:12:05 2020] GET / => generated 56547 bytes in 29 msecs (HTTP/1.1 400) 2 headers in 86 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '13.125.176.205:1234'. You may need to add '13.125.176.205' to ALLOWED_HOSTS.
+Bad Request: /logs
+[pid: 528|app: 0|req: 129/223] 62.171.163.129 () {30 vars in 390 bytes} [Fri Jul 10 05:43:20 2020] GET /logs => generated 56400 bytes in 29 msecs (HTTP/1.0 400) 2 headers in 86 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '13.125.176.205:1234'. You may need to add '13.125.176.205' to ALLOWED_HOSTS.
+Bad Request: /editConfig
+[pid: 527|app: 0|req: 43/224] 62.171.163.129 () {30 vars in 425 bytes} [Fri Jul 10 05:43:21 2020] GET /editConfig?returnUrl=/ => generated 56858 bytes in 47 msecs (HTTP/1.0 400) 2 headers in 86 bytes (1 switches on core 0)
+Not Found: /favicon.ico
+[pid: 528|app: 0|req: 130/225] 66.102.6.79 () {38 vars in 684 bytes} [Fri Jul 10 06:17:07 2020] GET /favicon.ico => generated 3528 bytes in 4 msecs (HTTP/1.1 404) 4 headers in 129 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '13.125.176.205:1234'. You may need to add '13.125.176.205' to ALLOWED_HOSTS.
+Bad Request: /
+[pid: 528|app: 0|req: 131/226] 192.35.168.219 () {28 vars in 358 bytes} [Fri Jul 10 07:10:08 2020] GET / => generated 56222 bytes in 29 msecs (HTTP/1.1 400) 2 headers in 86 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '13.125.176.205:1234'. You may need to add '13.125.176.205' to ALLOWED_HOSTS.
+Bad Request: /
+[pid: 527|app: 0|req: 44/227] 192.35.168.219 () {34 vars in 444 bytes} [Fri Jul 10 07:10:08 2020] GET / => generated 56655 bytes in 29 msecs (HTTP/1.1 400) 2 headers in 86 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '13.125.176.205:1234'. You may need to add '13.125.176.205' to ALLOWED_HOSTS.
+Bad Request: /
+[pid: 528|app: 0|req: 132/228] 192.35.169.48 () {28 vars in 357 bytes} [Fri Jul 10 10:33:25 2020] GET / => generated 56221 bytes in 30 msecs (HTTP/1.1 400) 2 headers in 86 bytes (1 switches on core 0)
+[pid: 528|app: 0|req: 133/229] 66.102.6.77 () {38 vars in 734 bytes} [Fri Jul 10 23:40:46 2020] GET /members/ => generated 325 bytes in 21 msecs (HTTP/1.1 200) 4 headers in 128 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '13.125.176.205:1234'. You may need to add '13.125.176.205' to ALLOWED_HOSTS.
+Bad Request: /
+[pid: 528|app: 0|req: 134/230] 209.17.96.2 () {30 vars in 455 bytes} [Sat Jul 11 00:20:07 2020] GET / => generated 56546 bytes in 29 msecs (HTTP/1.1 400) 2 headers in 86 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '13.125.176.205:1234'. You may need to add '13.125.176.205' to ALLOWED_HOSTS.
+Bad Request: /logs
+[pid: 528|app: 0|req: 135/231] 62.171.152.36 () {28 vars in 365 bytes} [Sat Jul 11 01:03:26 2020] GET /logs => generated 56269 bytes in 30 msecs (HTTP/1.0 400) 2 headers in 86 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '13.125.176.205:1234'. You may need to add '13.125.176.205' to ALLOWED_HOSTS.
+Bad Request: /editConfig
+[pid: 527|app: 0|req: 45/232] 62.171.152.36 () {28 vars in 400 bytes} [Sat Jul 11 01:03:27 2020] GET /editConfig?returnUrl=/ => generated 56727 bytes in 28 msecs (HTTP/1.0 400) 2 headers in 86 bytes (1 switches on core 0)
+Not Found: /favicon.ico
+[pid: 528|app: 0|req: 136/233] 66.102.6.75 () {38 vars in 684 bytes} [Sat Jul 11 01:36:38 2020] GET /favicon.ico => generated 3528 bytes in 4 msecs (HTTP/1.1 404) 4 headers in 129 bytes (1 switches on core 0)
+[pid: 528|app: 0|req: 137/234] 66.102.6.77 () {38 vars in 734 bytes} [Sat Jul 11 02:05:15 2020] GET /members/ => generated 325 bytes in 9 msecs (HTTP/1.1 200) 4 headers in 128 bytes (1 switches on core 0)
+Not Found: /favicon.ico
+[pid: 528|app: 0|req: 138/235] 66.102.6.77 () {38 vars in 684 bytes} [Sat Jul 11 06:25:58 2020] GET /favicon.ico => generated 3528 bytes in 4 msecs (HTTP/1.1 404) 4 headers in 129 bytes (1 switches on core 0)
+[pid: 528|app: 0|req: 139/236] 219.254.31.123 () {42 vars in 933 bytes} [Sat Jul 11 14:15:31 2020] GET /admin/ => generated 0 bytes in 1 msecs (HTTP/1.1 302) 8 headers in 301 bytes (1 switches on core 0)
+[pid: 526|app: 0|req: 27/237] 219.254.31.123 () {42 vars in 970 bytes} [Sat Jul 11 14:15:31 2020] GET /admin/login/?next=/admin/ => generated 1926 bytes in 14 msecs (HTTP/1.1 200) 8 headers in 431 bytes (1 switches on core 0)
+Not Found: /favicon.ico
+[pid: 528|app: 0|req: 140/238] 219.254.31.123 () {42 vars in 932 bytes} [Sat Jul 11 14:15:32 2020] GET /favicon.ico => generated 3528 bytes in 4 msecs (HTTP/1.1 404) 4 headers in 129 bytes (1 switches on core 0)
+[pid: 528|app: 0|req: 141/239] 66.102.6.79 () {38 vars in 734 bytes} [Sun Jul 12 00:05:44 2020] GET /members/ => generated 325 bytes in 17 msecs (HTTP/1.1 200) 4 headers in 128 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '13.125.176.205:1234'. You may need to add '13.125.176.205' to ALLOWED_HOSTS.
+Bad Request: /
+[pid: 528|app: 0|req: 142/240] 209.17.96.82 () {30 vars in 456 bytes} [Sun Jul 12 04:20:01 2020] GET / => generated 56547 bytes in 29 msecs (HTTP/1.1 400) 2 headers in 86 bytes (1 switches on core 0)
+[pid: 528|app: 0|req: 143/241] 66.102.6.75 () {38 vars in 730 bytes} [Sun Jul 12 05:07:02 2020] GET /members/ => generated 325 bytes in 9 msecs (HTTP/1.1 200) 4 headers in 128 bytes (1 switches on core 0)
+Not Found: /favicon.ico
+[pid: 527|app: 0|req: 46/242] 66.102.6.77 () {38 vars in 680 bytes} [Sun Jul 12 05:07:03 2020] GET /favicon.ico => generated 3528 bytes in 4 msecs (HTTP/1.1 404) 4 headers in 129 bytes (1 switches on core 0)
+[pid: 528|app: 0|req: 144/243] 66.102.6.75 () {38 vars in 730 bytes} [Sun Jul 12 05:10:56 2020] GET /members/ => generated 325 bytes in 9 msecs (HTTP/1.1 200) 4 headers in 128 bytes (1 switches on core 0)
+Not Found: /favicon.ico
+[pid: 527|app: 0|req: 47/244] 66.102.6.79 () {38 vars in 680 bytes} [Sun Jul 12 05:10:56 2020] GET /favicon.ico => generated 3528 bytes in 4 msecs (HTTP/1.1 404) 4 headers in 129 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '13.125.176.205:1234'. You may need to add '13.125.176.205' to ALLOWED_HOSTS.
+Bad Request: /
+[pid: 528|app: 0|req: 145/245] 209.17.96.202 () {30 vars in 457 bytes} [Mon Jul 13 01:47:47 2020] GET / => generated 56548 bytes in 29 msecs (HTTP/1.1 400) 2 headers in 86 bytes (1 switches on core 0)
+[pid: 528|app: 0|req: 146/246] 66.102.6.77 () {38 vars in 730 bytes} [Mon Jul 13 06:48:07 2020] GET /members/ => generated 325 bytes in 23 msecs (HTTP/1.1 200) 4 headers in 128 bytes (1 switches on core 0)
+Not Found: /favicon.ico
+[pid: 527|app: 0|req: 48/247] 66.102.6.79 () {38 vars in 680 bytes} [Mon Jul 13 06:48:07 2020] GET /favicon.ico => generated 3528 bytes in 4 msecs (HTTP/1.1 404) 4 headers in 129 bytes (1 switches on core 0)
+Not Found: /favicon.ico
+[pid: 528|app: 0|req: 147/248] 66.102.6.75 () {38 vars in 680 bytes} [Mon Jul 13 07:07:22 2020] GET /favicon.ico => generated 3528 bytes in 4 msecs (HTTP/1.1 404) 4 headers in 129 bytes (1 switches on core 0)
+[pid: 528|app: 0|req: 148/249] 66.102.6.75 () {38 vars in 730 bytes} [Mon Jul 13 08:11:04 2020] GET /members/ => generated 325 bytes in 9 msecs (HTTP/1.1 200) 4 headers in 128 bytes (1 switches on core 0)
+[pid: 528|app: 0|req: 149/250] 66.102.6.79 () {38 vars in 734 bytes} [Mon Jul 13 11:26:07 2020] GET /members/ => generated 325 bytes in 9 msecs (HTTP/1.1 200) 4 headers in 128 bytes (1 switches on core 0)
+Not Found: /favicon.ico
+[pid: 527|app: 0|req: 49/251] 66.102.6.77 () {38 vars in 684 bytes} [Mon Jul 13 11:26:08 2020] GET /favicon.ico => generated 3528 bytes in 4 msecs (HTTP/1.1 404) 4 headers in 129 bytes (1 switches on core 0)
+[pid: 528|app: 0|req: 150/252] 66.102.6.79 () {38 vars in 734 bytes} [Mon Jul 13 12:16:32 2020] GET /members/ => generated 325 bytes in 15 msecs (HTTP/1.1 200) 4 headers in 128 bytes (1 switches on core 0)
+Not Found: /favicon.ico
+[pid: 527|app: 0|req: 50/253] 66.102.6.77 () {38 vars in 684 bytes} [Mon Jul 13 12:16:32 2020] GET /favicon.ico => generated 3528 bytes in 4 msecs (HTTP/1.1 404) 4 headers in 129 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '13.125.176.205:1234'. You may need to add '13.125.176.205' to ALLOWED_HOSTS.
+Bad Request: /
+[pid: 528|app: 0|req: 151/254] 209.17.96.82 () {30 vars in 456 bytes} [Tue Jul 14 05:56:12 2020] GET / => generated 56547 bytes in 29 msecs (HTTP/1.1 400) 2 headers in 86 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '13.125.176.205:1234'. You may need to add '13.125.176.205' to ALLOWED_HOSTS.
+Bad Request: /logs
+[pid: 528|app: 0|req: 152/255] 62.171.152.36 () {28 vars in 365 bytes} [Tue Jul 14 07:01:53 2020] GET /logs => generated 56269 bytes in 29 msecs (HTTP/1.0 400) 2 headers in 86 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '13.125.176.205:1234'. You may need to add '13.125.176.205' to ALLOWED_HOSTS.
+Bad Request: /editConfig
+[pid: 527|app: 0|req: 51/256] 62.171.152.36 () {28 vars in 400 bytes} [Tue Jul 14 07:01:54 2020] GET /editConfig?returnUrl=/ => generated 56727 bytes in 29 msecs (HTTP/1.0 400) 2 headers in 86 bytes (1 switches on core 0)
+[pid: 528|app: 0|req: 153/257] 66.102.6.77 () {38 vars in 733 bytes} [Tue Jul 14 12:03:05 2020] GET /members/ => generated 325 bytes in 14 msecs (HTTP/1.1 200) 4 headers in 128 bytes (1 switches on core 0)
+Not Found: /favicon.ico
+[pid: 527|app: 0|req: 52/258] 66.102.6.79 () {38 vars in 683 bytes} [Tue Jul 14 12:03:05 2020] GET /favicon.ico => generated 3528 bytes in 4 msecs (HTTP/1.1 404) 4 headers in 129 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '13.125.176.205:1234'. You may need to add '13.125.176.205' to ALLOWED_HOSTS.
+Bad Request: /
+[pid: 528|app: 0|req: 154/259] 196.52.43.114 () {30 vars in 479 bytes} [Tue Jul 14 23:29:13 2020] GET / => generated 56592 bytes in 29 msecs (HTTP/1.1 400) 2 headers in 86 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '13.125.176.205:1234'. You may need to add '13.125.176.205' to ALLOWED_HOSTS.
+Bad Request: /
+[pid: 528|app: 0|req: 155/260] 209.17.97.122 () {30 vars in 457 bytes} [Wed Jul 15 02:47:33 2020] GET / => generated 56548 bytes in 29 msecs (HTTP/1.1 400) 2 headers in 86 bytes (1 switches on core 0)
+[pid: 528|app: 0|req: 156/261] 83.97.20.35 () {26 vars in 323 bytes} [Wed Jul 15 05:21:16 2020] GET / => generated 3203 bytes in 2 msecs (HTTP/1.0 200) 6 headers in 319 bytes (1 switches on core 0)
+[pid: 528|app: 0|req: 157/262] 66.102.6.77 () {38 vars in 733 bytes} [Wed Jul 15 05:49:55 2020] GET /members/ => generated 325 bytes in 10 msecs (HTTP/1.1 200) 4 headers in 128 bytes (1 switches on core 0)
+Not Found: /favicon.ico
+[pid: 527|app: 0|req: 53/263] 66.102.6.79 () {38 vars in 683 bytes} [Wed Jul 15 05:49:56 2020] GET /favicon.ico => generated 3528 bytes in 4 msecs (HTTP/1.1 404) 4 headers in 129 bytes (1 switches on core 0)
+Not Found: /favicon.ico
+[pid: 528|app: 0|req: 158/264] 66.102.6.79 () {38 vars in 683 bytes} [Wed Jul 15 07:44:25 2020] GET /favicon.ico => generated 3528 bytes in 4 msecs (HTTP/1.1 404) 4 headers in 129 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '13.125.176.205:1234'. You may need to add '13.125.176.205' to ALLOWED_HOSTS.
+Bad Request: /
+[pid: 528|app: 0|req: 159/265] 192.35.168.204 () {28 vars in 358 bytes} [Thu Jul 16 05:09:27 2020] GET / => generated 56222 bytes in 37 msecs (HTTP/1.1 400) 2 headers in 86 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '13.125.176.205:1234'. You may need to add '13.125.176.205' to ALLOWED_HOSTS.
+Bad Request: /
+[pid: 527|app: 0|req: 54/266] 192.35.168.204 () {34 vars in 444 bytes} [Thu Jul 16 05:09:27 2020] GET / => generated 56655 bytes in 29 msecs (HTTP/1.1 400) 2 headers in 86 bytes (1 switches on core 0)
+[pid: 528|app: 0|req: 160/267] 66.102.6.77 () {38 vars in 733 bytes} [Thu Jul 16 05:47:50 2020] GET /members/ => generated 325 bytes in 10 msecs (HTTP/1.1 200) 4 headers in 128 bytes (1 switches on core 0)
+Not Found: /favicon.ico
+[pid: 527|app: 0|req: 55/268] 66.102.6.75 () {38 vars in 683 bytes} [Thu Jul 16 05:47:50 2020] GET /favicon.ico => generated 3528 bytes in 4 msecs (HTTP/1.1 404) 4 headers in 129 bytes (1 switches on core 0)
+[pid: 528|app: 0|req: 161/269] 66.102.6.77 () {38 vars in 733 bytes} [Thu Jul 16 06:02:07 2020] GET /members/ => generated 325 bytes in 9 msecs (HTTP/1.1 200) 4 headers in 128 bytes (1 switches on core 0)
+Not Found: /favicon.ico
+[pid: 527|app: 0|req: 56/270] 66.102.6.79 () {38 vars in 683 bytes} [Thu Jul 16 06:02:07 2020] GET /favicon.ico => generated 3528 bytes in 4 msecs (HTTP/1.1 404) 4 headers in 129 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '13.125.176.205:1234'. You may need to add '13.125.176.205' to ALLOWED_HOSTS.
+Bad Request: /
+[pid: 528|app: 0|req: 162/271] 183.136.225.44 () {34 vars in 506 bytes} [Thu Jul 16 06:43:17 2020] GET / => generated 56810 bytes in 29 msecs (HTTP/1.1 400) 2 headers in 86 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '13.125.176.205:1234'. You may need to add '13.125.176.205' to ALLOWED_HOSTS.
+Bad Request: /
+[pid: 528|app: 0|req: 163/272] 209.17.96.114 () {30 vars in 457 bytes} [Thu Jul 16 07:10:54 2020] GET / => generated 56548 bytes in 28 msecs (HTTP/1.1 400) 2 headers in 86 bytes (1 switches on core 0)
+[pid: 528|app: 0|req: 164/273] 66.102.6.77 () {38 vars in 735 bytes} [Thu Jul 16 08:58:27 2020] GET /members/ => generated 325 bytes in 9 msecs (HTTP/1.1 200) 4 headers in 128 bytes (1 switches on core 0)
+Not Found: /favicon.ico
+[pid: 527|app: 0|req: 57/274] 66.102.6.77 () {38 vars in 685 bytes} [Thu Jul 16 08:58:28 2020] GET /favicon.ico => generated 3528 bytes in 4 msecs (HTTP/1.1 404) 4 headers in 129 bytes (1 switches on core 0)
+Not Found: /favicon.ico
+[pid: 528|app: 0|req: 165/275] 66.102.6.75 () {38 vars in 685 bytes} [Thu Jul 16 10:24:12 2020] GET /favicon.ico => generated 3528 bytes in 4 msecs (HTTP/1.1 404) 4 headers in 129 bytes (1 switches on core 0)
+[pid: 528|app: 0|req: 166/276] 66.102.6.75 () {38 vars in 735 bytes} [Thu Jul 16 12:18:29 2020] GET /members/ => generated 325 bytes in 9 msecs (HTTP/1.1 200) 4 headers in 128 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '13.125.176.205:1234'. You may need to add '13.125.176.205' to ALLOWED_HOSTS.
+Bad Request: /phpMyAdmin-3.0.0.0-all-languages/scripts/setup.php
+[pid: 528|app: 0|req: 167/277] 89.248.174.215 () {36 vars in 582 bytes} [Thu Jul 16 15:40:56 2020] GET /phpMyAdmin-3.0.0.0-all-languages/scripts/setup.php => generated 57399 bytes in 29 msecs (HTTP/1.1 400) 2 headers in 86 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '13.125.176.205:1234'. You may need to add '13.125.176.205' to ALLOWED_HOSTS.
+Bad Request: /phpMyAdmin-2.10.0.0/scripts/setup.php
+[pid: 527|app: 0|req: 58/278] 89.248.174.215 () {36 vars in 556 bytes} [Thu Jul 16 15:40:57 2020] GET /phpMyAdmin-2.10.0.0/scripts/setup.php => generated 57243 bytes in 29 msecs (HTTP/1.1 400) 2 headers in 86 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '13.125.176.205:1234'. You may need to add '13.125.176.205' to ALLOWED_HOSTS.
+Bad Request: /phpMyAdmin-2.11.11/scripts/setup.php
+[pid: 528|app: 0|req: 168/279] 89.248.174.215 () {36 vars in 554 bytes} [Thu Jul 16 15:40:58 2020] GET /phpMyAdmin-2.11.11/scripts/setup.php => generated 57231 bytes in 29 msecs (HTTP/1.1 400) 2 headers in 86 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '13.125.176.205:1234'. You may need to add '13.125.176.205' to ALLOWED_HOSTS.
+Bad Request: /phpMyAdmin-2.11.11.3/scripts/setup.ph
+[pid: 527|app: 0|req: 59/280] 89.248.174.215 () {36 vars in 556 bytes} [Thu Jul 16 15:41:00 2020] GET /phpMyAdmin-2.11.11.3/scripts/setup.ph => generated 57243 bytes in 29 msecs (HTTP/1.1 400) 2 headers in 86 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '13.125.176.205:1234'. You may need to add '13.125.176.205' to ALLOWED_HOSTS.
+Bad Request: /phpMyAdmin-2/scripts/setup.php
+[pid: 528|app: 0|req: 169/281] 89.248.174.215 () {36 vars in 542 bytes} [Thu Jul 16 15:41:01 2020] GET /phpMyAdmin-2/scripts/setup.php => generated 57159 bytes in 28 msecs (HTTP/1.1 400) 2 headers in 86 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '13.125.176.205:1234'. You may need to add '13.125.176.205' to ALLOWED_HOSTS.
+Bad Request: /my/scripts/setup.php
+[pid: 527|app: 0|req: 60/282] 89.248.174.215 () {36 vars in 522 bytes} [Thu Jul 16 15:41:02 2020] GET /my/scripts/setup.php => generated 57039 bytes in 29 msecs (HTTP/1.1 400) 2 headers in 86 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '13.125.176.205:1234'. You may need to add '13.125.176.205' to ALLOWED_HOSTS.
+Bad Request: /MyAdmin/scripts/setup.php
+[pid: 528|app: 0|req: 170/283] 89.248.174.215 () {36 vars in 532 bytes} [Thu Jul 16 15:41:03 2020] GET /MyAdmin/scripts/setup.php => generated 57099 bytes in 28 msecs (HTTP/1.1 400) 2 headers in 86 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '13.125.176.205:1234'. You may need to add '13.125.176.205' to ALLOWED_HOSTS.
+Bad Request: /PHPMYADMIN/scripts/setup.php
+[pid: 527|app: 0|req: 61/284] 89.248.174.215 () {36 vars in 538 bytes} [Thu Jul 16 15:41:04 2020] GET /PHPMYADMIN/scripts/setup.php => generated 57135 bytes in 28 msecs (HTTP/1.1 400) 2 headers in 86 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '13.125.176.205:1234'. You may need to add '13.125.176.205' to ALLOWED_HOSTS.
+Bad Request: /db/scripts/setup.php
+[pid: 528|app: 0|req: 171/285] 89.248.174.215 () {36 vars in 522 bytes} [Thu Jul 16 15:41:05 2020] GET /db/scripts/setup.php => generated 57039 bytes in 29 msecs (HTTP/1.1 400) 2 headers in 86 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '13.125.176.205:1234'. You may need to add '13.125.176.205' to ALLOWED_HOSTS.
+Bad Request: /dbadmin/scripts/setup.php
+[pid: 527|app: 0|req: 62/286] 89.248.174.215 () {36 vars in 532 bytes} [Thu Jul 16 15:41:06 2020] GET /dbadmin/scripts/setup.php => generated 57099 bytes in 29 msecs (HTTP/1.1 400) 2 headers in 86 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '13.125.176.205:1234'. You may need to add '13.125.176.205' to ALLOWED_HOSTS.
+Bad Request: /myadmin/scripts/setup.php
+[pid: 528|app: 0|req: 172/287] 89.248.174.215 () {36 vars in 532 bytes} [Thu Jul 16 15:41:07 2020] GET /myadmin/scripts/setup.php => generated 57099 bytes in 29 msecs (HTTP/1.1 400) 2 headers in 86 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '13.125.176.205:1234'. You may need to add '13.125.176.205' to ALLOWED_HOSTS.
+Bad Request: /mysql/scripts/setup.php
+[pid: 527|app: 0|req: 63/288] 89.248.174.215 () {36 vars in 528 bytes} [Thu Jul 16 15:41:08 2020] GET /mysql/scripts/setup.php => generated 57075 bytes in 29 msecs (HTTP/1.1 400) 2 headers in 86 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '13.125.176.205:1234'. You may need to add '13.125.176.205' to ALLOWED_HOSTS.
+Bad Request: /mysqladmin/scripts/setup.php
+[pid: 528|app: 0|req: 173/289] 89.248.174.215 () {36 vars in 538 bytes} [Thu Jul 16 15:41:09 2020] GET /mysqladmin/scripts/setup.php => generated 57135 bytes in 29 msecs (HTTP/1.1 400) 2 headers in 86 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '13.125.176.205:1234'. You may need to add '13.125.176.205' to ALLOWED_HOSTS.
+Bad Request: /pHpMyAdMiN/scripts/setup.php
+[pid: 527|app: 0|req: 64/290] 89.248.174.215 () {36 vars in 538 bytes} [Thu Jul 16 15:41:11 2020] GET /pHpMyAdMiN/scripts/setup.php => generated 57135 bytes in 29 msecs (HTTP/1.1 400) 2 headers in 86 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '13.125.176.205:1234'. You may need to add '13.125.176.205' to ALLOWED_HOSTS.
+Bad Request: /phpMyAdmin/scripts/setup.php
+[pid: 528|app: 0|req: 174/291] 89.248.174.215 () {36 vars in 538 bytes} [Thu Jul 16 15:41:12 2020] GET /phpMyAdmin/scripts/setup.php => generated 57135 bytes in 28 msecs (HTTP/1.1 400) 2 headers in 86 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '13.125.176.205:1234'. You may need to add '13.125.176.205' to ALLOWED_HOSTS.
+Bad Request: /phpadmin/scripts/setup.php
+[pid: 527|app: 0|req: 65/292] 89.248.174.215 () {36 vars in 534 bytes} [Thu Jul 16 15:41:13 2020] GET /phpadmin/scripts/setup.php => generated 57111 bytes in 29 msecs (HTTP/1.1 400) 2 headers in 86 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '13.125.176.205:1234'. You may need to add '13.125.176.205' to ALLOWED_HOSTS.
+Bad Request: /phpmyadmin/scripts/setup.php
+[pid: 528|app: 0|req: 175/293] 89.248.174.215 () {36 vars in 538 bytes} [Thu Jul 16 15:41:14 2020] GET /phpmyadmin/scripts/setup.php => generated 57135 bytes in 29 msecs (HTTP/1.1 400) 2 headers in 86 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '13.125.176.205:1234'. You may need to add '13.125.176.205' to ALLOWED_HOSTS.
+Bad Request: /sqladm/scripts/setup.php
+[pid: 527|app: 0|req: 66/294] 89.248.174.215 () {36 vars in 530 bytes} [Thu Jul 16 15:41:15 2020] GET /sqladm/scripts/setup.php => generated 57087 bytes in 29 msecs (HTTP/1.1 400) 2 headers in 86 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '13.125.176.205:1234'. You may need to add '13.125.176.205' to ALLOWED_HOSTS.
+Bad Request: /sqladmin/scripts/setup.php
+[pid: 528|app: 0|req: 176/295] 89.248.174.215 () {36 vars in 534 bytes} [Thu Jul 16 15:41:16 2020] GET /sqladmin/scripts/setup.php => generated 57111 bytes in 29 msecs (HTTP/1.1 400) 2 headers in 86 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '13.125.176.205:1234'. You may need to add '13.125.176.205' to ALLOWED_HOSTS.
+Bad Request: /phpmyadmin/scripts/db.init.php
+[pid: 527|app: 0|req: 67/296] 89.248.174.215 () {36 vars in 542 bytes} [Thu Jul 16 15:41:17 2020] GET /phpmyadmin/scripts/db.init.php => generated 57159 bytes in 30 msecs (HTTP/1.1 400) 2 headers in 86 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '13.125.176.205:1234'. You may need to add '13.125.176.205' to ALLOWED_HOSTS.
+Bad Request: /phpMyAdmin/scripts/db.init.php
+[pid: 528|app: 0|req: 177/297] 89.248.174.215 () {36 vars in 542 bytes} [Thu Jul 16 15:41:18 2020] GET /phpMyAdmin/scripts/db.init.php => generated 57159 bytes in 28 msecs (HTTP/1.1 400) 2 headers in 86 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '13.125.176.205:1234'. You may need to add '13.125.176.205' to ALLOWED_HOSTS.
+Bad Request: /MyAdmin/scripts/setup.php
+[pid: 527|app: 0|req: 68/298] 89.248.174.215 () {36 vars in 532 bytes} [Thu Jul 16 15:41:19 2020] GET /MyAdmin/scripts/setup.php => generated 57099 bytes in 29 msecs (HTTP/1.1 400) 2 headers in 86 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '13.125.176.205:1234'. You may need to add '13.125.176.205' to ALLOWED_HOSTS.
+Bad Request: /database/scripts/setup.php
+[pid: 528|app: 0|req: 178/299] 89.248.174.215 () {36 vars in 534 bytes} [Thu Jul 16 15:41:20 2020] GET /database/scripts/setup.php => generated 57111 bytes in 29 msecs (HTTP/1.1 400) 2 headers in 86 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '13.125.176.205:1234'. You may need to add '13.125.176.205' to ALLOWED_HOSTS.
+Bad Request: /phpAdmin/scripts/setup.php
+[pid: 527|app: 0|req: 69/300] 89.248.174.215 () {36 vars in 534 bytes} [Thu Jul 16 15:41:21 2020] GET /phpAdmin/scripts/setup.php => generated 57111 bytes in 30 msecs (HTTP/1.1 400) 2 headers in 86 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '13.125.176.205:1234'. You may need to add '13.125.176.205' to ALLOWED_HOSTS.
+Bad Request: /phpmyadmin1/scripts/setup.php
+[pid: 528|app: 0|req: 179/301] 89.248.174.215 () {36 vars in 540 bytes} [Thu Jul 16 15:41:22 2020] GET /phpmyadmin1/scripts/setup.php => generated 57147 bytes in 48 msecs (HTTP/1.1 400) 2 headers in 86 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '13.125.176.205:1234'. You may need to add '13.125.176.205' to ALLOWED_HOSTS.
+Bad Request: /phpmyadmin2/scripts/setup.php
+[pid: 527|app: 0|req: 70/302] 89.248.174.215 () {36 vars in 540 bytes} [Thu Jul 16 15:41:24 2020] GET /phpmyadmin2/scripts/setup.php => generated 57147 bytes in 30 msecs (HTTP/1.1 400) 2 headers in 86 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '13.125.176.205:1234'. You may need to add '13.125.176.205' to ALLOWED_HOSTS.
+Bad Request: /pma/scripts/setup.php
+[pid: 528|app: 0|req: 180/303] 89.248.174.215 () {36 vars in 524 bytes} [Thu Jul 16 15:41:25 2020] GET /pma/scripts/setup.php => generated 57051 bytes in 29 msecs (HTTP/1.1 400) 2 headers in 86 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '13.125.176.205:1234'. You may need to add '13.125.176.205' to ALLOWED_HOSTS.
+Bad Request: /scripts/setup.php
+[pid: 527|app: 0|req: 71/304] 89.248.174.215 () {36 vars in 516 bytes} [Thu Jul 16 15:41:26 2020] GET /scripts/setup.php => generated 57003 bytes in 31 msecs (HTTP/1.1 400) 2 headers in 86 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '13.125.176.205:1234'. You may need to add '13.125.176.205' to ALLOWED_HOSTS.
+Bad Request: /setup.php
+[pid: 528|app: 0|req: 181/305] 89.248.174.215 () {36 vars in 500 bytes} [Thu Jul 16 15:41:27 2020] GET /setup.php => generated 56907 bytes in 29 msecs (HTTP/1.1 400) 2 headers in 86 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '13.125.176.205:1234'. You may need to add '13.125.176.205' to ALLOWED_HOSTS.
+Bad Request: /
+[pid: 528|app: 0|req: 182/306] 209.17.97.50 () {30 vars in 456 bytes} [Thu Jul 16 22:01:23 2020] GET / => generated 56547 bytes in 29 msecs (HTTP/1.1 400) 2 headers in 86 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '13.125.176.205:1234'. You may need to add '13.125.176.205' to ALLOWED_HOSTS.
+Bad Request: /status
+[pid: 528|app: 0|req: 183/307] 89.248.172.16 () {30 vars in 401 bytes} [Thu Jul 16 23:17:14 2020] GET /status => generated 56431 bytes in 29 msecs (HTTP/1.1 400) 2 headers in 86 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '13.125.176.205:1234'. You may need to add '13.125.176.205' to ALLOWED_HOSTS.
+Bad Request: /logs
+[pid: 528|app: 0|req: 184/308] 62.171.152.36 () {28 vars in 365 bytes} [Fri Jul 17 07:15:57 2020] GET /logs => generated 56269 bytes in 29 msecs (HTTP/1.0 400) 2 headers in 86 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '13.125.176.205:1234'. You may need to add '13.125.176.205' to ALLOWED_HOSTS.
+Bad Request: /editConfig
+[pid: 527|app: 0|req: 72/309] 62.171.152.36 () {28 vars in 400 bytes} [Fri Jul 17 07:15:57 2020] GET /editConfig?returnUrl=/ => generated 56727 bytes in 30 msecs (HTTP/1.0 400) 2 headers in 86 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '13.125.176.205:1234'. You may need to add '13.125.176.205' to ALLOWED_HOSTS.
+Bad Request: /
+[pid: 528|app: 0|req: 185/310] 185.173.35.17 () {30 vars in 498 bytes} [Fri Jul 17 08:53:33 2020] GET / => generated 56630 bytes in 29 msecs (HTTP/1.1 400) 2 headers in 86 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '13.125.176.205:1234'. You may need to add '13.125.176.205' to ALLOWED_HOSTS.
+Bad Request: /
+[pid: 528|app: 0|req: 186/311] 192.35.169.48 () {28 vars in 357 bytes} [Fri Jul 17 18:12:22 2020] GET / => generated 56221 bytes in 28 msecs (HTTP/1.1 400) 2 headers in 86 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '13.125.176.205:1234'. You may need to add '13.125.176.205' to ALLOWED_HOSTS.
+Bad Request: /
+[pid: 528|app: 0|req: 187/312] 209.17.96.170 () {30 vars in 457 bytes} [Fri Jul 17 23:36:02 2020] GET / => generated 56548 bytes in 29 msecs (HTTP/1.1 400) 2 headers in 86 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '13.125.176.205:1234'. You may need to add '13.125.176.205' to ALLOWED_HOSTS.
+Bad Request: /
+[pid: 528|app: 0|req: 188/313] 192.35.169.48 () {28 vars in 357 bytes} [Sat Jul 18 02:31:51 2020] GET / => generated 56221 bytes in 29 msecs (HTTP/1.1 400) 2 headers in 86 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '13.125.176.205:1234'. You may need to add '13.125.176.205' to ALLOWED_HOSTS.
+Bad Request: /
+[pid: 528|app: 0|req: 189/314] 209.17.97.10 () {30 vars in 456 bytes} [Sat Jul 18 18:34:05 2020] GET / => generated 56547 bytes in 28 msecs (HTTP/1.1 400) 2 headers in 86 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '13.125.176.205:1234'. You may need to add '13.125.176.205' to ALLOWED_HOSTS.
+Bad Request: /
+[pid: 528|app: 0|req: 190/315] 209.17.96.186 () {30 vars in 457 bytes} [Sun Jul 19 18:22:50 2020] GET / => generated 56548 bytes in 29 msecs (HTTP/1.1 400) 2 headers in 86 bytes (1 switches on core 0)
+[pid: 528|app: 0|req: 191/316] 83.97.20.35 () {26 vars in 323 bytes} [Mon Jul 20 17:19:16 2020] GET / => generated 3203 bytes in 7 msecs (HTTP/1.0 200) 6 headers in 319 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '13.125.176.205:1234'. You may need to add '13.125.176.205' to ALLOWED_HOSTS.
+Bad Request: /
+[pid: 528|app: 0|req: 192/317] 209.17.97.42 () {30 vars in 456 bytes} [Mon Jul 20 18:17:25 2020] GET / => generated 56547 bytes in 29 msecs (HTTP/1.1 400) 2 headers in 86 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '13.125.176.205:1234'. You may need to add '13.125.176.205' to ALLOWED_HOSTS.
+Bad Request: /
+[pid: 528|app: 0|req: 193/318] 196.52.43.124 () {30 vars in 479 bytes} [Mon Jul 20 22:17:52 2020] GET / => generated 56592 bytes in 28 msecs (HTTP/1.1 400) 2 headers in 86 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '13.125.176.205:1234'. You may need to add '13.125.176.205' to ALLOWED_HOSTS.
+Bad Request: /
+[pid: 528|app: 0|req: 194/319] 192.35.169.48 () {28 vars in 357 bytes} [Tue Jul 21 16:00:32 2020] GET / => generated 56221 bytes in 29 msecs (HTTP/1.1 400) 2 headers in 86 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '13.125.176.205:1234'. You may need to add '13.125.176.205' to ALLOWED_HOSTS.
+Bad Request: /
+[pid: 528|app: 0|req: 195/320] 209.17.96.2 () {30 vars in 455 bytes} [Wed Jul 22 02:39:46 2020] GET / => generated 56546 bytes in 29 msecs (HTTP/1.1 400) 2 headers in 86 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '13.125.176.205:1234'. You may need to add '13.125.176.205' to ALLOWED_HOSTS.
+Bad Request: /logs
+[pid: 528|app: 0|req: 196/321] 62.171.163.129 () {30 vars in 390 bytes} [Wed Jul 22 07:30:47 2020] GET /logs => generated 56400 bytes in 29 msecs (HTTP/1.0 400) 2 headers in 86 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '13.125.176.205:1234'. You may need to add '13.125.176.205' to ALLOWED_HOSTS.
+Bad Request: /editConfig
+[pid: 527|app: 0|req: 73/322] 62.171.163.129 () {30 vars in 425 bytes} [Wed Jul 22 07:30:48 2020] GET /editConfig?returnUrl=/ => generated 56858 bytes in 31 msecs (HTTP/1.0 400) 2 headers in 86 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '13.125.176.205:1234'. You may need to add '13.125.176.205' to ALLOWED_HOSTS.
+Bad Request: /
+[pid: 528|app: 0|req: 197/323] 209.17.96.242 () {30 vars in 457 bytes} [Thu Jul 23 04:01:45 2020] GET / => generated 56548 bytes in 28 msecs (HTTP/1.1 400) 2 headers in 86 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '13.125.176.205:1234'. You may need to add '13.125.176.205' to ALLOWED_HOSTS.
+Bad Request: /logs
+[pid: 528|app: 0|req: 198/324] 62.171.152.36 () {28 vars in 365 bytes} [Thu Jul 23 13:29:28 2020] GET /logs => generated 56269 bytes in 30 msecs (HTTP/1.0 400) 2 headers in 86 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '13.125.176.205:1234'. You may need to add '13.125.176.205' to ALLOWED_HOSTS.
+Bad Request: /editConfig
+[pid: 527|app: 0|req: 74/325] 62.171.152.36 () {28 vars in 400 bytes} [Thu Jul 23 13:29:28 2020] GET /editConfig?returnUrl=/ => generated 56727 bytes in 31 msecs (HTTP/1.0 400) 2 headers in 86 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '13.125.176.205:1234'. You may need to add '13.125.176.205' to ALLOWED_HOSTS.
+Bad Request: /
+[pid: 528|app: 0|req: 199/326] 209.17.96.210 () {30 vars in 457 bytes} [Thu Jul 23 19:02:34 2020] GET / => generated 56548 bytes in 28 msecs (HTTP/1.1 400) 2 headers in 86 bytes (1 switches on core 0)
+[pid: 528|app: 0|req: 200/327] 139.162.131.159 () {26 vars in 327 bytes} [Thu Jul 23 22:14:58 2020] GET / => generated 3203 bytes in 2 msecs (HTTP/1.0 200) 6 headers in 319 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '13.125.176.205:1234'. You may need to add '13.125.176.205' to ALLOWED_HOSTS.
+Bad Request: /
+[pid: 528|app: 0|req: 201/328] 106.42.95.188 () {40 vars in 666 bytes} [Thu Jul 23 23:25:26 2020] GET / => generated 57252 bytes in 29 msecs (HTTP/1.1 400) 2 headers in 86 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '13.125.176.205:1234'. You may need to add '13.125.176.205' to ALLOWED_HOSTS.
+Bad Request: /logs
+[pid: 528|app: 0|req: 202/329] 62.171.152.36 () {28 vars in 365 bytes} [Fri Jul 24 07:01:25 2020] GET /logs => generated 56269 bytes in 29 msecs (HTTP/1.0 400) 2 headers in 86 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '13.125.176.205:1234'. You may need to add '13.125.176.205' to ALLOWED_HOSTS.
+Bad Request: /editConfig
+[pid: 527|app: 0|req: 75/330] 62.171.152.36 () {28 vars in 400 bytes} [Fri Jul 24 07:01:26 2020] GET /editConfig?returnUrl=/ => generated 56727 bytes in 31 msecs (HTTP/1.0 400) 2 headers in 86 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '13.125.176.205:1234'. You may need to add '13.125.176.205' to ALLOWED_HOSTS.
+Bad Request: /logs
+[pid: 528|app: 0|req: 203/331] 62.171.163.129 () {30 vars in 390 bytes} [Fri Jul 24 07:30:47 2020] GET /logs => generated 56400 bytes in 29 msecs (HTTP/1.0 400) 2 headers in 86 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '13.125.176.205:1234'. You may need to add '13.125.176.205' to ALLOWED_HOSTS.
+Bad Request: /editConfig
+[pid: 527|app: 0|req: 76/332] 62.171.163.129 () {30 vars in 425 bytes} [Fri Jul 24 07:30:47 2020] GET /editConfig?returnUrl=/ => generated 56858 bytes in 30 msecs (HTTP/1.0 400) 2 headers in 86 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '13.125.176.205:1234'. You may need to add '13.125.176.205' to ALLOWED_HOSTS.
+Bad Request: /
+[pid: 528|app: 0|req: 204/333] 196.52.43.61 () {30 vars in 478 bytes} [Fri Jul 24 11:10:31 2020] GET / => generated 56591 bytes in 29 msecs (HTTP/1.1 400) 2 headers in 86 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '13.125.176.205:1234'. You may need to add '13.125.176.205' to ALLOWED_HOSTS.
+Bad Request: /
+[pid: 528|app: 0|req: 205/334] 106.42.95.188 () {40 vars in 666 bytes} [Fri Jul 24 15:27:50 2020] GET / => generated 57252 bytes in 30 msecs (HTTP/1.1 400) 2 headers in 86 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '13.125.176.205:1234'. You may need to add '13.125.176.205' to ALLOWED_HOSTS.
+Bad Request: /status
+[pid: 528|app: 0|req: 206/335] 185.142.236.34 () {30 vars in 402 bytes} [Fri Jul 24 18:01:11 2020] GET /status => generated 56432 bytes in 29 msecs (HTTP/1.1 400) 2 headers in 86 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '13.125.176.205:1234'. You may need to add '13.125.176.205' to ALLOWED_HOSTS.
+Bad Request: /
+[pid: 528|app: 0|req: 207/336] 192.35.168.220 () {28 vars in 358 bytes} [Sat Jul 25 04:40:59 2020] GET / => generated 56222 bytes in 29 msecs (HTTP/1.1 400) 2 headers in 86 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '13.125.176.205:1234'. You may need to add '13.125.176.205' to ALLOWED_HOSTS.
+Bad Request: /
+[pid: 527|app: 0|req: 77/337] 192.35.168.220 () {34 vars in 444 bytes} [Sat Jul 25 04:40:59 2020] GET / => generated 56655 bytes in 31 msecs (HTTP/1.1 400) 2 headers in 86 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '13.125.176.205:1234'. You may need to add '13.125.176.205' to ALLOWED_HOSTS.
+Bad Request: /
+[pid: 528|app: 0|req: 208/338] 192.35.169.48 () {28 vars in 357 bytes} [Sat Jul 25 04:42:33 2020] GET / => generated 56221 bytes in 29 msecs (HTTP/1.1 400) 2 headers in 86 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '13.125.176.205:1234'. You may need to add '13.125.176.205' to ALLOWED_HOSTS.
+Bad Request: /
+[pid: 528|app: 0|req: 209/339] 209.17.96.242 () {30 vars in 457 bytes} [Sat Jul 25 05:17:35 2020] GET / => generated 56548 bytes in 29 msecs (HTTP/1.1 400) 2 headers in 86 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '13.125.176.205:1234'. You may need to add '13.125.176.205' to ALLOWED_HOSTS.
+Bad Request: /
+[pid: 528|app: 0|req: 210/340] 172.105.54.65 () {36 vars in 574 bytes} [Sat Jul 25 16:33:43 2020] GET / => generated 57016 bytes in 28 msecs (HTTP/1.1 400) 2 headers in 86 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '13.125.176.205:1234'. You may need to add '13.125.176.205' to ALLOWED_HOSTS.
+Bad Request: /favicon.ico
+[pid: 527|app: 0|req: 78/341] 172.105.54.65 () {36 vars in 596 bytes} [Sat Jul 25 16:33:44 2020] GET /favicon.ico => generated 57148 bytes in 30 msecs (HTTP/1.1 400) 2 headers in 86 bytes (1 switches on core 0)
+[pid: 528|app: 0|req: 211/342] 83.97.20.35 () {26 vars in 323 bytes} [Sat Jul 25 21:12:59 2020] GET / => generated 3203 bytes in 2 msecs (HTTP/1.0 200) 6 headers in 319 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '13.125.176.205:1234'. You may need to add '13.125.176.205' to ALLOWED_HOSTS.
+Bad Request: /
+[pid: 528|app: 0|req: 212/343] 209.17.97.106 () {30 vars in 457 bytes} [Sun Jul 26 00:39:41 2020] GET / => generated 56548 bytes in 29 msecs (HTTP/1.1 400) 2 headers in 86 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '13.125.176.205:1234'. You may need to add '13.125.176.205' to ALLOWED_HOSTS.
+Bad Request: /
+[pid: 528|app: 0|req: 213/344] 209.17.96.106 () {30 vars in 457 bytes} [Sun Jul 26 18:17:54 2020] GET / => generated 56548 bytes in 29 msecs (HTTP/1.1 400) 2 headers in 86 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '13.125.176.205:1234'. You may need to add '13.125.176.205' to ALLOWED_HOSTS.
+Bad Request: /
+[pid: 528|app: 0|req: 214/345] 92.118.160.5 () {30 vars in 497 bytes} [Mon Jul 27 21:47:45 2020] GET / => generated 56629 bytes in 29 msecs (HTTP/1.1 400) 2 headers in 86 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '13.125.176.205:1234'. You may need to add '13.125.176.205' to ALLOWED_HOSTS.
+Bad Request: /
+[pid: 528|app: 0|req: 215/346] 209.17.96.138 () {30 vars in 457 bytes} [Tue Jul 28 05:58:42 2020] GET / => generated 56548 bytes in 29 msecs (HTTP/1.1 400) 2 headers in 86 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: '13.125.176.205:1234'. You may need to add '13.125.176.205' to ALLOWED_HOSTS.
+Bad Request: /
+[pid: 528|app: 0|req: 216/347] 223.71.167.163 () {34 vars in 506 bytes} [Tue Jul 28 14:50:02 2020] GET / => generated 56810 bytes in 49 msecs (HTTP/1.1 400) 2 headers in 86 bytes (1 switches on core 0)
+Gracefully killing worker 2 (pid: 526)...
+Gracefully killing worker 4 (pid: 528)...
+Gracefully killing worker 1 (pid: 525)...
+...gracefully killing workers...
+Gracefully killing worker 3 (pid: 527)...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+binary reloading uWSGI...
+chdir() to /home/ubuntu/AttendaceCheckServer
+closing all non-uwsgi socket fds > 2 (max_fd = 1024)...
+found fd 3 mapped to socket 0 (localhost:8001)
+running /home/ubuntu/django-rest-tutorial/bin/uwsgi
+[uWSGI] getting INI configuration from my_uwsgi.ini
+*** Starting uWSGI 2.0.18 (64bit) on [Wed Jul 29 03:31:20 2020] ***
+compiled with version: 7.5.0 on 22 May 2020 06:42:38
+os: Linux-4.15.0-1065-aws #69-Ubuntu SMP Thu Mar 26 02:17:29 UTC 2020
+nodename: ip-172-31-38-38
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /home/ubuntu/AttendaceCheckServer
+detected binary path: /home/ubuntu/django-rest-tutorial/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/ubuntu/AttendaceCheckServer
+your processes number limit is 3840
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address localhost:8001 fd 3
+Python version: 3.6.9 (default, Jul 17 2020, 12:50:27)  [GCC 8.4.0]
+Set PythonHome to /home/ubuntu/django-rest-tutorial
+Python main interpreter initialized at 0x555cc107cde0
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 364600 bytes (356 KB) for 4 cores
+*** Operational MODE: preforking ***
+gracefully (RE)spawned uWSGI master process (pid: 524)
+spawned uWSGI worker 1 (pid: 24066, cores: 1)
+spawned uWSGI worker 2 (pid: 24067, cores: 1)
+spawned uWSGI worker 3 (pid: 24068, cores: 1)
+spawned uWSGI worker 4 (pid: 24069, cores: 1)
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x555cc107cde0 pid: 24066 (default app)
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x555cc107cde0 pid: 24069 (default app)
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x555cc107cde0 pid: 24067 (default app)
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x555cc107cde0 pid: 24068 (default app)
+Wed Jul 29 03:32:50 2020 - uWSGI worker 3 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+*** Starting uWSGI 2.0.18 (64bit) on [Tue Sep  1 06:12:48 2020] ***
+compiled with version: 7.5.0 on 22 May 2020 06:42:38
+os: Linux-5.3.0-1030-aws #32~18.04.1-Ubuntu SMP Tue Jun 30 23:04:16 UTC 2020
+nodename: ip-172-31-38-38
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /home/ubuntu/AttendaceCheckServer
+writing pidfile to /tmp/my_uwsgi.pid
+detected binary path: /home/ubuntu/django-rest-tutorial/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/ubuntu/AttendaceCheckServer
+your processes number limit is 3802
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address localhost:8001 fd 3
+Python version: 3.6.9 (default, Jul 17 2020, 12:50:27)  [GCC 8.4.0]
+Set PythonHome to /home/ubuntu/django-rest-tutorial
+Python main interpreter initialized at 0x55727867dea0
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 364600 bytes (356 KB) for 4 cores
+*** Operational MODE: preforking ***
+spawned uWSGI master process (pid: 12455)
+spawned uWSGI worker 1 (pid: 12456, cores: 1)
+spawned uWSGI worker 2 (pid: 12457, cores: 1)
+spawned uWSGI worker 3 (pid: 12458, cores: 1)
+spawned uWSGI worker 4 (pid: 12459, cores: 1)
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x55727867dea0 pid: 12459 (default app)
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x55727867dea0 pid: 12456 (default app)
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x55727867dea0 pid: 12457 (default app)
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x55727867dea0 pid: 12458 (default app)
+Invalid HTTP_HOST header: 'ec2-3-35-28-254.ap-northeast-2.compute.amazonaws.com:1234'. You may need to add 'ec2-3-35-28-254.ap-northeast-2.compute.amazonaws.com' to ALLOWED_HOSTS.
+Bad Request: /members
+[pid: 12459|app: 0|req: 1/1] 219.254.31.123 () {42 vars in 904 bytes} [Tue Sep  1 06:13:45 2020] GET /members => generated 58592 bytes in 44 msecs (HTTP/1.1 400) 2 headers in 86 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: 'ec2-3-35-28-254.ap-northeast-2.compute.amazonaws.com:1234'. You may need to add 'ec2-3-35-28-254.ap-northeast-2.compute.amazonaws.com' to ALLOWED_HOSTS.
+Bad Request: /favicon.ico
+[pid: 12458|app: 0|req: 1/2] 219.254.31.123 () {42 vars in 880 bytes} [Tue Sep  1 06:13:46 2020] GET /favicon.ico => generated 58608 bytes in 34 msecs (HTTP/1.1 400) 2 headers in 86 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: 'ec2-3-35-28-254.ap-northeast-2.compute.amazonaws.com:1234'. You may need to add 'ec2-3-35-28-254.ap-northeast-2.compute.amazonaws.com' to ALLOWED_HOSTS.
+Bad Request: /member
+[pid: 12457|app: 0|req: 1/3] 219.254.31.123 () {42 vars in 902 bytes} [Tue Sep  1 06:13:48 2020] GET /member => generated 58580 bytes in 35 msecs (HTTP/1.1 400) 2 headers in 86 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: 'ec2-3-35-28-254.ap-northeast-2.compute.amazonaws.com:1234'. You may need to add 'ec2-3-35-28-254.ap-northeast-2.compute.amazonaws.com' to ALLOWED_HOSTS.
+Bad Request: /favicon.ico
+[pid: 12458|app: 0|req: 2/4] 219.254.31.123 () {42 vars in 879 bytes} [Tue Sep  1 06:13:49 2020] GET /favicon.ico => generated 58607 bytes in 29 msecs (HTTP/1.1 400) 2 headers in 86 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: 'ec2-3-35-28-254.ap-northeast-2.compute.amazonaws.com:1234'. You may need to add 'ec2-3-35-28-254.ap-northeast-2.compute.amazonaws.com' to ALLOWED_HOSTS.
+Bad Request: /members
+[pid: 12457|app: 0|req: 2/5] 219.254.31.123 () {42 vars in 904 bytes} [Tue Sep  1 06:14:05 2020] GET /members => generated 58592 bytes in 29 msecs (HTTP/1.1 400) 2 headers in 86 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: 'ec2-3-35-28-254.ap-northeast-2.compute.amazonaws.com:1234'. You may need to add 'ec2-3-35-28-254.ap-northeast-2.compute.amazonaws.com' to ALLOWED_HOSTS.
+Bad Request: /favicon.ico
+[pid: 12458|app: 0|req: 3/6] 219.254.31.123 () {42 vars in 880 bytes} [Tue Sep  1 06:14:06 2020] GET /favicon.ico => generated 58608 bytes in 29 msecs (HTTP/1.1 400) 2 headers in 86 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: 'ec2-3-35-28-254.ap-northeast-2.compute.amazonaws.com:1234'. You may need to add 'ec2-3-35-28-254.ap-northeast-2.compute.amazonaws.com' to ALLOWED_HOSTS.
+Bad Request: /members
+[pid: 12458|app: 0|req: 4/7] 219.254.31.123 () {44 vars in 935 bytes} [Tue Sep  1 06:14:57 2020] GET /members => generated 58729 bytes in 30 msecs (HTTP/1.1 400) 2 headers in 86 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: 'ec2-3-35-28-254.ap-northeast-2.compute.amazonaws.com:1234'. You may need to add 'ec2-3-35-28-254.ap-northeast-2.compute.amazonaws.com' to ALLOWED_HOSTS.
+Bad Request: /favicon.ico
+[pid: 12457|app: 0|req: 3/8] 219.254.31.123 () {46 vars in 933 bytes} [Tue Sep  1 06:14:57 2020] GET /favicon.ico => generated 58873 bytes in 28 msecs (HTTP/1.1 400) 2 headers in 86 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: 'ec2-3-35-28-254.ap-northeast-2.compute.amazonaws.com:1234'. You may need to add 'ec2-3-35-28-254.ap-northeast-2.compute.amazonaws.com' to ALLOWED_HOSTS.
+Bad Request: /members
+[pid: 12458|app: 0|req: 5/9] 219.254.31.123 () {44 vars in 935 bytes} [Tue Sep  1 06:14:58 2020] GET /members => generated 58729 bytes in 29 msecs (HTTP/1.1 400) 2 headers in 86 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: 'ec2-3-35-28-254.ap-northeast-2.compute.amazonaws.com:1234'. You may need to add 'ec2-3-35-28-254.ap-northeast-2.compute.amazonaws.com' to ALLOWED_HOSTS.
+Bad Request: /favicon.ico
+[pid: 12457|app: 0|req: 4/10] 219.254.31.123 () {46 vars in 933 bytes} [Tue Sep  1 06:14:59 2020] GET /favicon.ico => generated 58873 bytes in 31 msecs (HTTP/1.1 400) 2 headers in 86 bytes (1 switches on core 0)
+*** Starting uWSGI 2.0.18 (64bit) on [Tue Sep  1 06:15:08 2020] ***
+compiled with version: 7.5.0 on 22 May 2020 06:42:38
+os: Linux-5.3.0-1030-aws #32~18.04.1-Ubuntu SMP Tue Jun 30 23:04:16 UTC 2020
+nodename: ip-172-31-38-38
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /home/ubuntu/AttendaceCheckServer
+writing pidfile to /tmp/my_uwsgi.pid
+detected binary path: /home/ubuntu/django-rest-tutorial/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/ubuntu/AttendaceCheckServer
+your processes number limit is 3802
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+probably another instance of uWSGI is running on the same address (localhost:8001).
+bind(): Address already in use [core/socket.c line 769]
+Invalid HTTP_HOST header: 'ec2-3-35-28-254.ap-northeast-2.compute.amazonaws.com:1234'. You may need to add 'ec2-3-35-28-254.ap-northeast-2.compute.amazonaws.com' to ALLOWED_HOSTS.
+Bad Request: /members
+[pid: 12458|app: 0|req: 6/11] 219.254.31.123 () {44 vars in 935 bytes} [Tue Sep  1 06:15:10 2020] GET /members => generated 58729 bytes in 29 msecs (HTTP/1.1 400) 2 headers in 86 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: 'ec2-3-35-28-254.ap-northeast-2.compute.amazonaws.com:1234'. You may need to add 'ec2-3-35-28-254.ap-northeast-2.compute.amazonaws.com' to ALLOWED_HOSTS.
+Bad Request: /favicon.ico
+[pid: 12457|app: 0|req: 5/12] 219.254.31.123 () {46 vars in 933 bytes} [Tue Sep  1 06:15:11 2020] GET /favicon.ico => generated 58873 bytes in 29 msecs (HTTP/1.1 400) 2 headers in 86 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: 'ec2-3-35-28-254.ap-northeast-2.compute.amazonaws.com:1234'. You may need to add 'ec2-3-35-28-254.ap-northeast-2.compute.amazonaws.com' to ALLOWED_HOSTS.
+Bad Request: /members
+[pid: 12458|app: 0|req: 7/13] 219.254.31.123 () {44 vars in 935 bytes} [Tue Sep  1 06:15:12 2020] GET /members => generated 58729 bytes in 29 msecs (HTTP/1.1 400) 2 headers in 86 bytes (1 switches on core 0)
+Invalid HTTP_HOST header: 'ec2-3-35-28-254.ap-northeast-2.compute.amazonaws.com:1234'. You may need to add 'ec2-3-35-28-254.ap-northeast-2.compute.amazonaws.com' to ALLOWED_HOSTS.
+Bad Request: /favicon.ico
+[pid: 12457|app: 0|req: 6/14] 219.254.31.123 () {46 vars in 933 bytes} [Tue Sep  1 06:15:12 2020] GET /favicon.ico => generated 58873 bytes in 29 msecs (HTTP/1.1 400) 2 headers in 86 bytes (1 switches on core 0)
+Tue Sep  1 06:15:44 2020 - uWSGI worker 3 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Tue Sep  1 06:15:44 2020 - uWSGI worker 2 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Tue Sep  1 06:15:44 2020 - uWSGI worker 1 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+Tue Sep  1 06:15:44 2020 - uWSGI worker 4 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+*** Starting uWSGI 2.0.18 (64bit) on [Tue Sep  1 06:15:56 2020] ***
+compiled with version: 7.5.0 on 22 May 2020 06:42:38
+os: Linux-5.3.0-1030-aws #32~18.04.1-Ubuntu SMP Tue Jun 30 23:04:16 UTC 2020
+nodename: ip-172-31-38-38
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /home/ubuntu/AttendaceCheckServer
+writing pidfile to /tmp/my_uwsgi.pid
+detected binary path: /home/ubuntu/django-rest-tutorial/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/ubuntu/AttendaceCheckServer
+your processes number limit is 3802
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address localhost:8001 fd 3
+Python version: 3.6.9 (default, Jul 17 2020, 12:50:27)  [GCC 8.4.0]
+Set PythonHome to /home/ubuntu/django-rest-tutorial
+Python main interpreter initialized at 0x55ab23469ec0
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 364600 bytes (356 KB) for 4 cores
+*** Operational MODE: preforking ***
+spawned uWSGI master process (pid: 12503)
+spawned uWSGI worker 1 (pid: 12504, cores: 1)
+spawned uWSGI worker 2 (pid: 12505, cores: 1)
+spawned uWSGI worker 3 (pid: 12506, cores: 1)
+spawned uWSGI worker 4 (pid: 12507, cores: 1)
+WSGI app 0 (mountpoint='') ready in 2 seconds on interpreter 0x55ab23469ec0 pid: 12504 (default app)
+WSGI app 0 (mountpoint='') ready in 2 seconds on interpreter 0x55ab23469ec0 pid: 12507 (default app)
+WSGI app 0 (mountpoint='') ready in 2 seconds on interpreter 0x55ab23469ec0 pid: 12505 (default app)
+WSGI app 0 (mountpoint='') ready in 2 seconds on interpreter 0x55ab23469ec0 pid: 12506 (default app)
+[pid: 12504|app: 0|req: 1/1] 219.254.31.123 () {44 vars in 935 bytes} [Tue Sep  1 06:15:58 2020] GET /members => generated 0 bytes in 425 msecs (HTTP/1.1 301) 4 headers in 147 bytes (1 switches on core 0)
+[pid: 12506|app: 0|req: 1/2] 219.254.31.123 () {44 vars in 937 bytes} [Tue Sep  1 06:15:58 2020] GET /members/ => generated 325 bytes in 304 msecs (HTTP/1.1 200) 4 headers in 128 bytes (1 switches on core 0)
+Not Found: /favicon.ico
+[pid: 12505|app: 0|req: 1/3] 219.254.31.123 () {42 vars in 881 bytes} [Tue Sep  1 06:16:00 2020] GET /favicon.ico => generated 3525 bytes in 225 msecs (HTTP/1.1 404) 4 headers in 129 bytes (1 switches on core 0)
+[pid: 12506|app: 0|req: 2/4] 219.254.31.123 () {42 vars in 906 bytes} [Tue Sep  1 06:16:27 2020] GET /members/ => generated 325 bytes in 9 msecs (HTTP/1.1 200) 4 headers in 128 bytes (1 switches on core 0)
+[pid: 12506|app: 0|req: 3/5] 219.254.31.123 () {42 vars in 900 bytes} [Tue Sep  1 06:47:33 2020] GET /admin => generated 0 bytes in 2 msecs (HTTP/1.1 301) 4 headers in 145 bytes (1 switches on core 0)
+[pid: 12504|app: 0|req: 2/6] 219.254.31.123 () {42 vars in 902 bytes} [Tue Sep  1 06:47:33 2020] GET /admin/ => generated 0 bytes in 36 msecs (HTTP/1.1 302) 8 headers in 301 bytes (1 switches on core 0)
+[pid: 12506|app: 0|req: 4/7] 219.254.31.123 () {42 vars in 939 bytes} [Tue Sep  1 06:47:33 2020] GET /admin/login/?next=/admin/ => generated 1926 bytes in 93 msecs (HTTP/1.1 200) 8 headers in 431 bytes (1 switches on core 0)
+[pid: 12505|app: 0|req: 2/8] 219.254.31.123 () {52 vars in 1348 bytes} [Tue Sep  1 06:47:37 2020] POST /admin/login/?next=/admin/ => generated 0 bytes in 170 msecs (HTTP/1.1 302) 10 headers in 595 bytes (1 switches on core 0)
+[pid: 12506|app: 0|req: 5/9] 219.254.31.123 () {46 vars in 1159 bytes} [Tue Sep  1 06:47:37 2020] GET /admin/ => generated 10215 bytes in 42 msecs (HTTP/1.1 200) 7 headers in 264 bytes (1 switches on core 0)
+[pid: 12505|app: 0|req: 3/10] 219.254.31.123 () {44 vars in 1149 bytes} [Tue Sep  1 06:47:40 2020] GET /admin/memberauth/logtable/ => generated 4491 bytes in 104 msecs (HTTP/1.1 200) 8 headers in 431 bytes (1 switches on core 0)
+[pid: 12506|app: 0|req: 6/11] 219.254.31.123 () {42 vars in 976 bytes} [Tue Sep  1 06:47:41 2020] GET /admin/jsi18n/ => generated 8330 bytes in 14 msecs (HTTP/1.1 200) 5 headers in 159 bytes (1 switches on core 0)
+[pid: 12505|app: 0|req: 4/12] 219.254.31.123 () {44 vars in 1128 bytes} [Tue Sep  1 06:47:42 2020] GET /admin/ => generated 10215 bytes in 35 msecs (HTTP/1.1 200) 7 headers in 264 bytes (1 switches on core 0)
+[pid: 12506|app: 0|req: 7/13] 219.254.31.123 () {44 vars in 1149 bytes} [Tue Sep  1 06:47:43 2020] GET /admin/memberauth/logtable/ => generated 4491 bytes in 45 msecs (HTTP/1.1 200) 8 headers in 431 bytes (1 switches on core 0)
+[pid: 12505|app: 0|req: 5/14] 219.254.31.123 () {42 vars in 976 bytes} [Tue Sep  1 06:47:43 2020] GET /admin/jsi18n/ => generated 8330 bytes in 12 msecs (HTTP/1.1 200) 5 headers in 159 bytes (1 switches on core 0)
+[pid: 12506|app: 0|req: 8/15] 219.254.31.123 () {44 vars in 1187 bytes} [Tue Sep  1 06:47:44 2020] GET /admin/memberauth/logtable/1/change/ => generated 11944 bytes in 75 msecs (HTTP/1.1 200) 8 headers in 432 bytes (1 switches on core 0)
+[pid: 12505|app: 0|req: 6/16] 219.254.31.123 () {42 vars in 985 bytes} [Tue Sep  1 06:47:44 2020] GET /admin/jsi18n/ => generated 8330 bytes in 12 msecs (HTTP/1.1 200) 5 headers in 159 bytes (1 switches on core 0)
+[pid: 12506|app: 0|req: 9/17] 219.254.31.123 () {44 vars in 1149 bytes} [Tue Sep  1 06:47:46 2020] GET /admin/memberauth/logtable/ => generated 4491 bytes in 45 msecs (HTTP/1.1 200) 8 headers in 431 bytes (1 switches on core 0)
+[pid: 12505|app: 0|req: 7/18] 219.254.31.123 () {44 vars in 1128 bytes} [Tue Sep  1 06:47:47 2020] GET /admin/ => generated 10215 bytes in 35 msecs (HTTP/1.1 200) 7 headers in 264 bytes (1 switches on core 0)
+[pid: 12506|app: 0|req: 10/19] 219.254.31.123 () {44 vars in 1139 bytes} [Tue Sep  1 06:47:49 2020] GET /admin/memberauth/log/ => generated 17334 bytes in 135 msecs (HTTP/1.1 200) 8 headers in 432 bytes (1 switches on core 0)
+[pid: 12505|app: 0|req: 8/20] 219.254.31.123 () {42 vars in 971 bytes} [Tue Sep  1 06:47:49 2020] GET /admin/jsi18n/ => generated 8330 bytes in 12 msecs (HTTP/1.1 200) 5 headers in 159 bytes (1 switches on core 0)
+[pid: 12506|app: 0|req: 11/21] 219.254.31.123 () {44 vars in 1174 bytes} [Tue Sep  1 06:47:51 2020] GET /admin/memberauth/log/37/change/ => generated 6564 bytes in 53 msecs (HTTP/1.1 200) 8 headers in 431 bytes (1 switches on core 0)
+[pid: 12505|app: 0|req: 9/22] 219.254.31.123 () {42 vars in 981 bytes} [Tue Sep  1 06:47:51 2020] GET /admin/jsi18n/ => generated 8330 bytes in 12 msecs (HTTP/1.1 200) 5 headers in 159 bytes (1 switches on core 0)
+[pid: 12506|app: 0|req: 12/23] 219.254.31.123 () {44 vars in 1139 bytes} [Tue Sep  1 06:47:53 2020] GET /admin/memberauth/log/ => generated 17334 bytes in 135 msecs (HTTP/1.1 200) 8 headers in 432 bytes (1 switches on core 0)
+[pid: 12505|app: 0|req: 10/24] 219.254.31.123 () {44 vars in 1128 bytes} [Tue Sep  1 06:47:54 2020] GET /admin/ => generated 10215 bytes in 34 msecs (HTTP/1.1 200) 7 headers in 264 bytes (1 switches on core 0)
