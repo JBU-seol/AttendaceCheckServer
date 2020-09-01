@@ -181,13 +181,21 @@ def logtest(request):
     mac_address = memObj.mac_address
     subject_num_id = lecObj.id
     timeObj = Subject_time.objects.get(Subject_num_id = subject_num_id)
-    timeSentence = timeObj.year+'-'+timeObj.day+' '+timeObj.start_time+":00.000000+00:00"
+
+    timeSentence1 = timeObj.year + '-' + timeObj.day + ' ' + timeObj.start_time + ":00.000000+00:00"
+    timeSentence2 = timeObj.year + '-' + timeObj.day + ' ' + timeObj.finish_time + ":00.000000+00:00"
 
 
-    logObjs = Log.objects.filter(mac_addr=mac_address, lecture_room=lecture_room,
-                                 time__range=['2020-06-01 12:00:00.000000+00:00', timeSentence])
-    print(logObjs)
-
+    #logObjs = Log.objects.filter(mac_addr=mac_address, lecture_room=lecture_room,
+    #                             time__range=[timeSentence1, timeSentence2])
+    logObjs_count = Log.objects.filter(mac_addr=mac_address, lecture_room=lecture_room, time__range=[timeSentence1, timeSentence2]).count()
+    logtableObj = logTable.objects.get(macAddress=mac_address, lecture_id=lecture_id)
+    if logObjs_count>10:#출석체크 강도 설정
+        logtableObj.one_week=1
+        logtableObj.save()
+    else:
+        logtableObj.one_week=0
+        logtableObj.save()
 
     return HttpResponse(status=200)
 
