@@ -246,11 +246,11 @@ def logtest(request):
     print(logtableObj.id)
     #출결여부 결정
     if logObjs_count>8:#출석체크 강도 설정
-        value=1#출석
+        value=3#출석
     elif logObjs_count>3:
         value=2#지각
     else:
-        value=0#결석
+        value=1#결석
     #주차정보 셋팅
     if i == 0:
         logtableObj.one_week = value
