@@ -287,3 +287,101 @@ def logtest(request):
     return HttpResponse(status=200)
 
 # next_day = now + datetime.timedelta(days=7)
+
+@csrf_exempt
+def get_student_attendance(request):
+    data = JSONParser().parse(request)
+    grade_numbers = data['students_numbers']
+    lecture_name = data['lecture_name']
+    week = data['week']
+    lecObj = Subject.objects.get(lecture_name=lecture_name)
+    lecture_id = lecObj.lecture_id
+    dic = {"check":[]}
+    for number in grade_numbers:
+        logTableObj = logTable.objects.get(gradeNumber=number, lecture_id=lecture_id)
+        if week=='01':
+            i = logTableObj.one_week
+        elif week=='02':
+            i = logTableObj.two_week
+        elif week=='03':
+            i = logTableObj.three_week
+        elif week=='04':
+            i = logTableObj.four_week
+        elif week=='05':
+            i = logTableObj.five_week
+        elif week=='06':
+            i = logTableObj.six_week
+        elif week=='07':
+            i = logTableObj.seven_week
+        elif week=='08':
+            i = logTableObj.eight_week
+        elif week=='09':
+            i = logTableObj.nine_week
+        elif week=='10':
+            i = logTableObj.ten_week
+        elif week=='11':
+            i = logTableObj.eleven_week
+        elif week=='12':
+            i = logTableObj.twelve_week
+        elif week=='13':
+            i = logTableObj.thirteen_week
+        elif week=='14':
+            i = logTableObj.fourteen_week
+        elif week=='15':
+            i = logTableObj.fifteen_week
+        elif week=='16':
+            i = logTableObj.sixteen_week
+
+        if i==1:
+            dic["check"].append("결석")
+        elif i==2:
+            dic["check"].append("지각")
+        elif i==3:
+            dic["check"].append("출석")
+    return JsonResponse(dic, status=200)
+
+@csrf_exempt
+def change_student_attendance(request):
+    data = JSONParser().parse(request)
+    number = data['student_number']
+    lecture_name = data['lecture_name']
+    week = data['week']
+    code = data['code']
+    lecObj = Subject.objects.get(lecture_name=lecture_name)
+    lecture_id = lecObj.lecture_id
+    logTableObj = logTable.objects.get(gradeNumber=number, lecture_id=lecture_id)
+    if week == '01':
+        logTableObj.one_week = code
+    elif week == '02':
+        logTableObj.two_week = code
+    elif week == '03':
+        logTableObj.three_week = code
+    elif week == '04':
+        logTableObj.four_week = code
+    elif week == '05':
+        logTableObj.five_week = code
+    elif week == '06':
+        logTableObj.six_week = code
+    elif week == '07':
+        logTableObj.seven_week = code
+    elif week == '08':
+        logTableObj.eight_week = code
+    elif week == '09':
+        logTableObj.nine_week = code
+    elif week == '10':
+        logTableObj.ten_week = code
+    elif week == '11':
+        logTableObj.eleven_week = code
+    elif week == '12':
+        logTableObj.twelve_week = code
+    elif week == '13':
+        logTableObj.thirteen_week = code
+    elif week == '14':
+        logTableObj.fourteen_week = code
+    elif week == '15':
+        logTableObj.fifteen_week = code
+    elif week == '16':
+        logTableObj.sixteen_week = code
+    logTableObj.save()
+
+    return HttpResponse(status=200)

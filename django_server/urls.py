@@ -44,6 +44,8 @@ urlpatterns = [
     path('members/student_list', views.studentList),
     path('members/week_list', views.attendanceList),
     path('members/check', views.logtest),
+    path('members/attendance_list', views.get_student_attendance),
+    path('members/change_attendance_list', views.change_student_attendance),
     path('login/', views.login),
     path('', views.regStudent, name='reg'),
     path('regCon', views.regConStudent, name='regCon'),
