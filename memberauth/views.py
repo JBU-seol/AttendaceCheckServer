@@ -115,6 +115,10 @@ def regStudent(request):
     return render(request, 'students/registerStudent.html')
 
 def regConStudent(request):
+    agree = request.POST.get('agree',None)
+    if agree == None:
+        messages.info(request, '개인정보처리방침 동의가 필요합니다.')
+        return HttpResponseRedirect('/')
     name = request.POST['name']
     grade = request.POST['grade']
     student_id = request.POST['student_id']
@@ -202,7 +206,7 @@ def logtest(request):
 
     #index 선택
     now = datetime.datetime.now()
-    if datetime.datetime(2020,9,7)<now<datetime.datetime(2020,9,14):#14->12수정해야함.
+    if datetime.datetime(2020,9,7)<now<datetime.datetime(2020,9,12):
         i = 0
     elif datetime.datetime(2020,9,14)<now<datetime.datetime(2020,9,19):
         i = 1
@@ -236,18 +240,13 @@ def logtest(request):
     timeSentence1 = timeObj.year + "-" + arrayDay[i] + " " + timeObj.start_time + ":00.000000+00:00"
     timeSentence2 = timeObj.year + "-" + arrayDay[i] + " " + timeObj.finish_time + ":00.000000+00:00"
 
-
-    #logObjs = Log.objects.filter(mac_addr=mac_address, lecture_room=lecture_room,
-    #                             time__range=[timeSentence1, timeSentence2])
     logObjs_count = Log.objects.filter(mac_addr=mac_address, lecture_room=lecture_room,
                                  time__range=[timeSentence1, timeSentence2]).count()
-    print(logObjs_count)
-    logtableObj = logTable.objects.get(macAddress=mac_address, lecture_id=lecture_id)
-    print(logtableObj.id)
+    logtableObj = logTable.objects.get(gradeNumber=grade_number, lecture_id=lecture_id)
     #출결여부 결정
     if logObjs_count>8:#출석체크 강도 설정
         value=3#출석
-    elif logObjs_count>3:
+    elif logObjs_count>4:
         value=2#지각
     else:
         value=1#결석
@@ -285,7 +284,6 @@ def logtest(request):
     logtableObj.save()
 
     return HttpResponse(status=200)
-
 # next_day = now + datetime.timedelta(days=7)
 
 @csrf_exempt
