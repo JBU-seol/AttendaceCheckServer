@@ -95,14 +95,15 @@ def studentList(request):
     else:
         return HttpResponse(status=400)
 
-
-
 @csrf_exempt
 def login(request):
     if request.method == 'POST':
         data = JSONParser().parse(request)
         search_grade_number = data['grade_number']
-        obj = Member.objects.get(grade_number=search_grade_number)
+        if search_grade_number[0] == 'p':
+            obj = ProMember.objects.get(grade_number=search_grade_number)
+        else:
+            obj = Member.objects.get(grade_number=search_grade_number)
         dictName = {"name": obj.name}
         if data['mac_address'] == obj.mac_address:
             return JsonResponse( dictName,status=200)
@@ -110,6 +111,7 @@ def login(request):
             return HttpResponse(status=400)
     else:
         return HttpResponse(status=400)
+
 
 def regStudent(request):
     return render(request, 'students/registerStudent.html')
